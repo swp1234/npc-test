@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "title": "Test NPC - ¿Eres un NPC? | DopaBrain",
+        "description": "¿Eres un NPC o el Protagonista? Responde este test para descubrir dónde estás en el espectro de NPC a Jefe Final."
+    },
+    "a11y": { "skip": "Saltar al contenido" },
+    "app": {
+        "title": "Test NPC",
+        "subtitle": "¿Eres un NPC o el Protagonista?",
+        "description": "Responde 12 preguntas sobre tus hábitos diarios y comportamiento social para descubrir si vives en piloto automático o si escribes tu propio guion.",
+        "start": "Iniciar Misión"
+    },
+    "quiz": {
+        "progress": "{current} / {total}",
+        "question": "Pregunta"
+    },
+    "questions": {
+        "q1": { "text": "¿Qué haces cuando entras a un lugar lleno de desconocidos?", "a": "Me quedo junto a la pared observando", "b": "Busco a alguien conocido y me pego", "c": "Le hablo a la persona más cercana", "d": "Hago una entrada que todos notan" },
+        "q2": { "text": "¿Cómo pides en un restaurante?", "a": "Lo mismo de siempre", "b": "Lo que recomienden", "c": "Algo diferente cada vez", "d": "Algo fuera del menú o personalizado" },
+        "q3": { "text": "¿Cuál es tu estilo al caminar?", "a": "El mismo camino exacto todos los días", "b": "Sigo a la multitud", "c": "Atajos y rutas alternativas", "d": "Camino como si tuviera banda sonora" },
+        "q4": { "text": "¿Cómo manejas los silencios incómodos?", "a": "Espero a que alguien más hable", "b": "Reviso mi celular", "c": "Hago conversación casual", "d": "Digo algo random y lo hago funcionar" },
+        "q5": { "text": "¿Cómo es tu rutina matutina?", "a": "Exactamente lo mismo todos los días", "b": "Realmente no tengo una", "c": "Cambia según mi ánimo", "d": "Cada día es un nuevo episodio" },
+        "q6": { "text": "Alguien te pide tu opinión. Tú dices:", "a": "Me da igual, lo que ustedes quieran", "b": "Estoy de acuerdo con la mayoría", "c": "Comparto lo que realmente pienso", "d": "Tengo una charla TED preparada" },
+        "q7": { "text": "¿Cómo reaccionas cuando pasa algo vergonzoso?", "a": "Me congelo y rezo para que nadie haya visto", "b": "Hago como que no pasó nada", "c": "Me río de mí mismo", "d": "Lo convierto en una historia que le cuento a todos" },
+        "q8": { "text": "¿Cuál es tu estilo de mensajes?", "a": "Respuestas de una palabra: 'ok', 'jaja', 'sí'", "b": "Respondo horas después con 'perdón, recién vi esto'", "c": "Participo en conversaciones completas", "d": "Audios, memes, ensayos, el paquete completo" },
+        "q9": { "text": "¿Cómo eliges qué ver o jugar?", "a": "Vuelvo a ver lo mismo de siempre", "b": "Lo que esté de moda", "c": "Basado en recomendaciones personales", "d": "Yo marco las tendencias" },
+        "q10": { "text": "En una fiesta, ¿dónde estás?", "a": "Acariciando al perro en la esquina", "b": "Parado cerca de la comida", "c": "Yendo de grupo en grupo hablando con todos", "d": "En el centro de la pista contando historias" },
+        "q11": { "text": "¿Cómo tomas decisiones?", "a": "Dejo que otros decidan por mí", "b": "Voy con la corriente", "c": "Analizo pros y contras", "d": "Confío en mi instinto al instante" },
+        "q12": { "text": "¿Qué dice la gente de ti?", "a": "Espera, ¿quién?", "b": "Que soy buena onda supongo", "c": "Que soy muy divertido/a", "d": "Todos tienen una anécdota sobre mí" }
+    },
+    "tiers": {
+        "npc": { "emoji": "🤖", "name": "NPC Total", "desc": "Te chocas contra las paredes, repites los mismos diálogos y sigues el mismo camino todos los días. Tu frase típica es '...' y tu animación de espera es mirar al vacío. Pero oye, todo mundo necesita NPCs — ¡tú mantienes la simulación funcionando!" },
+        "extra": { "emoji": "👻", "name": "Extra de Fondo", "desc": "Existes en la escena pero nadie recuerda tu nombre. Eres el Aldeano #47 — técnicamente presente, técnicamente vivo, técnicamente... ahí. Tienes potencial para un arco argumental, pero sigues en la pantalla de carga." },
+        "side": { "emoji": "⚡", "name": "Personaje Secundario", "desc": "Tienes momentos memorables y la gente conoce tu nombre. Eres el amigo que todos quieren, el de las frases célebres, pero aún no has desbloqueado tu forma final. ¡Tu episodio de historia de fondo está por llegar!" },
+        "main": { "emoji": "👑", "name": "Protagonista", "desc": "La cámara te sigue a TI. Armadura de trama: activada. Cada sala en la que entras, la energía cambia. Tienes el arco de desarrollo, la banda sonora, y al menos tres personas apoyándote. Solo vibras de protagonista." },
+        "boss": { "emoji": "🔥", "name": "Jefe Final", "desc": "No juegas el juego — TÚ ERES el juego. La realidad se dobla alrededor de tus decisiones. Cuando entras, hasta los protagonistas se vuelven NPCs. Tienes múltiples fases, un tema musical épico, y todos conocen tu nombre." }
+    },
+    "result": {
+        "title": "Tu Resultado",
+        "score": "{score}% Energía de Protagonista",
+        "retake": "Repetir Misión",
+        "npcLabel": "NPC",
+        "bossLabel": "JEFE"
+    },
+    "share": {
+        "title": "Comparte tu Resultado",
+        "text": "¡Saqué \"{tier}\" ({score}%) en el Test NPC! ¿Soy un NPC o el Protagonista? Descúbrelo:",
+        "twitter": "Compartir en X",
+        "copyUrl": "Copiar Enlace",
+        "copied": "¡Copiado!"
+    },
+    "nav": { "back": "Inicio DopaBrain" }
+}
