@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "title": "Test PNJ - Es-tu un PNJ ? | DopaBrain",
+        "description": "Es-tu un PNJ ou le Personnage Principal ? Fais ce quiz pour découvrir où tu te situes sur le spectre PNJ à Boss Final !"
+    },
+    "a11y": { "skip": "Aller au contenu" },
+    "app": {
+        "title": "Test PNJ",
+        "subtitle": "Es-tu un PNJ ou le Personnage Principal ?",
+        "description": "Réponds à 12 questions sur tes habitudes quotidiennes et ton comportement social pour savoir si tu vis en pilote automatique ou si tu écris le scénario.",
+        "start": "Lancer la Quête"
+    },
+    "quiz": {
+        "progress": "{current} / {total}",
+        "question": "Question"
+    },
+    "questions": {
+        "q1": { "text": "Que fais-tu en entrant dans une pièce pleine d'inconnus ?", "a": "Rester contre le mur et observer", "b": "Trouver quelqu'un que je connais et rester avec", "c": "Parler à la personne la plus proche", "d": "Faire une entrée que tout le monde remarque" },
+        "q2": { "text": "Comment tu commandes au restaurant ?", "a": "La même chose à chaque fois", "b": "Ce qu'ils recommandent", "c": "Quelque chose de différent à chaque visite", "d": "Hors menu ou commande personnalisée" },
+        "q3": { "text": "Quel est ton style de marche ?", "a": "Le même chemin exact tous les jours", "b": "Suivre la foule", "c": "Prendre des raccourcis et des chemins alternatifs", "d": "Marcher comme si une bande-son jouait" },
+        "q4": { "text": "Comment tu gères les silences gênants ?", "a": "Attendre que quelqu'un d'autre parle", "b": "Regarder mon téléphone", "c": "Faire la conversation", "d": "Dire un truc random et l'assumer" },
+        "q5": { "text": "C'est quoi ta routine du matin ?", "a": "Exactement la même chose tous les jours", "b": "J'en ai pas vraiment", "c": "Ça change selon mon humeur", "d": "Chaque jour est un nouvel épisode" },
+        "q6": { "text": "Quelqu'un te demande ton avis. Tu dis :", "a": "Ça m'est égal, comme vous voulez", "b": "Je suis d'accord avec la majorité", "c": "Je donne mon avis honnête", "d": "J'ai un TED Talk complet de prêt" },
+        "q7": { "text": "Comment tu réagis quand un truc gênant arrive ?", "a": "Je me fige en espérant que personne n'a vu", "b": "Je fais comme si rien ne s'était passé", "c": "Je rigole de moi-même", "d": "J'en fais une histoire que je raconte à tout le monde" },
+        "q8": { "text": "C'est quoi ton style de messages ?", "a": "Réponses d'un mot : 'ok', 'oui', 'mdr'", "b": "Répondre des heures après avec 'désolé je viens de voir'", "c": "Avoir de vraies conversations", "d": "Vocaux, memes, pavés, le pack complet" },
+        "q9": { "text": "Comment tu choisis quoi regarder ou jouer ?", "a": "Re-regarder le même contenu réconfortant", "b": "Ce qui est tendance", "c": "D'après des recommandations perso", "d": "C'est moi qui lance les tendances" },
+        "q10": { "text": "En soirée, t'es où ?", "a": "En train de caresser le chien dans un coin", "b": "À côté du buffet", "c": "Je passe de groupe en groupe pour parler à tout le monde", "d": "Au centre de la piste à raconter des histoires" },
+        "q11": { "text": "Comment tu prends des décisions ?", "a": "Je laisse les autres décider pour moi", "b": "Je me laisse porter", "c": "Je pèse le pour et le contre", "d": "Je fais confiance à mon instinct direct" },
+        "q12": { "text": "Qu'est-ce que les gens disent de toi ?", "a": "Attends, qui ?", "b": "Il/elle est sympa je suppose", "c": "On s'éclate trop avec lui/elle", "d": "Tout le monde a une anecdote sur lui/elle" }
+    },
+    "tiers": {
+        "npc": { "emoji": "🤖", "name": "PNJ Total", "desc": "Tu te cognes dans les murs, tu répètes les mêmes dialogues et tu suis exactement le même chemin chaque jour. Ta phrase culte c'est '...' et ton animation d'attente c'est fixer le vide. Mais bon, chaque monde a besoin de PNJ — tu fais tourner la simulation !" },
+        "extra": { "emoji": "👻", "name": "Figurant de Fond", "desc": "Tu existes dans la scène mais personne ne se souvient de ton nom. Tu es Villageois #47 — techniquement présent, techniquement vivant, techniquement... là. Tu as le potentiel pour un arc narratif, mais t'es encore sur l'écran de chargement." },
+        "side": { "emoji": "⚡", "name": "Personnage Secondaire", "desc": "T'as des moments mémorables et les gens connaissent ton nom. T'es l'ami que tout le monde adore, celui avec les répliques cultes, mais t'as pas encore débloqué ta forme finale. Ton épisode backstory arrive bientôt !" },
+        "main": { "emoji": "👑", "name": "Personnage Principal", "desc": "La caméra te suit TOI. Armure de scénario : activée. Chaque pièce où tu entres, l'énergie change. T'as l'arc de développement, la bande-son, et au moins trois personnes qui te soutiennent. Que des vibes de protagoniste." },
+        "boss": { "emoji": "🔥", "name": "Boss Final", "desc": "Tu joues pas au jeu — tu ES le jeu. La réalité se plie autour de tes décisions. Quand tu entres, même les personnages principaux deviennent des PNJ. T'as plusieurs phases, un thème musical de tueur, et tout le monde connaît ton nom." }
+    },
+    "result": {
+        "title": "Ton Résultat",
+        "score": "{score}% Énergie de Personnage Principal",
+        "retake": "Refaire la Quête",
+        "npcLabel": "PNJ",
+        "bossLabel": "BOSS"
+    },
+    "share": {
+        "title": "Partage ton Résultat",
+        "text": "J'ai eu « {tier} » ({score}%) au Test PNJ ! Suis-je un PNJ ou le Perso Principal ? Découvre :",
+        "twitter": "Partager sur X",
+        "copyUrl": "Copier le lien",
+        "copied": "Copié !"
+    },
+    "nav": { "back": "Accueil DopaBrain" }
+}

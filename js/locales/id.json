@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "title": "Tes NPC - Apakah Kamu NPC? | DopaBrain",
+        "description": "Kamu NPC atau Karakter Utama? Ikuti kuis ini untuk tahu posisimu di spektrum NPC sampai Boss Akhir!"
+    },
+    "a11y": { "skip": "Langsung ke konten" },
+    "app": {
+        "title": "Tes NPC",
+        "subtitle": "Kamu NPC atau Karakter Utama?",
+        "description": "Jawab 12 pertanyaan tentang kebiasaan sehari-hari dan perilaku sosialmu untuk tahu apakah kamu hidup di mode autopilot atau menulis naskahmu sendiri.",
+        "start": "Mulai Quest"
+    },
+    "quiz": {
+        "progress": "{current} / {total}",
+        "question": "Pertanyaan"
+    },
+    "questions": {
+        "q1": { "text": "Apa yang kamu lakukan saat masuk ruangan penuh orang asing?", "a": "Berdiri di pinggir dan mengamati", "b": "Cari orang yang kukenal dan nempel", "c": "Ngobrol sama orang terdekat", "d": "Masuk dengan gaya yang bikin semua orang noleh" },
+        "q2": { "text": "Gimana cara kamu pesan makanan di restoran?", "a": "Selalu pesan yang sama", "b": "Yang direkomendasikan", "c": "Setiap kali beda", "d": "Yang nggak ada di menu atau custom order" },
+        "q3": { "text": "Gimana gaya jalanmu?", "a": "Setiap hari jalur yang persis sama", "b": "Ikut arus orang", "c": "Ambil jalan pintas dan rute alternatif", "d": "Jalan kayak ada soundtrack-nya" },
+        "q4": { "text": "Gimana kamu menghadapi keheningan yang awkward?", "a": "Nunggu orang lain ngomong duluan", "b": "Cek HP", "c": "Buka obrolan ringan", "d": "Ngomong sesuatu yang random dan own it" },
+        "q5": { "text": "Gimana rutinitas pagimu?", "a": "Persis sama setiap hari", "b": "Nggak punya rutinitas khusus", "c": "Berubah tergantung mood", "d": "Setiap hari episode baru" },
+        "q6": { "text": "Seseorang minta pendapatmu. Kamu bilang:", "a": "Terserah aja, apa aja boleh", "b": "Aku setuju sama mayoritas", "c": "Aku kasih pendapat jujurku", "d": "Aku udah siapin TED Talk lengkap" },
+        "q7": { "text": "Gimana reaksimu kalau terjadi sesuatu yang memalukan?", "a": "Membeku dan berharap nggak ada yang lihat", "b": "Pura-pura nggak terjadi apa-apa", "c": "Ketawa sendiri", "d": "Dijadiin cerita yang diceritain ke semua orang" },
+        "q8": { "text": "Gimana gaya chat-mu?", "a": "Balesan satu kata: 'ok', 'wkwk', 'sip'", "b": "Bales berjam-jam kemudian pake 'sorry baru baca'", "c": "Ikut ngobrol dengan serius", "d": "Voice note, meme, essay panjang, komplit" },
+        "q9": { "text": "Gimana cara kamu pilih mau nonton atau main apa?", "a": "Nonton ulang konten comfort yang sama", "b": "Yang lagi trending", "c": "Berdasarkan rekomendasi orang", "d": "Aku yang bikin tren" },
+        "q10": { "text": "Di pesta, kamu di mana?", "a": "Di pojokan elus-elus anjing", "b": "Berdiri di dekat makanan", "c": "Pindah-pindah grup ngobrol sama semua orang", "d": "Di tengah dance floor ceritain kisah" },
+        "q11": { "text": "Gimana cara kamu ambil keputusan?", "a": "Biarin orang lain yang putusin", "b": "Ngalir aja", "c": "Timbang-timbang plus minusnya", "d": "Langsung percaya insting" },
+        "q12": { "text": "Apa kata orang tentang kamu?", "a": "Tunggu, siapa?", "b": "Orangnya baik sih kayaknya", "c": "Seru banget kalau bareng dia", "d": "Semua orang punya cerita tentang dia" }
+    },
+    "tiers": {
+        "npc": { "emoji": "🤖", "name": "NPC Sejati", "desc": "Kamu nabrak tembok, ngulang dialog yang sama, dan jalan di jalur yang persis sama setiap hari. Catchphrase-mu '...' dan idle animation-mu melamun. Tapi ya sudahlah, setiap dunia butuh NPC — kamu yang bikin simulasi tetap jalan!" },
+        "extra": { "emoji": "👻", "name": "Figuran Latar", "desc": "Kamu ada di scene tapi nggak ada yang ingat namamu. Kamu Penduduk Desa #47 — secara teknis hadir, secara teknis hidup, secara teknis... ada. Kamu punya potensi character arc, tapi masih di loading screen." },
+        "side": { "emoji": "⚡", "name": "Karakter Pendukung", "desc": "Kamu punya momen yang memorable dan orang-orang tahu namamu. Kamu temen yang semua orang sayang, yang punya catchphrase keren, tapi belum unlock final form. Episode backstory-mu sebentar lagi tayang!" },
+        "main": { "emoji": "👑", "name": "Karakter Utama", "desc": "Kamera ngikutin KAMU. Plot armor: aktif. Setiap ruangan yang kamu masuki, energinya berubah. Kamu punya character development arc, soundtrack, dan minimal tiga orang yang nge-root buat kamu. Vibes protagonis doang." },
+        "boss": { "emoji": "🔥", "name": "Boss Akhir", "desc": "Kamu nggak main game — kamu ADALAH game-nya. Realitas melengkung di sekitar keputusanmu. Pas kamu masuk, bahkan karakter utama jadi NPC. Kamu punya multiple phase, theme song yang epic, dan semua orang tahu namamu." }
+    },
+    "result": {
+        "title": "Hasilmu",
+        "score": "{score}% Energi Karakter Utama",
+        "retake": "Ulangi Quest",
+        "npcLabel": "NPC",
+        "bossLabel": "BOSS"
+    },
+    "share": {
+        "title": "Bagikan Hasilmu",
+        "text": "Aku dapat \"{tier}\" ({score}%) di Tes NPC! Aku NPC atau Karakter Utama? Cek yuk:",
+        "twitter": "Bagikan di X",
+        "copyUrl": "Salin Link",
+        "copied": "Tersalin!"
+    },
+    "nav": { "back": "Beranda DopaBrain" }
+}

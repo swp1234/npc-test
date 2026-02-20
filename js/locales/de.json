@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "title": "NPC-Test - Bist du ein NPC? | DopaBrain",
+        "description": "Bist du ein NPC oder der Hauptcharakter? Mach diesen Test und finde heraus, wo du auf der Skala von NPC bis Endboss stehst!"
+    },
+    "a11y": { "skip": "Zum Inhalt springen" },
+    "app": {
+        "title": "NPC-Test",
+        "subtitle": "Bist du ein NPC oder der Hauptcharakter?",
+        "description": "Beantworte 12 Fragen über deine Alltagsgewohnheiten und dein Sozialverhalten und finde heraus, ob du auf Autopilot lebst oder selbst das Drehbuch schreibst.",
+        "start": "Quest starten"
+    },
+    "quiz": {
+        "progress": "{current} / {total}",
+        "question": "Frage"
+    },
+    "questions": {
+        "q1": { "text": "Was machst du, wenn du einen Raum voller Fremder betrittst?", "a": "An der Wand stehen und beobachten", "b": "Jemand Bekanntes suchen und dabeibleiben", "c": "Die nächste Person ansprechen", "d": "Einen Auftritt hinlegen, den alle bemerken" },
+        "q2": { "text": "Wie bestellst du im Restaurant?", "a": "Jedes Mal das Gleiche", "b": "Was empfohlen wird", "c": "Jedes Mal etwas Neues", "d": "Etwas, das nicht auf der Karte steht" },
+        "q3": { "text": "Wie ist dein Gehstil?", "a": "Jeden Tag exakt denselben Weg", "b": "Der Masse folgen", "c": "Abkürzungen und alternative Routen nehmen", "d": "Laufen, als hätte man einen Soundtrack" },
+        "q4": { "text": "Wie gehst du mit peinlicher Stille um?", "a": "Warten, bis jemand anderes redet", "b": "Aufs Handy schauen", "c": "Smalltalk machen", "d": "Etwas Zufälliges sagen und es durchziehen" },
+        "q5": { "text": "Wie sieht deine Morgenroutine aus?", "a": "Jeden Tag exakt das Gleiche", "b": "Hab eigentlich keine", "c": "Ändert sich je nach Stimmung", "d": "Jeder Tag ist eine neue Episode" },
+        "q6": { "text": "Jemand fragt nach deiner Meinung. Du sagst:", "a": "Ist mir egal, wie ihr wollt", "b": "Ich stimme der Mehrheit zu", "c": "Ich sage ehrlich, was ich denke", "d": "Ich hab einen kompletten TED-Talk vorbereitet" },
+        "q7": { "text": "Wie reagierst du bei peinlichen Situationen?", "a": "Erstarren und hoffen, dass es keiner gesehen hat", "b": "So tun, als wäre nichts passiert", "c": "Über mich selbst lachen", "d": "Es in eine Geschichte verwandeln, die ich jedem erzähle" },
+        "q8": { "text": "Wie ist dein Nachrichtenstil?", "a": "Ein-Wort-Antworten: 'ok', 'ja', 'lol'", "b": "Stunden später antworten mit 'sorry, hab's erst jetzt gesehen'", "c": "Richtige Gespräche führen", "d": "Sprachnachrichten, Memes, Aufsätze, das volle Programm" },
+        "q9": { "text": "Wie wählst du aus, was du schaust oder spielst?", "a": "Immer wieder denselben Wohlfühl-Content", "b": "Was gerade trendet", "c": "Basierend auf persönlichen Empfehlungen", "d": "Ich setze die Trends" },
+        "q10": { "text": "Auf einer Party — wo bist du?", "a": "In der Ecke den Hund streicheln", "b": "In der Nähe der Snacks stehen", "c": "Zwischen Gruppen wechseln und mit allen reden", "d": "Mitten auf der Tanzfläche Geschichten erzählen" },
+        "q11": { "text": "Wie triffst du Entscheidungen?", "a": "Andere für mich entscheiden lassen", "b": "Einfach mitschwimmen", "c": "Vor- und Nachteile abwägen", "d": "Sofort meinem Bauchgefühl vertrauen" },
+        "q12": { "text": "Was sagen die Leute über dich?", "a": "Moment, wer?", "b": "Nett, schätz ich", "c": "Richtig lustig, mit denen zusammen zu sein", "d": "Jeder hat eine Geschichte über sie" }
+    },
+    "tiers": {
+        "npc": { "emoji": "🤖", "name": "Voller NPC", "desc": "Du läufst gegen Wände, wiederholst dieselben Dialoge und gehst jeden Tag exakt denselben Weg. Dein Spruch ist '...' und deine Idle-Animation ist ins Leere starren. Aber hey, jede Welt braucht NPCs — du hältst die Simulation am Laufen!" },
+        "extra": { "emoji": "👻", "name": "Hintergrund-Statist", "desc": "Du existierst in der Szene, aber niemand erinnert sich an deinen Namen. Du bist Dorfbewohner #47 — technisch anwesend, technisch am Leben, technisch... da. Du hast das Potenzial für einen Charakter-Arc, aber du bist noch im Ladebildschirm." },
+        "side": { "emoji": "⚡", "name": "Nebencharakter", "desc": "Du hast denkwürdige Momente und die Leute kennen deinen Namen. Du bist der Freund, den alle lieben, der mit den Sprüchen — aber du hast deine finale Form noch nicht freigeschaltet. Deine Backstory-Episode kommt bald!" },
+        "main": { "emoji": "👑", "name": "Hauptcharakter", "desc": "Die Kamera folgt DIR. Plot-Rüstung: aktiviert. Jeder Raum, den du betrittst — die Energie ändert sich. Du hast den Charakter-Entwicklungsbogen, den Soundtrack, und mindestens drei Leute, die für dich mitfiebern. Nur Protagonist-Vibes." },
+        "boss": { "emoji": "🔥", "name": "Endboss", "desc": "Du spielst nicht das Spiel — du BIST das Spiel. Die Realität biegt sich um deine Entscheidungen. Wenn du reinkommst, werden selbst die Hauptcharaktere zu NPCs. Du hast mehrere Phasen, einen epischen Theme-Song, und jeder kennt deinen Namen." }
+    },
+    "result": {
+        "title": "Dein Ergebnis",
+        "score": "{score}% Hauptcharakter-Energie",
+        "retake": "Quest wiederholen",
+        "npcLabel": "NPC",
+        "bossLabel": "BOSS"
+    },
+    "share": {
+        "title": "Ergebnis teilen",
+        "text": "Ich hab \"{tier}\" ({score}%) beim NPC-Test bekommen! Bin ich ein NPC oder der Hauptcharakter? Finde es heraus:",
+        "twitter": "Auf X teilen",
+        "copyUrl": "Link kopieren",
+        "copied": "Kopiert!"
+    },
+    "nav": { "back": "DopaBrain Startseite" }
+}

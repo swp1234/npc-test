@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "title": "NPC Testi - Sen NPC misin? | DopaBrain",
+        "description": "NPC misin yoksa Ana Karakter mi? Bu testi çöz ve NPC'den Son Boss'a kadar nerede olduğunu öğren!"
+    },
+    "a11y": { "skip": "İçeriğe geç" },
+    "app": {
+        "title": "NPC Testi",
+        "subtitle": "NPC misin yoksa Ana Karakter mi?",
+        "description": "Günlük alışkanlıkların ve sosyal davranışların hakkındaki 12 soruyu cevapla ve otopilotta mı yaşadığını yoksa senaryoyu kendin mi yazdığını öğren.",
+        "start": "Göreve Başla"
+    },
+    "quiz": {
+        "progress": "{current} / {total}",
+        "question": "Soru"
+    },
+    "questions": {
+        "q1": { "text": "Yabancılarla dolu bir odaya girdiğinde ne yaparsın?", "a": "Duvara yaslanıp gözlemlerim", "b": "Tanıdık birini bulup yapışırım", "c": "En yakındaki kişiyle sohbet başlatırım", "d": "Herkesin fark edeceği bir giriş yaparım" },
+        "q2": { "text": "Restoranda nasıl sipariş verirsin?", "a": "Her seferinde aynı şeyi", "b": "Tavsiye edileni", "c": "Her seferinde farklı bir şey", "d": "Menüde olmayan bir şeyi özel sipariş" },
+        "q3": { "text": "Yürüyüş tarzın nasıl?", "a": "Her gün birebir aynı yoldan", "b": "Kalabalığı takip ederim", "c": "Kestirmeler ve alternatif rotalar", "d": "Sanki müzik çalıyormuş gibi yürürüm" },
+        "q4": { "text": "Garip bir sessizlik olduğunda ne yaparsın?", "a": "Başka birinin konuşmasını beklerim", "b": "Telefona bakarım", "c": "Havadan sudan konuşurum", "d": "Rastgele bir şey söyler ve sahiplenirim" },
+        "q5": { "text": "Sabah rutinin nasıl?", "a": "Her gün tıpatıp aynı", "b": "Pek bir rutinim yok", "c": "Ruh halime göre değişir", "d": "Her gün yeni bir bölüm" },
+        "q6": { "text": "Biri fikrini soruyor. Sen:", "a": "Fark etmez, siz ne isterseniz", "b": "Çoğunluğa katılırım", "c": "Dürüstçe ne düşündüğümü söylerim", "d": "Hazırda bir TED konuşmam var" },
+        "q7": { "text": "Utanç verici bir şey olduğunda nasıl tepki verirsin?", "a": "Donarım ve kimsenin görmediğini umarım", "b": "Olmamış gibi davranırım", "c": "Kendi kendime gülerim", "d": "Herkese anlattığım bir hikâyeye dönüştürürüm" },
+        "q8": { "text": "Mesajlaşma tarzın nasıl?", "a": "Tek kelimelik yanıtlar: 'ok', 'tmm', 'haha'", "b": "Saatler sonra 'pardon yeni gördüm' diye cevap", "c": "Tam sohbetlere katılırım", "d": "Sesli mesaj, meme, uzun yazılar, tam paket" },
+        "q9": { "text": "Ne izleyeceğini veya oynayacağını nasıl seçersin?", "a": "Hep aynı rahatlatıcı içerikleri tekrar izlerim", "b": "Ne popülerse onu", "c": "Kişisel tavsiyelere göre", "d": "Trendleri ben belirlerim" },
+        "q10": { "text": "Bir partide neredesin?", "a": "Köşede köpeği seviyorum", "b": "Atıştırmalıkların yanında duruyorum", "c": "Gruplar arası dolaşıp herkesle konuşuyorum", "d": "Dans pistinin ortasında hikâye anlatıyorum" },
+        "q11": { "text": "Kararları nasıl alırsın?", "a": "Başkalarının benim yerime karar vermesine izin veririm", "b": "Akışına bırakırım", "c": "Artıları ve eksileri tartarım", "d": "Anında içgüdüme güvenirim" },
+        "q12": { "text": "İnsanlar senin hakkında ne diyor?", "a": "Dur, kim?", "b": "İyi biri galiba", "c": "Yanında olmak çok eğlenceli", "d": "Herkesin onunla ilgili bir hikâyesi var" }
+    },
+    "tiers": {
+        "npc": { "emoji": "🤖", "name": "Tam NPC", "desc": "Duvarlara çarpıyorsun, aynı diyalogları tekrarlıyorsun ve her gün tıpatıp aynı yoldan gidiyorsun. Slogan cümlen '...' ve bekleme animasyonun boşluğa bakmak. Ama olsun, her dünyada NPC'ler lazım — simülasyonu sen çalıştırıyorsun!" },
+        "extra": { "emoji": "👻", "name": "Arka Plan Figüranı", "desc": "Sahnede varsın ama kimse adını hatırlamıyor. Sen Köylü #47'sin — teknik olarak oradasın, teknik olarak hayattasın, teknik olarak... varsın. Karakter gelişimi potansiyelin var ama hâlâ yükleme ekranındasın." },
+        "side": { "emoji": "⚡", "name": "Yan Karakter", "desc": "Unutulmaz anların var ve insanlar adını biliyor. Herkesin sevdiği arkadaşsın, meşhur replikler senin ama henüz son formunu açmadın. Geçmiş hikâyen bölümü yakında geliyor!" },
+        "main": { "emoji": "👑", "name": "Ana Karakter", "desc": "Kamera SENİ takip ediyor. Senaryo zırhı: aktif. Girdiğin her odanın enerjisi değişiyor. Karakter gelişim arkın, film müziğin ve en az üç kişi seni destekliyor. Sadece protagonist enerjisi." },
+        "boss": { "emoji": "🔥", "name": "Son Boss", "desc": "Oyunu oynamıyorsun — oyun SENSİN. Gerçeklik kararlarının etrafında bükülüyor. Sen içeri girdiğinde ana karakterler bile NPC oluyor. Birden fazla fazın, efsane bir tema müziğin var ve herkes adını biliyor." }
+    },
+    "result": {
+        "title": "Sonucun",
+        "score": "%{score} Ana Karakter Enerjisi",
+        "retake": "Tekrar Dene",
+        "npcLabel": "NPC",
+        "bossLabel": "BOSS"
+    },
+    "share": {
+        "title": "Sonucunu Paylaş",
+        "text": "NPC Testinde \"{tier}\" ({score}%) çıktı! NPC miyim yoksa Ana Karakter mi? Öğren:",
+        "twitter": "X'te Paylaş",
+        "copyUrl": "Linki Kopyala",
+        "copied": "Kopyalandı!"
+    },
+    "nav": { "back": "DopaBrain Ana Sayfa" }
+}
