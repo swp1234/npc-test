@@ -1,53 +1,203 @@
 {
-    "meta": {
-        "title": "NPC-Test - Bist du ein NPC? | DopaBrain",
-        "description": "Bist du ein NPC oder der Hauptcharakter? Mach diesen Test und finde heraus, wo du auf der Skala von NPC bis Endboss stehst!"
+  "meta": {
+    "title": "NPC-Test - RPG-Dialogbaum | DopaBrain",
+    "description": "Bist du ein NPC oder der Hauptcharakter? Reagiere auf 10 RPG-Begegnungen und entdecke deine Rolle: von NPC bis Endboss!"
+  },
+  "a11y": { "skipLink": "Zum Inhalt springen" },
+  "intro": {
+    "title": "NPC-Test",
+    "subtitle": "Entdecke deine RPG-Rolle durch Dialog",
+    "start": "Quest starten",
+    "questionCount": "10 Szenen / ~3 Min"
+  },
+  "dialogue": {
+    "continue": "[ Klicken zum Fortfahren ]"
+  },
+  "scenes": {
+    "s1": {
+      "npc": "Dorfweiser",
+      "line": "Reisender, Dunkelheit ist ueber dieses Dorf gefallen. Nur die Mutigen koennen diesen Fluch brechen. Was fuer ein Mensch bist du?",
+      "choices": {
+        "a": "Ich bin nur auf der Durchreise...",
+        "b": "Erzaehl mir mehr darueber.",
+        "c": "Ich bin diese mutige Person!"
+      },
+      "reactions": {
+        "a": "...Noch ein Hintergrund-NPC. Geh zur Seite, der Held kommt noch.",
+        "b": "Interessanter Blick. Ich sehe Potenzial.",
+        "c": "Ha! So viel Selbstvertrauen! Mit diesen Augen, vielleicht..."
+      }
     },
-    "a11y": { "skip": "Zum Inhalt springen" },
-    "app": {
-        "title": "NPC-Test",
-        "subtitle": "Bist du ein NPC oder der Hauptcharakter?",
-        "description": "Beantworte 12 Fragen über deine Alltagsgewohnheiten und dein Sozialverhalten und finde heraus, ob du auf Autopilot lebst oder selbst das Drehbuch schreibst.",
-        "start": "Quest starten"
+    "s2": {
+      "npc": "Der Koenig",
+      "line": "Abenteurer! Das Koenigreich ist in Gefahr. Ein Drache hat die Prinzessin entfuehrt. Was wirst du tun?",
+      "choices": {
+        "a": "Ist das nicht die Aufgabe der Ritter?",
+        "b": "Was ist die Belohnung?",
+        "c": "Ich breche sofort auf, Majestaet!"
+      },
+      "reactions": {
+        "a": "...Stimmt. Wache! Schick den naechsten Abenteurer rein.",
+        "b": "Ein Praktiker. Tausend Goldmuenzen und ein Rittertitel.",
+        "c": "Das ist der Geist! Das Schicksal des Reiches liegt in deinen Haenden!"
+      }
     },
-    "quiz": {
-        "progress": "{current} / {total}",
-        "question": "Frage"
+    "s3": {
+      "npc": "Der Geist",
+      "line": "Hehehe... Du der dieses verfluchte Schloss betreten hat. Du musst mein Raetsel loesen um lebend herauszukommen. Bereit?",
+      "choices": {
+        "a": "Ich wuerde lieber leise gehen.",
+        "b": "Ich liebe Raetsel. Leg los.",
+        "c": "Raetsel? Ich stelle die Fragen. Du bist dran!"
+      },
+      "reactions": {
+        "a": "Langweilig... Die Tuer ist verschlossen. Du kannst nicht raus.",
+        "b": "Gut... Nicht schlecht. Ich sehe Licht in deinen Augen.",
+        "c": "Was?! Du wagst es einen Geist herauszufordern?! ...Du gefaellst mir."
+      }
     },
-    "questions": {
-        "q1": { "text": "Was machst du, wenn du einen Raum voller Fremder betrittst?", "a": "An der Wand stehen und beobachten", "b": "Jemand Bekanntes suchen und dabeibleiben", "c": "Die nächste Person ansprechen", "d": "Einen Auftritt hinlegen, den alle bemerken" },
-        "q2": { "text": "Wie bestellst du im Restaurant?", "a": "Jedes Mal das Gleiche", "b": "Was empfohlen wird", "c": "Jedes Mal etwas Neues", "d": "Etwas, das nicht auf der Karte steht" },
-        "q3": { "text": "Wie ist dein Gehstil?", "a": "Jeden Tag exakt denselben Weg", "b": "Der Masse folgen", "c": "Abkürzungen und alternative Routen nehmen", "d": "Laufen, als hätte man einen Soundtrack" },
-        "q4": { "text": "Wie gehst du mit peinlicher Stille um?", "a": "Warten, bis jemand anderes redet", "b": "Aufs Handy schauen", "c": "Smalltalk machen", "d": "Etwas Zufälliges sagen und es durchziehen" },
-        "q5": { "text": "Wie sieht deine Morgenroutine aus?", "a": "Jeden Tag exakt das Gleiche", "b": "Hab eigentlich keine", "c": "Ändert sich je nach Stimmung", "d": "Jeder Tag ist eine neue Episode" },
-        "q6": { "text": "Jemand fragt nach deiner Meinung. Du sagst:", "a": "Ist mir egal, wie ihr wollt", "b": "Ich stimme der Mehrheit zu", "c": "Ich sage ehrlich, was ich denke", "d": "Ich hab einen kompletten TED-Talk vorbereitet" },
-        "q7": { "text": "Wie reagierst du bei peinlichen Situationen?", "a": "Erstarren und hoffen, dass es keiner gesehen hat", "b": "So tun, als wäre nichts passiert", "c": "Über mich selbst lachen", "d": "Es in eine Geschichte verwandeln, die ich jedem erzähle" },
-        "q8": { "text": "Wie ist dein Nachrichtenstil?", "a": "Ein-Wort-Antworten: 'ok', 'ja', 'lol'", "b": "Stunden später antworten mit 'sorry, hab's erst jetzt gesehen'", "c": "Richtige Gespräche führen", "d": "Sprachnachrichten, Memes, Aufsätze, das volle Programm" },
-        "q9": { "text": "Wie wählst du aus, was du schaust oder spielst?", "a": "Immer wieder denselben Wohlfühl-Content", "b": "Was gerade trendet", "c": "Basierend auf persönlichen Empfehlungen", "d": "Ich setze die Trends" },
-        "q10": { "text": "Auf einer Party — wo bist du?", "a": "In der Ecke den Hund streicheln", "b": "In der Nähe der Snacks stehen", "c": "Zwischen Gruppen wechseln und mit allen reden", "d": "Mitten auf der Tanzfläche Geschichten erzählen" },
-        "q11": { "text": "Wie triffst du Entscheidungen?", "a": "Andere für mich entscheiden lassen", "b": "Einfach mitschwimmen", "c": "Vor- und Nachteile abwägen", "d": "Sofort meinem Bauchgefühl vertrauen" },
-        "q12": { "text": "Was sagen die Leute über dich?", "a": "Moment, wer?", "b": "Nett, schätz ich", "c": "Richtig lustig, mit denen zusammen zu sein", "d": "Jeder hat eine Geschichte über sie" }
+    "s4": {
+      "npc": "Meisterschmied",
+      "line": "Diese Waffe hat 30 Jahre gebraucht. Ich gebe sie nur jemandem wirklich Wuerdigem. Beweise deinen Wert.",
+      "choices": {
+        "a": "Ich glaube nicht dass ich wuerdig bin...",
+        "b": "Ich nehme jede Pruefung an.",
+        "c": "Ich glaube dieses Schwert hat mich bereits gewaehlt."
+      },
+      "reactions": {
+        "a": "...Geh. Das Schwert wartet auf seinen wahren Meister.",
+        "b": "Demut und Willenskraft. Eine gute Kombination.",
+        "c": "Haha! Mit diesem Mut wuerde sogar das Schwert zustimmen!"
+      }
     },
-    "tiers": {
-        "npc": { "emoji": "🤖", "name": "Voller NPC", "desc": "Du läufst gegen Wände, wiederholst dieselben Dialoge und gehst jeden Tag exakt denselben Weg. Dein Spruch ist '...' und deine Idle-Animation ist ins Leere starren. Aber hey, jede Welt braucht NPCs — du hältst die Simulation am Laufen!" },
-        "extra": { "emoji": "👻", "name": "Hintergrund-Statist", "desc": "Du existierst in der Szene, aber niemand erinnert sich an deinen Namen. Du bist Dorfbewohner #47 — technisch anwesend, technisch am Leben, technisch... da. Du hast das Potenzial für einen Charakter-Arc, aber du bist noch im Ladebildschirm." },
-        "side": { "emoji": "⚡", "name": "Nebencharakter", "desc": "Du hast denkwürdige Momente und die Leute kennen deinen Namen. Du bist der Freund, den alle lieben, der mit den Sprüchen — aber du hast deine finale Form noch nicht freigeschaltet. Deine Backstory-Episode kommt bald!" },
-        "main": { "emoji": "👑", "name": "Hauptcharakter", "desc": "Die Kamera folgt DIR. Plot-Rüstung: aktiviert. Jeder Raum, den du betrittst — die Energie ändert sich. Du hast den Charakter-Entwicklungsbogen, den Soundtrack, und mindestens drei Leute, die für dich mitfiebern. Nur Protagonist-Vibes." },
-        "boss": { "emoji": "🔥", "name": "Endboss", "desc": "Du spielst nicht das Spiel — du BIST das Spiel. Die Realität biegt sich um deine Entscheidungen. Wenn du reinkommst, werden selbst die Hauptcharaktere zu NPCs. Du hast mehrere Phasen, einen epischen Theme-Song, und jeder kennt deinen Namen." }
+    "s5": {
+      "npc": "Mystische Katze",
+      "line": "Miau~ Mensch, waehl einen Weg an dieser Gabelung. Links ist sicher aber langweilig. Rechts ist gefaehrlich aber hat einen Schatz.",
+      "choices": {
+        "a": "Ich nehme den sicheren Weg.",
+        "b": "Lass mich nachdenken...",
+        "c": "Natuerlich rechts! Her mit dem Schatz!"
+      },
+      "reactions": {
+        "a": "Sichere Wahl, miau... Aber Abenteurermaterial? Zweifelhaft, miau.",
+        "b": "Ein vorsichtiger Mensch, miau. Nicht schlecht, miau.",
+        "c": "Nyaha! Ein Mutiger, miau! So ein Narr... aeh, Held! Lange her, miau!"
+      }
     },
-    "result": {
-        "title": "Dein Ergebnis",
-        "score": "{score}% Hauptcharakter-Energie",
-        "retake": "Quest wiederholen",
-        "npcLabel": "NPC",
-        "bossLabel": "BOSS"
+    "s6": {
+      "npc": "Antiker Roboter",
+      "line": "Systemfehler... Das Verteidigungssystem ist ausser Kontrolle. Du hast 30 Sekunden. Manuelle Deaktivierung oder Mainframe hacken?",
+      "choices": {
+        "a": "Ich kenne mich mit Maschinen nicht aus...",
+        "b": "Zeig mir die manuelle Deaktivierung.",
+        "c": "Mainframe hacken. Zeig mir den Code!"
+      },
+      "reactions": {
+        "a": "Bestaetigt. Benutzerlevel: Beobachter. Bitte warten.",
+        "b": "Manueller Modus aktiviert. Du bist ein systematischer Problemloeser.",
+        "c": "Warnung: Unerlaubter Zugriff— ...Zugriff gewaehrt?! Beeindruckend, Mensch."
+      }
     },
-    "share": {
-        "title": "Ergebnis teilen",
-        "text": "Ich hab \"{tier}\" ({score}%) beim NPC-Test bekommen! Bin ich ein NPC oder der Hauptcharakter? Finde es heraus:",
-        "twitter": "Auf X teilen",
-        "copyUrl": "Link kopieren",
-        "copied": "Kopiert!"
+    "s7": {
+      "npc": "Waldfee",
+      "line": "Die Blumen verwelken und der Wald stirbt... Ich kann einen Wunsch erfuellen. Was wuerdest du dir wuenschen?",
+      "choices": {
+        "a": "Ich bin unsicher, entscheide du.",
+        "b": "Nutze ihn um den Wald wiederzubeleben.",
+        "c": "Ich habe einen Weg drei Probleme mit einem Wunsch zu loesen!"
+      },
+      "reactions": {
+        "a": "...Sich nicht entscheiden zu koennen ist das Traurigste.",
+        "b": "Was fuer ein warmes Herz. Der Wald wird dankbar sein.",
+        "c": "Oh! Was fuer eine Idee! Du bist wirklich besonders!"
+      }
     },
-    "nav": { "back": "DopaBrain Startseite" }
+    "s8": {
+      "npc": "Dunkler Scherge",
+      "line": "Hehe... Du hast es bis hierher geschafft. Beeindruckend. Aber der Dunkle Lord will verhandeln. Willst du kein leichtes Leben? Schliess dich uns an.",
+      "choices": {
+        "a": "Leichtes Leben? Klingt nicht schlecht...",
+        "b": "Lass mich die Bedingungen hoeren.",
+        "c": "Sag dem Dunklen Lord ich komme persoenlich!"
+      },
+      "reactions": {
+        "a": "Gut gut~ Der Dunkle Lord mag gehorsame Schafe. Hehe.",
+        "b": "Schlau. Aber wer beide Seiten abwaegt wird am Ende Feind von allen.",
+        "c": "Was?! Dieser Verrueckte... Ich muss berichten. Mein Lord, wir haben ein Problem!"
+      }
+    },
+    "s9": {
+      "npc": "Legendaerer Held",
+      "line": "Ich habe einst die Welt gerettet. Aber ich bin alt. Es ist Zeit die Fackel weiterzugeben. Bist du bereit mein Nachfolger zu sein?",
+      "choices": {
+        "a": "Ich glaube nicht dass ich dafuer gemacht bin...",
+        "b": "Ich bin noch unsicher aber ich will lernen.",
+        "c": "Darauf habe ich gewartet, Meister!"
+      },
+      "reactions": {
+        "a": "Demut ist eine Tugend aber zu viel und du verpasst deine Chance. Geh.",
+        "b": "Gut. Der Wille zu lernen, da faengt alles an.",
+        "c": "Ha! Diese Augen... Wie mein juengeres Ich. Bestanden!"
+      }
+    },
+    "s10": {
+      "npc": "Letzter Torwaechter",
+      "line": "Dies ist das letzte Tor. Dein Schicksal wartet dahinter. Aber es gibt kein Zurueck. Wirst du es trotzdem oeffnen?",
+      "choices": {
+        "a": "Lass mich nachdenken und wiederkommen...",
+        "b": "Ich bin bereit. Oeffne es.",
+        "c": "Ein Tor kann mich aufhalten? Zur Seite!"
+      },
+      "reactions": {
+        "a": "Das Tor wartet nicht... Hier endet dein Weg.",
+        "b": "Gut. Ruhige Entschlossenheit... Du bist wuerdig deinem Schicksal zu begegnen.",
+        "c": "Hahaha! Wer kein Tor fuerchtet! Du bist... die Legende!"
+      }
+    }
+  },
+  "tiers": {
+    "npc": {
+      "name": "Voller NPC",
+      "tagline": "Laeuft gegen Waende. Wiederholt denselben Dialog.",
+      "desc": "Alle NPCs haben dich ignoriert. Du hast immer die sicherste Option gewaehlt. Dein Standardspruch ist '...' und du nimmst nicht an der Hauptquest teil. Aber keine Sorge — jede Welt braucht NPCs. Ohne dich waere das Dorf leer!",
+      "traits": ["Sicherheit Zuerst", "Routinemeister", "Beobachter", "Niedrige Energie"]
+    },
+    "extra": {
+      "name": "Hintergrundstatist",
+      "tagline": "In der Szene aber niemand erinnert den Namen.",
+      "desc": "Du existierst in der Szene aber NPCs erinnern sich nicht lange an dich. Dorfbewohner #47 — technisch anwesend, technisch lebendig... technisch da. Charakterentwicklungspotenzial vorhanden aber noch im Ladebildschirm.",
+      "traits": ["Passiver Teilnehmer", "Aufmerksam", "Hat Potenzial", "Vorsichtig"]
+    },
+    "side": {
+      "name": "Nebencharakter",
+      "tagline": "Hat denkwuerdige Szenen.",
+      "desc": "NPCs erinnern sich an dich! Du hast in mehreren Situationen beeindruckende Entscheidungen getroffen und echte Praesenz gezeigt. Noch nicht der Protagonist aber der Nebencharakter den alle lieben. Deine Hintergrundgeschichte kommt bald!",
+      "traits": ["Ausgewogen", "Zuverlaessig", "Wachsend", "Teamplayer"]
+    },
+    "main": {
+      "name": "Hauptcharakter",
+      "tagline": "Die Kamera folgt dir.",
+      "desc": "NPCs waren tief beeindruckt! Plot-Ruestung aktiviert — jedes Gespraech aenderte sich als du eintratest. Charakterentwicklungsbogen, Soundtrack, und mindestens drei NPCs die fuer dich sind.",
+      "traits": ["Entschlossen", "Charismatisch", "Plot-Ruestung", "Anfuehrer"]
+    },
+    "boss": {
+      "name": "Endboss",
+      "tagline": "Spielt nicht das Spiel. IST das Spiel.",
+      "desc": "NPCs zitterten vor dir! Du hast jedes Gespraech dominiert und die Realitaet bog sich um deine Entscheidungen. Mehrere Phasen, epischer Themensong, und alle NPCs kennen deinen Namen. Legendaer!",
+      "traits": ["Ueberwaeltigende Praesenz", "Furchtlos", "Game Changer", "Legende"]
+    }
+  },
+  "result": {
+    "share": "Ergebnis teilen",
+    "retry": "Nochmal spielen",
+    "npcLabel": "NPC",
+    "bossLabel": "BOSS"
+  },
+  "share": {
+    "title": "Ergebnis teilen",
+    "text": "Ich bin \"{type}\" ({score}%) im NPC-Test! Mach den RPG-Dialog-Test:",
+    "copy": "Link kopieren",
+    "copied": "Kopiert!",
+    "copyFail": "Kopieren fehlgeschlagen"
+  }
 }

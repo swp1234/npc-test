@@ -1,53 +1,203 @@
 {
-    "meta": {
-        "title": "Tes NPC - Apakah Kamu NPC? | DopaBrain",
-        "description": "Kamu NPC atau Karakter Utama? Ikuti kuis ini untuk tahu posisimu di spektrum NPC sampai Boss Akhir!"
+  "meta": {
+    "title": "Tes NPC - Dialog RPG | DopaBrain",
+    "description": "Kamu NPC atau Karakter Utama? Reaksi terhadap 10 pertemuan RPG dan temukan peranmu — dari NPC sampai Boss Akhir!"
+  },
+  "a11y": { "skipLink": "Langsung ke konten" },
+  "intro": {
+    "title": "Tes NPC",
+    "subtitle": "Temukan Peran RPG-mu Lewat Dialog",
+    "start": "Mulai Quest",
+    "questionCount": "10 adegan / ~3 menit"
+  },
+  "dialogue": {
+    "continue": "[ Klik untuk lanjut ]"
+  },
+  "scenes": {
+    "s1": {
+      "npc": "Tetua Desa",
+      "line": "Pelancong, kegelapan telah menyelimuti desa ini. Hanya yang berani bisa memecahkan kutukan ini. Kamu orang seperti apa?",
+      "choices": {
+        "a": "Saya cuma lewat...",
+        "b": "Ceritakan lebih lanjut.",
+        "c": "Sayalah orang yang berani itu!"
+      },
+      "reactions": {
+        "a": "...NPC latar belakang lagi. Minggir, pahlawan akan datang.",
+        "b": "Tatapan menarik. Aku lihat potensi.",
+        "c": "Ha! Percaya diri sekali! Dengan mata seperti itu, mungkin..."
+      }
     },
-    "a11y": { "skip": "Langsung ke konten" },
-    "app": {
-        "title": "Tes NPC",
-        "subtitle": "Kamu NPC atau Karakter Utama?",
-        "description": "Jawab 12 pertanyaan tentang kebiasaan sehari-hari dan perilaku sosialmu untuk tahu apakah kamu hidup di mode autopilot atau menulis naskahmu sendiri.",
-        "start": "Mulai Quest"
+    "s2": {
+      "npc": "Raja",
+      "line": "Petualang! Kerajaan dalam bahaya. Naga menculik putri. Apa yang akan kamu lakukan?",
+      "choices": {
+        "a": "Bukankah itu tugas ksatria?",
+        "b": "Apa hadiahnya?",
+        "c": "Saya berangkat sekarang, Yang Mulia!"
+      },
+      "reactions": {
+        "a": "...Benar juga. Penjaga! Panggil petualang berikutnya.",
+        "b": "Yang praktis. Seribu keping emas dan gelar ksatria.",
+        "c": "Itu semangatnya! Nasib kerajaan ada di tanganmu!"
+      }
     },
-    "quiz": {
-        "progress": "{current} / {total}",
-        "question": "Pertanyaan"
+    "s3": {
+      "npc": "Hantu",
+      "line": "He he he... Kamu yang masuk kastil terkutuk ini. Kamu harus menjawab teka-tekiku untuk keluar hidup-hidup. Siap?",
+      "choices": {
+        "a": "Lebih baik pergi diam-diam.",
+        "b": "Aku suka teka-teki. Ayo.",
+        "c": "Teka-teki? Aku yang bertanya. Giliranmu!"
+      },
+      "reactions": {
+        "a": "Membosankan... Pintunya terkunci. Kamu tidak bisa keluar.",
+        "b": "Bagus... Lumayan. Aku lihat cahaya di matamu.",
+        "c": "Apa?! Berani balik teka-teki ke hantu?! ...Aku suka kamu."
+      }
     },
-    "questions": {
-        "q1": { "text": "Apa yang kamu lakukan saat masuk ruangan penuh orang asing?", "a": "Berdiri di pinggir dan mengamati", "b": "Cari orang yang kukenal dan nempel", "c": "Ngobrol sama orang terdekat", "d": "Masuk dengan gaya yang bikin semua orang noleh" },
-        "q2": { "text": "Gimana cara kamu pesan makanan di restoran?", "a": "Selalu pesan yang sama", "b": "Yang direkomendasikan", "c": "Setiap kali beda", "d": "Yang nggak ada di menu atau custom order" },
-        "q3": { "text": "Gimana gaya jalanmu?", "a": "Setiap hari jalur yang persis sama", "b": "Ikut arus orang", "c": "Ambil jalan pintas dan rute alternatif", "d": "Jalan kayak ada soundtrack-nya" },
-        "q4": { "text": "Gimana kamu menghadapi keheningan yang awkward?", "a": "Nunggu orang lain ngomong duluan", "b": "Cek HP", "c": "Buka obrolan ringan", "d": "Ngomong sesuatu yang random dan own it" },
-        "q5": { "text": "Gimana rutinitas pagimu?", "a": "Persis sama setiap hari", "b": "Nggak punya rutinitas khusus", "c": "Berubah tergantung mood", "d": "Setiap hari episode baru" },
-        "q6": { "text": "Seseorang minta pendapatmu. Kamu bilang:", "a": "Terserah aja, apa aja boleh", "b": "Aku setuju sama mayoritas", "c": "Aku kasih pendapat jujurku", "d": "Aku udah siapin TED Talk lengkap" },
-        "q7": { "text": "Gimana reaksimu kalau terjadi sesuatu yang memalukan?", "a": "Membeku dan berharap nggak ada yang lihat", "b": "Pura-pura nggak terjadi apa-apa", "c": "Ketawa sendiri", "d": "Dijadiin cerita yang diceritain ke semua orang" },
-        "q8": { "text": "Gimana gaya chat-mu?", "a": "Balesan satu kata: 'ok', 'wkwk', 'sip'", "b": "Bales berjam-jam kemudian pake 'sorry baru baca'", "c": "Ikut ngobrol dengan serius", "d": "Voice note, meme, essay panjang, komplit" },
-        "q9": { "text": "Gimana cara kamu pilih mau nonton atau main apa?", "a": "Nonton ulang konten comfort yang sama", "b": "Yang lagi trending", "c": "Berdasarkan rekomendasi orang", "d": "Aku yang bikin tren" },
-        "q10": { "text": "Di pesta, kamu di mana?", "a": "Di pojokan elus-elus anjing", "b": "Berdiri di dekat makanan", "c": "Pindah-pindah grup ngobrol sama semua orang", "d": "Di tengah dance floor ceritain kisah" },
-        "q11": { "text": "Gimana cara kamu ambil keputusan?", "a": "Biarin orang lain yang putusin", "b": "Ngalir aja", "c": "Timbang-timbang plus minusnya", "d": "Langsung percaya insting" },
-        "q12": { "text": "Apa kata orang tentang kamu?", "a": "Tunggu, siapa?", "b": "Orangnya baik sih kayaknya", "c": "Seru banget kalau bareng dia", "d": "Semua orang punya cerita tentang dia" }
+    "s4": {
+      "npc": "Pandai Besi Legendaris",
+      "line": "Senjata ini butuh 30 tahun untuk ditempa. Hanya kuberikan pada yang benar-benar layak. Buktikan kelayakanmu.",
+      "choices": {
+        "a": "Aku rasa aku tidak layak...",
+        "b": "Aku terima ujian apapun.",
+        "c": "Kurasa pedang ini sudah memilihku."
+      },
+      "reactions": {
+        "a": "...Pergilah. Pedang menunggu tuannya yang sejati.",
+        "b": "Kerendahan hati dan tekad. Kombinasi yang bagus.",
+        "c": "Haha! Dengan keberanian seperti itu, pedangnya pun akan setuju!"
+      }
     },
-    "tiers": {
-        "npc": { "emoji": "🤖", "name": "NPC Sejati", "desc": "Kamu nabrak tembok, ngulang dialog yang sama, dan jalan di jalur yang persis sama setiap hari. Catchphrase-mu '...' dan idle animation-mu melamun. Tapi ya sudahlah, setiap dunia butuh NPC — kamu yang bikin simulasi tetap jalan!" },
-        "extra": { "emoji": "👻", "name": "Figuran Latar", "desc": "Kamu ada di scene tapi nggak ada yang ingat namamu. Kamu Penduduk Desa #47 — secara teknis hadir, secara teknis hidup, secara teknis... ada. Kamu punya potensi character arc, tapi masih di loading screen." },
-        "side": { "emoji": "⚡", "name": "Karakter Pendukung", "desc": "Kamu punya momen yang memorable dan orang-orang tahu namamu. Kamu temen yang semua orang sayang, yang punya catchphrase keren, tapi belum unlock final form. Episode backstory-mu sebentar lagi tayang!" },
-        "main": { "emoji": "👑", "name": "Karakter Utama", "desc": "Kamera ngikutin KAMU. Plot armor: aktif. Setiap ruangan yang kamu masuki, energinya berubah. Kamu punya character development arc, soundtrack, dan minimal tiga orang yang nge-root buat kamu. Vibes protagonis doang." },
-        "boss": { "emoji": "🔥", "name": "Boss Akhir", "desc": "Kamu nggak main game — kamu ADALAH game-nya. Realitas melengkung di sekitar keputusanmu. Pas kamu masuk, bahkan karakter utama jadi NPC. Kamu punya multiple phase, theme song yang epic, dan semua orang tahu namamu." }
+    "s5": {
+      "npc": "Kucing Mistis",
+      "line": "Meong~ Manusia, pilih satu jalan di persimpangan ini. Kiri aman tapi membosankan. Kanan berbahaya tapi ada harta karun.",
+      "choices": {
+        "a": "Aku pilih jalan aman.",
+        "b": "Biar kupikir dulu...",
+        "c": "Tentu saja kanan! Kasih harta karunnya!"
+      },
+      "reactions": {
+        "a": "Pilihan aman, meong... Tapi bahan petualang? Meragukan, meong.",
+        "b": "Manusia yang hati-hati, meong. Tidak buruk, meong.",
+        "c": "Nyaha! Yang berani, meong! Dasar bodoh... eh, pahlawan! Sudah lama, meong!"
+      }
     },
-    "result": {
-        "title": "Hasilmu",
-        "score": "{score}% Energi Karakter Utama",
-        "retake": "Ulangi Quest",
-        "npcLabel": "NPC",
-        "bossLabel": "BOSS"
+    "s6": {
+      "npc": "Robot Kuno",
+      "line": "Error sistem... Sistem pertahanan fasilitas ini tak terkendali. 30 detik. Nonaktifkan manual atau retas mainframe?",
+      "choices": {
+        "a": "Aku tidak paham mesin...",
+        "b": "Tunjukkan manual nonaktifkan.",
+        "c": "Retas mainframe. Tunjukkan kodenya!"
+      },
+      "reactions": {
+        "a": "Dikonfirmasi. Level pengguna: Pengamat. Silakan tunggu.",
+        "b": "Mode manual diaktifkan. Kamu pemecah masalah yang sistematis.",
+        "c": "Peringatan: Akses tidak sah— ...Akses diberikan?! Mengesankan, manusia."
+      }
     },
-    "share": {
-        "title": "Bagikan Hasilmu",
-        "text": "Aku dapat \"{tier}\" ({score}%) di Tes NPC! Aku NPC atau Karakter Utama? Cek yuk:",
-        "twitter": "Bagikan di X",
-        "copyUrl": "Salin Link",
-        "copied": "Tersalin!"
+    "s7": {
+      "npc": "Peri Hutan",
+      "line": "Bunga-bunga layu dan hutan sedang mati... Aku bisa mengabulkan satu permintaan. Apa yang kamu minta?",
+      "choices": {
+        "a": "Aku tidak yakin, kamu saja yang putuskan.",
+        "b": "Gunakan untuk menghidupkan kembali hutan.",
+        "c": "Aku punya cara selesaikan tiga masalah dengan satu permintaan!"
+      },
+      "reactions": {
+        "a": "...Tidak bisa memutuskan adalah hal paling menyedihkan.",
+        "b": "Hati yang hangat. Hutan akan berterima kasih.",
+        "c": "Astaga! Ide yang brilian! Kamu benar-benar spesial!"
+      }
     },
-    "nav": { "back": "Beranda DopaBrain" }
+    "s8": {
+      "npc": "Anak Buah Kegelapan",
+      "line": "He he... Sampai sini ya. Mengesankan. Tapi Raja Kegelapan mau bernegosiasi. Tidak mau hidup enak? Bergabunglah.",
+      "choices": {
+        "a": "Hidup enak? Kedengarannya tidak buruk...",
+        "b": "Biar kudengar syaratnya dulu.",
+        "c": "Bilang ke Raja Kegelapan, aku datang sendiri!"
+      },
+      "reactions": {
+        "a": "Bagus bagus~ Raja Kegelapan suka domba yang patuh. He he.",
+        "b": "Cerdas. Tapi yang menimbang dua sisi jadi musuh keduanya.",
+        "c": "Apa?! Orang gila ini... Harus lapor. Tuanku, ada masalah!"
+      }
+    },
+    "s9": {
+      "npc": "Pahlawan Legendaris",
+      "line": "Aku pernah menyelamatkan dunia. Tapi sudah tua. Waktunya menyerahkan tongkat estafet. Kamu siap jadi penerusku?",
+      "choices": {
+        "a": "Aku rasa aku tidak mampu...",
+        "b": "Belum yakin, tapi aku ingin belajar.",
+        "c": "Aku sudah menunggu ini, Guru!"
+      },
+      "reactions": {
+        "a": "Kerendahan hati itu baik, tapi berlebihan dan kamu kehilangan kesempatan. Pergilah.",
+        "b": "Bagus. Kemauan belajar, di situlah semuanya dimulai.",
+        "c": "Ha! Mata itu... Seperti melihat diriku muda. Lulus!"
+      }
+    },
+    "s10": {
+      "npc": "Penjaga Terakhir",
+      "line": "Ini gerbang terakhir. Takdirmu menunggu di baliknya. Tapi tidak bisa kembali. Tetap mau membukanya?",
+      "choices": {
+        "a": "Biar kupikir dulu dan kembali...",
+        "b": "Aku siap. Buka.",
+        "c": "Gerbang bisa menghentikanku? Minggir!"
+      },
+      "reactions": {
+        "a": "Gerbang tidak menunggu... Sampai di sini saja jalanmu.",
+        "b": "Bagus. Tekad yang tenang... Kamu layak menghadapi takdirmu.",
+        "c": "Hahaha! Yang tidak takut gerbang! Kamu adalah... legenda!"
+      }
+    }
+  },
+  "tiers": {
+    "npc": {
+      "name": "NPC Total",
+      "tagline": "Nabrak tembok. Mengulang dialog yang sama.",
+      "desc": "Semua NPC mengabaikanmu. Kamu selalu memilih opsi paling aman. Dialog defaultmu adalah '...' dan kamu tidak ikut quest utama. Tapi jangan khawatir — setiap dunia butuh NPC. Tanpamu, desa akan kosong!",
+      "traits": ["Keamanan Utama", "Master Rutinitas", "Pengamat", "Energi Rendah"]
+    },
+    "extra": {
+      "name": "Figuran Latar",
+      "tagline": "Ada di adegan tapi tak ada yang ingat namanya.",
+      "desc": "Kamu ada di adegan, tapi NPC tidak mengingatmu lama. Penduduk desa #47 — secara teknis ada, secara teknis hidup... secara teknis di sana. Punya potensi pengembangan karakter, tapi masih di layar loading.",
+      "traits": ["Peserta Pasif", "Peka Situasi", "Punya Potensi", "Hati-hati"]
+    },
+    "side": {
+      "name": "Karakter Pendukung",
+      "tagline": "Punya adegan yang berkesan.",
+      "desc": "NPC mengingatmu! Kamu membuat pilihan mengesankan di beberapa situasi dan menunjukkan kehadiran nyata. Belum protagonis quest utama, tapi karakter pendukung yang semua orang suka. Episode latar belakangmu segera hadir!",
+      "traits": ["Seimbang", "Bisa Diandalkan", "Berkembang", "Pemain Tim"]
+    },
+    "main": {
+      "name": "Karakter Utama",
+      "tagline": "Kamera mengikutimu.",
+      "desc": "NPC sangat terkesan! Plot armor aktif — setiap percakapan berubah saat kamu masuk. Arc pengembangan karakter, OST, dan setidaknya tiga NPC mendukungmu.",
+      "traits": ["Tegas", "Karismatik", "Plot Armor", "Pemimpin"]
+    },
+    "boss": {
+      "name": "Boss Akhir",
+      "tagline": "Tidak memainkan game. ADALAH game-nya.",
+      "desc": "NPC gemetar di hadapanmu! Kamu mendominasi setiap percakapan, dan realitas membengkok di sekitar keputusanmu. Beberapa fase, lagu tema pembunuh, dan semua NPC tahu namamu. Legendaris!",
+      "traits": ["Kehadiran Luar Biasa", "Tanpa Rasa Takut", "Pengubah Permainan", "Legenda"]
+    }
+  },
+  "result": {
+    "share": "Bagikan Hasil",
+    "retry": "Main Lagi",
+    "npcLabel": "NPC",
+    "bossLabel": "BOSS"
+  },
+  "share": {
+    "title": "Bagikan Hasil",
+    "text": "Aku dapat \"{type}\" ({score}%) di Tes NPC! Coba tes dialog RPG:",
+    "copy": "Salin Link",
+    "copied": "Tersalin!",
+    "copyFail": "Gagal menyalin"
+  }
 }

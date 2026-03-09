@@ -1,53 +1,203 @@
 {
-    "meta": {
-        "title": "Test PNJ - Es-tu un PNJ ? | DopaBrain",
-        "description": "Es-tu un PNJ ou le Personnage Principal ? Fais ce quiz pour découvrir où tu te situes sur le spectre PNJ à Boss Final !"
+  "meta": {
+    "title": "Test PNJ - Arbre de Dialogue RPG | DopaBrain",
+    "description": "Es-tu un PNJ ou le Personnage Principal ? Reagis a 10 rencontres RPG et decouvre ton role : de PNJ a Boss Final !"
+  },
+  "a11y": { "skipLink": "Aller au contenu" },
+  "intro": {
+    "title": "Test PNJ",
+    "subtitle": "Decouvre ton role RPG a travers le dialogue",
+    "start": "Lancer la Quete",
+    "questionCount": "10 scenes / ~3 min"
+  },
+  "dialogue": {
+    "continue": "[ Cliquez pour continuer ]"
+  },
+  "scenes": {
+    "s1": {
+      "npc": "Sage du Village",
+      "line": "Voyageur, les tenebres sont tombees sur ce village. Seuls les braves peuvent briser cette malediction. Quel genre de personne es-tu ?",
+      "choices": {
+        "a": "Je ne fais que passer...",
+        "b": "Dites-m'en plus.",
+        "c": "Je suis cette personne brave !"
+      },
+      "reactions": {
+        "a": "...Encore un PNJ de fond. Ecarte-toi, le heros viendra.",
+        "b": "Regard interessant. Je vois du potentiel.",
+        "c": "Ha ! Quelle confiance ! Avec ces yeux, peut-etre..."
+      }
     },
-    "a11y": { "skip": "Aller au contenu" },
-    "app": {
-        "title": "Test PNJ",
-        "subtitle": "Es-tu un PNJ ou le Personnage Principal ?",
-        "description": "Réponds à 12 questions sur tes habitudes quotidiennes et ton comportement social pour savoir si tu vis en pilote automatique ou si tu écris le scénario.",
-        "start": "Lancer la Quête"
+    "s2": {
+      "npc": "Le Roi",
+      "line": "Aventurier ! Le royaume est en peril. Un dragon a enleve la princesse. Que feras-tu ?",
+      "choices": {
+        "a": "Ce n'est pas le travail des chevaliers ?",
+        "b": "Quelle est la recompense ?",
+        "c": "Je pars immediatement, Majeste !"
+      },
+      "reactions": {
+        "a": "...En effet. Garde ! Faites entrer le prochain aventurier.",
+        "b": "Un pragmatique. Mille pieces d'or et un titre de chevalier.",
+        "c": "Voila l'esprit ! Le destin du royaume est entre tes mains !"
+      }
     },
-    "quiz": {
-        "progress": "{current} / {total}",
-        "question": "Question"
+    "s3": {
+      "npc": "Le Fantome",
+      "line": "He he he... Toi qui es entre dans ce chateau maudit. Tu dois resoudre mon enigme pour sortir vivant. Pret ?",
+      "choices": {
+        "a": "Je prefererais partir discretement.",
+        "b": "J'adore les enigmes. Allez-y.",
+        "c": "Les enigmes ? C'est moi qui pose les questions. A toi !"
+      },
+      "reactions": {
+        "a": "Ennuyeux... La porte est verrouillee. Tu ne peux pas sortir.",
+        "b": "Bien... Pas mal. Je vois de la lumiere dans tes yeux.",
+        "c": "Quoi ?! Tu oses defier un fantome ?! ...Tu me plais."
+      }
     },
-    "questions": {
-        "q1": { "text": "Que fais-tu en entrant dans une pièce pleine d'inconnus ?", "a": "Rester contre le mur et observer", "b": "Trouver quelqu'un que je connais et rester avec", "c": "Parler à la personne la plus proche", "d": "Faire une entrée que tout le monde remarque" },
-        "q2": { "text": "Comment tu commandes au restaurant ?", "a": "La même chose à chaque fois", "b": "Ce qu'ils recommandent", "c": "Quelque chose de différent à chaque visite", "d": "Hors menu ou commande personnalisée" },
-        "q3": { "text": "Quel est ton style de marche ?", "a": "Le même chemin exact tous les jours", "b": "Suivre la foule", "c": "Prendre des raccourcis et des chemins alternatifs", "d": "Marcher comme si une bande-son jouait" },
-        "q4": { "text": "Comment tu gères les silences gênants ?", "a": "Attendre que quelqu'un d'autre parle", "b": "Regarder mon téléphone", "c": "Faire la conversation", "d": "Dire un truc random et l'assumer" },
-        "q5": { "text": "C'est quoi ta routine du matin ?", "a": "Exactement la même chose tous les jours", "b": "J'en ai pas vraiment", "c": "Ça change selon mon humeur", "d": "Chaque jour est un nouvel épisode" },
-        "q6": { "text": "Quelqu'un te demande ton avis. Tu dis :", "a": "Ça m'est égal, comme vous voulez", "b": "Je suis d'accord avec la majorité", "c": "Je donne mon avis honnête", "d": "J'ai un TED Talk complet de prêt" },
-        "q7": { "text": "Comment tu réagis quand un truc gênant arrive ?", "a": "Je me fige en espérant que personne n'a vu", "b": "Je fais comme si rien ne s'était passé", "c": "Je rigole de moi-même", "d": "J'en fais une histoire que je raconte à tout le monde" },
-        "q8": { "text": "C'est quoi ton style de messages ?", "a": "Réponses d'un mot : 'ok', 'oui', 'mdr'", "b": "Répondre des heures après avec 'désolé je viens de voir'", "c": "Avoir de vraies conversations", "d": "Vocaux, memes, pavés, le pack complet" },
-        "q9": { "text": "Comment tu choisis quoi regarder ou jouer ?", "a": "Re-regarder le même contenu réconfortant", "b": "Ce qui est tendance", "c": "D'après des recommandations perso", "d": "C'est moi qui lance les tendances" },
-        "q10": { "text": "En soirée, t'es où ?", "a": "En train de caresser le chien dans un coin", "b": "À côté du buffet", "c": "Je passe de groupe en groupe pour parler à tout le monde", "d": "Au centre de la piste à raconter des histoires" },
-        "q11": { "text": "Comment tu prends des décisions ?", "a": "Je laisse les autres décider pour moi", "b": "Je me laisse porter", "c": "Je pèse le pour et le contre", "d": "Je fais confiance à mon instinct direct" },
-        "q12": { "text": "Qu'est-ce que les gens disent de toi ?", "a": "Attends, qui ?", "b": "Il/elle est sympa je suppose", "c": "On s'éclate trop avec lui/elle", "d": "Tout le monde a une anecdote sur lui/elle" }
+    "s4": {
+      "npc": "Maitre Forgeron",
+      "line": "Cette arme a mis 30 ans a forger. Je ne la donne qu'a quelqu'un de vraiment digne. Prouve ta valeur.",
+      "choices": {
+        "a": "Je ne pense pas etre digne...",
+        "b": "J'accepte n'importe quelle epreuve.",
+        "c": "Je crois que cette epee m'a deja choisi."
+      },
+      "reactions": {
+        "a": "...Pars. L'epee attend son vrai maitre.",
+        "b": "Humilite et volonte. Bonne combinaison.",
+        "c": "Haha ! Avec ce courage, meme l'epee serait d'accord !"
+      }
     },
-    "tiers": {
-        "npc": { "emoji": "🤖", "name": "PNJ Total", "desc": "Tu te cognes dans les murs, tu répètes les mêmes dialogues et tu suis exactement le même chemin chaque jour. Ta phrase culte c'est '...' et ton animation d'attente c'est fixer le vide. Mais bon, chaque monde a besoin de PNJ — tu fais tourner la simulation !" },
-        "extra": { "emoji": "👻", "name": "Figurant de Fond", "desc": "Tu existes dans la scène mais personne ne se souvient de ton nom. Tu es Villageois #47 — techniquement présent, techniquement vivant, techniquement... là. Tu as le potentiel pour un arc narratif, mais t'es encore sur l'écran de chargement." },
-        "side": { "emoji": "⚡", "name": "Personnage Secondaire", "desc": "T'as des moments mémorables et les gens connaissent ton nom. T'es l'ami que tout le monde adore, celui avec les répliques cultes, mais t'as pas encore débloqué ta forme finale. Ton épisode backstory arrive bientôt !" },
-        "main": { "emoji": "👑", "name": "Personnage Principal", "desc": "La caméra te suit TOI. Armure de scénario : activée. Chaque pièce où tu entres, l'énergie change. T'as l'arc de développement, la bande-son, et au moins trois personnes qui te soutiennent. Que des vibes de protagoniste." },
-        "boss": { "emoji": "🔥", "name": "Boss Final", "desc": "Tu joues pas au jeu — tu ES le jeu. La réalité se plie autour de tes décisions. Quand tu entres, même les personnages principaux deviennent des PNJ. T'as plusieurs phases, un thème musical de tueur, et tout le monde connaît ton nom." }
+    "s5": {
+      "npc": "Chat Mystique",
+      "line": "Miaou~ Humain, choisis un chemin a cette fourche. A gauche c'est sur mais ennuyeux. A droite c'est dangereux mais il y a un tresor.",
+      "choices": {
+        "a": "Je prends le chemin sur.",
+        "b": "Laisse-moi reflechir...",
+        "c": "Evidemment a droite ! Donne-moi le tresor !"
+      },
+      "reactions": {
+        "a": "Choix prudent, miaou... Mais materiel d'aventurier ? Douteux, miaou.",
+        "b": "Un humain prudent, miaou. Pas mal, miaou.",
+        "c": "Nyaha ! Un brave, miaou ! Quel idiot... euh, heros ! Ca faisait longtemps, miaou !"
+      }
     },
-    "result": {
-        "title": "Ton Résultat",
-        "score": "{score}% Énergie de Personnage Principal",
-        "retake": "Refaire la Quête",
-        "npcLabel": "PNJ",
-        "bossLabel": "BOSS"
+    "s6": {
+      "npc": "Robot Ancien",
+      "line": "Erreur systeme... Le systeme de defense est hors de controle. Tu as 30 secondes. Desactivation manuelle ou pirater le mainframe ?",
+      "choices": {
+        "a": "Je ne connais pas les machines...",
+        "b": "Montre-moi la desactivation manuelle.",
+        "c": "Pirater le mainframe. Montre-moi le code !"
+      },
+      "reactions": {
+        "a": "Confirme. Niveau utilisateur : Observateur. Veuillez patienter.",
+        "b": "Mode manuel active. Tu es un solutionneur systematique.",
+        "c": "Avertissement : Acces non autorise— ...Acces accorde ?! Impressionnant, humain."
+      }
     },
-    "share": {
-        "title": "Partage ton Résultat",
-        "text": "J'ai eu « {tier} » ({score}%) au Test PNJ ! Suis-je un PNJ ou le Perso Principal ? Découvre :",
-        "twitter": "Partager sur X",
-        "copyUrl": "Copier le lien",
-        "copied": "Copié !"
+    "s7": {
+      "npc": "Fee de la Foret",
+      "line": "Les fleurs fanent et la foret meurt... Je peux exaucer un voeu. Que souhaiterais-tu ?",
+      "choices": {
+        "a": "Je ne sais pas, decidez pour moi.",
+        "b": "Utilisez-le pour ranimer la foret.",
+        "c": "J'ai un moyen de resoudre trois problemes avec un seul voeu !"
+      },
+      "reactions": {
+        "a": "...Ne pas pouvoir decider est la chose la plus triste.",
+        "b": "Quel coeur chaleureux. La foret te sera reconnaissante.",
+        "c": "Oh ! Quelle idee ! Tu es vraiment special !"
+      }
     },
-    "nav": { "back": "Accueil DopaBrain" }
+    "s8": {
+      "npc": "Sbire des Tenebres",
+      "line": "He he... Tu es arrive jusque-la. Impressionnant. Mais le Seigneur des Tenebres veut negocier. Tu ne veux pas une vie facile ? Rejoins-nous.",
+      "choices": {
+        "a": "Vie facile ? Ca ne semble pas mal...",
+        "b": "Laisse-moi entendre les conditions.",
+        "c": "Dis au Seigneur des Tenebres que j'arrive !"
+      },
+      "reactions": {
+        "a": "Bien bien~ Le Seigneur aime les moutons obeissants. He he.",
+        "b": "Malin. Mais celui qui pese les deux cotes finit ennemi de tous.",
+        "c": "Quoi ?! Ce fou... Je dois faire mon rapport. Mon Seigneur, nous avons un probleme !"
+      }
+    },
+    "s9": {
+      "npc": "Heros Legendaire",
+      "line": "J'ai sauve le monde autrefois. Mais je suis vieux maintenant. Il est temps de passer le flambeau. Es-tu pret a etre mon successeur ?",
+      "choices": {
+        "a": "Je ne pense pas etre fait pour ca...",
+        "b": "Je ne suis pas encore sur, mais je veux apprendre.",
+        "c": "J'ai attendu ce moment toute ma vie, Maitre !"
+      },
+      "reactions": {
+        "a": "L'humilite est une vertu, mais trop et tu rates ta chance. Va.",
+        "b": "Bien. La volonte d'apprendre, c'est la que tout commence.",
+        "c": "Ha ! Ces yeux... Comme me voir plus jeune. Reussi !"
+      }
+    },
+    "s10": {
+      "npc": "Gardien Final",
+      "line": "C'est la derniere porte. Ton destin t'attend de l'autre cote. Mais pas de retour possible. Tu l'ouvriras quand meme ?",
+      "choices": {
+        "a": "Laissez-moi reflechir et revenir...",
+        "b": "Je suis pret. Ouvrez-la.",
+        "c": "Une porte peut m'arreter ? Ecartez-vous !"
+      },
+      "reactions": {
+        "a": "La porte n'attend pas... C'est aussi loin que tu iras.",
+        "b": "Bien. Resolution calme... Tu es digne d'affronter ton destin.",
+        "c": "Hahaha ! Celui qui ne craint aucune porte ! Tu es... la legende !"
+      }
+    }
+  },
+  "tiers": {
+    "npc": {
+      "name": "PNJ Total",
+      "tagline": "Se cogne aux murs. Repete le meme dialogue.",
+      "desc": "Tous les PNJ t'ont ignore. Tu as toujours choisi l'option la plus sure. Ta phrase par defaut est '...' et tu ne participes pas a la quete principale. Mais ne t'inquiete pas — chaque monde a besoin de PNJ. Sans toi, le village serait vide !",
+      "traits": ["Securite d'Abord", "Maitre de Routine", "Observateur", "Faible Energie"]
+    },
+    "extra": {
+      "name": "Figurant",
+      "tagline": "Present dans la scene mais personne ne se souvient du nom.",
+      "desc": "Tu existes dans la scene mais les PNJ ne se souviennent pas longtemps de toi. Villageois #47 — techniquement present, techniquement vivant... techniquement la. Tu as du potentiel mais tu es encore sur l'ecran de chargement.",
+      "traits": ["Participant Passif", "Perceptif", "A du Potentiel", "Prudent"]
+    },
+    "side": {
+      "name": "Personnage Secondaire",
+      "tagline": "A des scenes memorables.",
+      "desc": "Les PNJ se souviennent de toi ! Tu as fait des choix impressionnants dans plusieurs situations et montre une vraie presence. Pas encore le protagoniste mais le secondaire que tout le monde adore. Ton episode d'origine arrive bientot !",
+      "traits": ["Equilibre", "Fiable", "En Croissance", "Joueur d'Equipe"]
+    },
+    "main": {
+      "name": "Personnage Principal",
+      "tagline": "La camera te suit.",
+      "desc": "Les PNJ ont ete profondement impressionnes ! Armure de scenario activee — chaque conversation a change quand tu es entre. Arc de developpement, bande-son, et au moins trois PNJ qui te soutiennent.",
+      "traits": ["Determine", "Charismatique", "Armure de Scenario", "Leader"]
+    },
+    "boss": {
+      "name": "Boss Final",
+      "tagline": "Ne joue pas au jeu. EST le jeu.",
+      "desc": "Les PNJ ont tremble devant toi ! Tu as domine chaque conversation et la realite s'est pliee autour de tes decisions. Phases multiples, theme musical epique, et tous les PNJ connaissent ton nom. Legendaire !",
+      "traits": ["Presence Ecrasante", "Sans Peur", "Change la Donne", "Legende"]
+    }
+  },
+  "result": {
+    "share": "Partager le Resultat",
+    "retry": "Rejouer",
+    "npcLabel": "PNJ",
+    "bossLabel": "BOSS"
+  },
+  "share": {
+    "title": "Partager le Resultat",
+    "text": "J'ai obtenu \"{type}\" ({score}%) au Test PNJ ! Fais le test de dialogue RPG :",
+    "copy": "Copier le Lien",
+    "copied": "Copie !",
+    "copyFail": "Echec de la copie"
+  }
 }

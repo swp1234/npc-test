@@ -1,53 +1,203 @@
 {
-    "meta": {
-        "title": "NPC Test - Are You an NPC? | DopaBrain",
-        "description": "Are you an NPC or the Main Character? Take this quiz to find out where you fall on the NPC to Final Boss spectrum!"
+  "meta": {
+    "title": "NPC Test - RPG Dialogue Tree | DopaBrain",
+    "description": "Are you an NPC or the Main Character? React to 10 RPG encounters and discover your role — from NPC to Final Boss!"
+  },
+  "a11y": { "skipLink": "Skip to content" },
+  "intro": {
+    "title": "NPC Test",
+    "subtitle": "Discover Your RPG Role Through Dialogue",
+    "start": "Start Quest",
+    "questionCount": "10 scenes / ~3 min"
+  },
+  "dialogue": {
+    "continue": "[ Click to continue ]"
+  },
+  "scenes": {
+    "s1": {
+      "npc": "Village Sage",
+      "line": "Traveler, darkness has fallen upon this village. Only the brave can break this curse. What kind of person are you?",
+      "choices": {
+        "a": "I'm just passing through...",
+        "b": "Tell me more about this.",
+        "c": "I am that brave person!"
+      },
+      "reactions": {
+        "a": "...Another background NPC. Move aside, the hero will come eventually.",
+        "b": "Interesting look in your eyes. I see potential.",
+        "c": "Ha! Such confidence! With eyes like those, perhaps..."
+      }
     },
-    "a11y": { "skip": "Skip to content" },
-    "app": {
-        "title": "NPC Test",
-        "subtitle": "Are you an NPC or the Main Character?",
-        "description": "Answer 12 questions about your daily habits and social behavior to discover if you're living on autopilot or writing the script.",
-        "start": "Start Quest"
+    "s2": {
+      "npc": "The King",
+      "line": "Adventurer! The kingdom is in peril. A dragon has kidnapped the princess. What will you do?",
+      "choices": {
+        "a": "Isn't that the knights' job?",
+        "b": "What's the reward?",
+        "c": "I'll leave right now, Your Majesty!"
+      },
+      "reactions": {
+        "a": "...Indeed. Guard! Send in the next adventurer.",
+        "b": "A practical one. 1000 gold coins and a knighthood.",
+        "c": "That's the spirit! The kingdom's fate rests on your shoulders!"
+      }
     },
-    "quiz": {
-        "progress": "{current} / {total}",
-        "question": "Question"
+    "s3": {
+      "npc": "The Ghost",
+      "line": "Heh heh heh... You who entered this cursed castle. You must solve my riddle to leave alive. Ready?",
+      "choices": {
+        "a": "I'd rather just quietly leave.",
+        "b": "I love riddles. Bring it on.",
+        "c": "Riddles? I'll be the one asking. Your turn!"
+      },
+      "reactions": {
+        "a": "Boring... The door is locked anyway. You can't leave.",
+        "b": "Good... Not bad. I see light in your eyes.",
+        "c": "What?! You dare reverse-riddle a ghost?! ...I like you."
+      }
     },
-    "questions": {
-        "q1": { "text": "What do you do when you enter a room full of strangers?", "a": "Stand by the wall and observe", "b": "Find someone I know and stick to them", "c": "Start a conversation with the nearest person", "d": "Make an entrance everyone notices" },
-        "q2": { "text": "How do you order food at a restaurant?", "a": "Same thing every time", "b": "What they recommend", "c": "Something different each visit", "d": "Off-menu or custom order" },
-        "q3": { "text": "What's your walking style?", "a": "Walk the exact same path daily", "b": "Follow the crowd", "c": "Take shortcuts and alternate routes", "d": "Walk like there's a soundtrack playing" },
-        "q4": { "text": "How do you handle awkward silences?", "a": "Wait for someone else to talk", "b": "Check my phone", "c": "Make small talk", "d": "Say something random and own it" },
-        "q5": { "text": "What's your morning routine?", "a": "Same exact thing every single day", "b": "I don't really have one", "c": "Changes based on my mood", "d": "Each day is a new episode" },
-        "q6": { "text": "Someone asks for your opinion. You say:", "a": "I don't mind, whatever you want", "b": "I agree with the majority", "c": "I share my honest thoughts", "d": "I have a full TED talk prepared" },
-        "q7": { "text": "How do you react when something embarrassing happens?", "a": "Freeze and hope nobody saw", "b": "Pretend it didn't happen", "c": "Laugh at myself", "d": "Turn it into a story I tell everyone" },
-        "q8": { "text": "What's your texting style?", "a": "One-word replies: 'ok', 'nice', 'lol'", "b": "Reply hours later with 'sorry I just saw this'", "c": "Engage in full conversations", "d": "Voice notes, memes, essays, the whole package" },
-        "q9": { "text": "How do you pick what to watch or play?", "a": "Rewatch the same comfort content", "b": "Whatever's trending", "c": "Based on personal recommendations", "d": "I set the trends" },
-        "q10": { "text": "At a party, where are you?", "a": "Petting the dog in the corner", "b": "Standing near the snacks", "c": "Moving between groups, talking to everyone", "d": "Center of the dance floor telling stories" },
-        "q11": { "text": "How do you make decisions?", "a": "Let others decide for me", "b": "Go with the flow", "c": "Weigh pros and cons", "d": "Trust my gut instantly" },
-        "q12": { "text": "What do people say about you?", "a": "Wait, who?", "b": "They're nice I guess", "c": "They're really fun to be around", "d": "Everyone has a story about them" }
+    "s4": {
+      "npc": "Master Smith",
+      "line": "This weapon took 30 years to forge. I'll only give it to someone truly worthy. Prove yourself.",
+      "choices": {
+        "a": "I don't really think I'm worthy...",
+        "b": "I'll take any test you give me.",
+        "c": "I think this blade already chose me."
+      },
+      "reactions": {
+        "a": "...Leave. The blade awaits its true master.",
+        "b": "Humility and willpower. A fine combination.",
+        "c": "Haha! With guts like that, even the blade would agree!"
+      }
     },
-    "tiers": {
-        "npc": { "emoji": "🤖", "name": "Full NPC", "desc": "You run into walls, repeat the same dialogue, and follow the exact same path every day. Your catchphrase is '...' and your idle animation is staring into space. But hey, every world needs NPCs — you keep the simulation running!" },
-        "extra": { "emoji": "👻", "name": "Background Extra", "desc": "You exist in the scene but nobody remembers your name. You're Villager #47 — technically present, technically alive, technically... there. You have the potential for a character arc, but you're still in the loading screen." },
-        "side": { "emoji": "⚡", "name": "Side Character", "desc": "You've got memorable moments and people know your name. You're the friend everyone loves, the one with the catchphrases, but you haven't unlocked your final form yet. Your backstory episode is coming!" },
-        "main": { "emoji": "👑", "name": "Main Character", "desc": "The camera follows YOU. Plot armor: activated. Every room you enter, the energy shifts. You've got the character development arc, the soundtrack, and at least three people rooting for you. Protagonist vibes only." },
-        "boss": { "emoji": "🔥", "name": "Final Boss", "desc": "You don't just play the game — you ARE the game. Reality bends around your decisions. When you walk in, even the main characters become NPCs. You've got multiple phases, a killer theme song, and everyone knows your name." }
+    "s5": {
+      "npc": "Mystic Cat",
+      "line": "Meow~ Human, pick one at this fork. Left is safe but boring. Right is dangerous but has treasure.",
+      "choices": {
+        "a": "I'll take the safe path.",
+        "b": "Let me think about it...",
+        "c": "Obviously right! Hand over the treasure!"
+      },
+      "reactions": {
+        "a": "A safe choice, meow... But adventurer material? Doubtful, meow.",
+        "b": "A cautious human, meow. Not bad, meow.",
+        "c": "Nyaha! A brave one, meow! Such a fool... er, hero! It's been a while, meow!"
+      }
     },
-    "result": {
-        "title": "Your Result",
-        "score": "{score}% Main Character Energy",
-        "retake": "Retake Quest",
-        "npcLabel": "NPC",
-        "bossLabel": "BOSS"
+    "s6": {
+      "npc": "Ancient Robot",
+      "line": "System error... This facility's defense system has gone haywire. You have 30 seconds. Manual override or hack the mainframe?",
+      "choices": {
+        "a": "I don't really know machines...",
+        "b": "Show me the manual override.",
+        "c": "Hack the mainframe. Show me the code!"
+      },
+      "reactions": {
+        "a": "Confirmed. User clearance: Observer. Please stand by.",
+        "b": "Manual mode activated. You are a systematic problem-solver.",
+        "c": "Warning: Unauthorized access— ...Access granted?! Impressive, human."
+      }
     },
-    "share": {
-        "title": "Share Your Result",
-        "text": "I got \"{tier}\" ({score}%) on the NPC Test! Am I an NPC or the Main Character? Find out:",
-        "twitter": "Share on X",
-        "copyUrl": "Copy Link",
-        "copied": "Copied!"
+    "s7": {
+      "npc": "Forest Fairy",
+      "line": "The flowers are wilting and the forest is dying... I can grant one wish. What would you wish for?",
+      "choices": {
+        "a": "I'm not sure, you decide.",
+        "b": "Use it to revive the forest.",
+        "c": "I have a way to solve three problems with one wish!"
+      },
+      "reactions": {
+        "a": "...Not being able to decide is the saddest thing.",
+        "b": "What a warm heart. The forest will be grateful.",
+        "c": "Oh my! What an idea! You truly are special!"
+      }
     },
-    "nav": { "back": "DopaBrain Home" }
+    "s8": {
+      "npc": "Dark Minion",
+      "line": "Heh heh... You made it this far. Impressive. But the Dark Lord wants to negotiate. Don't you want an easy life? Join us.",
+      "choices": {
+        "a": "Easy life? That doesn't sound bad...",
+        "b": "Let me hear the terms first.",
+        "c": "Tell the Dark Lord I'm coming for him!"
+      },
+      "reactions": {
+        "a": "Good, good~ The Dark Lord loves obedient sheep. Heh heh.",
+        "b": "Clever. But those who weigh both sides end up enemies to all.",
+        "c": "What?! This maniac... I need to report this. My Lord, we have a problem!"
+      }
+    },
+    "s9": {
+      "npc": "Legendary Hero",
+      "line": "I once saved the world. But I'm old now. It's time to pass the torch. Are you ready to be my successor?",
+      "choices": {
+        "a": "I don't think I'm cut out for this...",
+        "b": "I'm not sure yet, but I want to learn.",
+        "c": "I've been waiting for this, Master!"
+      },
+      "reactions": {
+        "a": "Humility is a virtue, but too much and you miss your chance. Go.",
+        "b": "Good. The willingness to learn — that's where it all begins.",
+        "c": "Ha! Those eyes... Like looking at my younger self. You pass!"
+      }
+    },
+    "s10": {
+      "npc": "Final Gatekeeper",
+      "line": "This is the last gate. Your destiny waits beyond. But there's no turning back. Will you still open it?",
+      "choices": {
+        "a": "Let me think and come back...",
+        "b": "I'm ready. Please open it.",
+        "c": "A gate can stop me? Move aside!"
+      },
+      "reactions": {
+        "a": "The gate doesn't wait... This is as far as you go.",
+        "b": "Good. Calm resolve... You are worthy of facing your destiny.",
+        "c": "Hahaha! One who fears no gate! You are... the legend!"
+      }
+    }
+  },
+  "tiers": {
+    "npc": {
+      "name": "Full NPC",
+      "tagline": "Walks into walls. Repeats the same dialogue.",
+      "desc": "Every NPC just passed you by. You always picked the safest dialogue option. Your default line is '...' and you don't get involved in the main quest. But don't worry — every world needs NPCs. Without you, the village would be empty!",
+      "traits": ["Safety First", "Routine Master", "Observer", "Low Energy"]
+    },
+    "extra": {
+      "name": "Background Extra",
+      "tagline": "Present in the scene, but nobody remembers the name.",
+      "desc": "You exist in the scene, but NPCs don't remember you for long. Villager #47 — technically present, technically alive... technically there. You have character growth potential, but you're still on the loading screen.",
+      "traits": ["Passive Participant", "Socially Aware", "Has Potential", "Cautious"]
+    },
+    "side": {
+      "name": "Side Character",
+      "tagline": "Has memorable scenes.",
+      "desc": "NPCs remember you! You made impressive choices in several situations and showed real presence. Not the main quest protagonist yet, but the side character everyone loves. Your backstory episode is coming!",
+      "traits": ["Well-Balanced", "Reliable", "Growing", "Team Player"]
+    },
+    "main": {
+      "name": "Main Character",
+      "tagline": "The camera follows you.",
+      "desc": "NPCs were deeply impressed! Plot armor activated — every conversation shifted when you entered. Character development arc, an OST, and at least three NPCs rooting for you.",
+      "traits": ["Decisive", "Charismatic", "Plot Armor", "Leader"]
+    },
+    "boss": {
+      "name": "Final Boss",
+      "tagline": "Doesn't play the game. IS the game.",
+      "desc": "NPCs trembled before you! You dominated every conversation, and reality bent around your decisions. Multiple phases, a killer theme song, and every NPC knows your name. Legendary!",
+      "traits": ["Overwhelming Presence", "Fearless", "Game Changer", "Legend"]
+    }
+  },
+  "result": {
+    "share": "Share Result",
+    "retry": "Play Again",
+    "npcLabel": "NPC",
+    "bossLabel": "BOSS"
+  },
+  "share": {
+    "title": "Share Your Result",
+    "text": "I got \"{type}\" ({score}%) on the NPC Test! Take the RPG dialogue quiz:",
+    "copy": "Copy Link",
+    "copied": "Copied!",
+    "copyFail": "Copy failed"
+  }
 }

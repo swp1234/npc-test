@@ -1,53 +1,203 @@
 {
-    "meta": {
-        "title": "NPC Testi - Sen NPC misin? | DopaBrain",
-        "description": "NPC misin yoksa Ana Karakter mi? Bu testi çöz ve NPC'den Son Boss'a kadar nerede olduğunu öğren!"
+  "meta": {
+    "title": "NPC Testi - RPG Diyalog | DopaBrain",
+    "description": "NPC misin yoksa Ana Karakter mi? 10 RPG karsilasmaya tepki ver ve rolunu kesfet — NPC'den Son Boss'a!"
+  },
+  "a11y": { "skipLink": "Icerigi atla" },
+  "intro": {
+    "title": "NPC Testi",
+    "subtitle": "Diyalog ile RPG Rolunu Kesfet",
+    "start": "Goreve Basla",
+    "questionCount": "10 sahne / ~3 dk"
+  },
+  "dialogue": {
+    "continue": "[ Devam etmek icin tikla ]"
+  },
+  "scenes": {
+    "s1": {
+      "npc": "Koy Bilgesi",
+      "line": "Gezgin, karanlik bu koye coktu. Yalnizca cesurlar bu laneti kirabilir. Sen nasil bir insansin?",
+      "choices": {
+        "a": "Ben sadece geciyordum...",
+        "b": "Bana daha fazla anlat.",
+        "c": "O cesur kisi benim!"
+      },
+      "reactions": {
+        "a": "...Bir arka plan NPC'si daha. Cekilin, kahraman gelecek.",
+        "b": "Ilginc bir bakis. Potansiyel goruyorum.",
+        "c": "Ha! Ne ozguven! Bu gozlerle, belki..."
+      }
     },
-    "a11y": { "skip": "İçeriğe geç" },
-    "app": {
-        "title": "NPC Testi",
-        "subtitle": "NPC misin yoksa Ana Karakter mi?",
-        "description": "Günlük alışkanlıkların ve sosyal davranışların hakkındaki 12 soruyu cevapla ve otopilotta mı yaşadığını yoksa senaryoyu kendin mi yazdığını öğren.",
-        "start": "Göreve Başla"
+    "s2": {
+      "npc": "Kral",
+      "line": "Maceracı! Krallik tehlikede. Bir ejderha prensesi kacirdi. Ne yapacaksin?",
+      "choices": {
+        "a": "Bu sovalyelerin isi degil mi?",
+        "b": "Odul ne?",
+        "c": "Hemen yola cikiyorum, Majesteleri!"
+      },
+      "reactions": {
+        "a": "...Dogru. Muhafiz! Siradaki maceraci gelsin.",
+        "b": "Pratik dusunuyorsun. Bin altin sikke ve sovalye unvani.",
+        "c": "Iste bu ruh! Kralligin kaderi senin ellerinde!"
+      }
     },
-    "quiz": {
-        "progress": "{current} / {total}",
-        "question": "Soru"
+    "s3": {
+      "npc": "Hayalet",
+      "line": "He he he... Bu lanetli kaleye giren sen. Canli cikmak icin bilmecemi cozmek zorundasin. Hazir misin?",
+      "choices": {
+        "a": "Sessizce cikmayi tercih ederim.",
+        "b": "Bilmeceleri severim. Getir.",
+        "c": "Bilmece mi? Soran ben olurum. Senin siran!"
+      },
+      "reactions": {
+        "a": "Sikici... Kapi kilitli. Cikamazsin.",
+        "b": "Guzel... Fena degil. Gozlerinde isik goruyorum.",
+        "c": "Ne?! Bir hayalete bilmece mi soruyorsun?! ...Senden hoslandim."
+      }
     },
-    "questions": {
-        "q1": { "text": "Yabancılarla dolu bir odaya girdiğinde ne yaparsın?", "a": "Duvara yaslanıp gözlemlerim", "b": "Tanıdık birini bulup yapışırım", "c": "En yakındaki kişiyle sohbet başlatırım", "d": "Herkesin fark edeceği bir giriş yaparım" },
-        "q2": { "text": "Restoranda nasıl sipariş verirsin?", "a": "Her seferinde aynı şeyi", "b": "Tavsiye edileni", "c": "Her seferinde farklı bir şey", "d": "Menüde olmayan bir şeyi özel sipariş" },
-        "q3": { "text": "Yürüyüş tarzın nasıl?", "a": "Her gün birebir aynı yoldan", "b": "Kalabalığı takip ederim", "c": "Kestirmeler ve alternatif rotalar", "d": "Sanki müzik çalıyormuş gibi yürürüm" },
-        "q4": { "text": "Garip bir sessizlik olduğunda ne yaparsın?", "a": "Başka birinin konuşmasını beklerim", "b": "Telefona bakarım", "c": "Havadan sudan konuşurum", "d": "Rastgele bir şey söyler ve sahiplenirim" },
-        "q5": { "text": "Sabah rutinin nasıl?", "a": "Her gün tıpatıp aynı", "b": "Pek bir rutinim yok", "c": "Ruh halime göre değişir", "d": "Her gün yeni bir bölüm" },
-        "q6": { "text": "Biri fikrini soruyor. Sen:", "a": "Fark etmez, siz ne isterseniz", "b": "Çoğunluğa katılırım", "c": "Dürüstçe ne düşündüğümü söylerim", "d": "Hazırda bir TED konuşmam var" },
-        "q7": { "text": "Utanç verici bir şey olduğunda nasıl tepki verirsin?", "a": "Donarım ve kimsenin görmediğini umarım", "b": "Olmamış gibi davranırım", "c": "Kendi kendime gülerim", "d": "Herkese anlattığım bir hikâyeye dönüştürürüm" },
-        "q8": { "text": "Mesajlaşma tarzın nasıl?", "a": "Tek kelimelik yanıtlar: 'ok', 'tmm', 'haha'", "b": "Saatler sonra 'pardon yeni gördüm' diye cevap", "c": "Tam sohbetlere katılırım", "d": "Sesli mesaj, meme, uzun yazılar, tam paket" },
-        "q9": { "text": "Ne izleyeceğini veya oynayacağını nasıl seçersin?", "a": "Hep aynı rahatlatıcı içerikleri tekrar izlerim", "b": "Ne popülerse onu", "c": "Kişisel tavsiyelere göre", "d": "Trendleri ben belirlerim" },
-        "q10": { "text": "Bir partide neredesin?", "a": "Köşede köpeği seviyorum", "b": "Atıştırmalıkların yanında duruyorum", "c": "Gruplar arası dolaşıp herkesle konuşuyorum", "d": "Dans pistinin ortasında hikâye anlatıyorum" },
-        "q11": { "text": "Kararları nasıl alırsın?", "a": "Başkalarının benim yerime karar vermesine izin veririm", "b": "Akışına bırakırım", "c": "Artıları ve eksileri tartarım", "d": "Anında içgüdüme güvenirim" },
-        "q12": { "text": "İnsanlar senin hakkında ne diyor?", "a": "Dur, kim?", "b": "İyi biri galiba", "c": "Yanında olmak çok eğlenceli", "d": "Herkesin onunla ilgili bir hikâyesi var" }
+    "s4": {
+      "npc": "Usta Demirci",
+      "line": "Bu silah 30 yil surdu. Sadece gercekten layik olana veririm. Degerini kanitla.",
+      "choices": {
+        "a": "Layik oldugumu sanmiyorum...",
+        "b": "Her sinavi kabul ederim.",
+        "c": "Bu kilic beni secmis gibi."
+      },
+      "reactions": {
+        "a": "...Git. Kilic gercek sahibini bekliyor.",
+        "b": "Alcikonulluluk ve irade. Iyi bir kombinasyon.",
+        "c": "Haha! Bu cesaretle kilic bile kabul eder!"
+      }
     },
-    "tiers": {
-        "npc": { "emoji": "🤖", "name": "Tam NPC", "desc": "Duvarlara çarpıyorsun, aynı diyalogları tekrarlıyorsun ve her gün tıpatıp aynı yoldan gidiyorsun. Slogan cümlen '...' ve bekleme animasyonun boşluğa bakmak. Ama olsun, her dünyada NPC'ler lazım — simülasyonu sen çalıştırıyorsun!" },
-        "extra": { "emoji": "👻", "name": "Arka Plan Figüranı", "desc": "Sahnede varsın ama kimse adını hatırlamıyor. Sen Köylü #47'sin — teknik olarak oradasın, teknik olarak hayattasın, teknik olarak... varsın. Karakter gelişimi potansiyelin var ama hâlâ yükleme ekranındasın." },
-        "side": { "emoji": "⚡", "name": "Yan Karakter", "desc": "Unutulmaz anların var ve insanlar adını biliyor. Herkesin sevdiği arkadaşsın, meşhur replikler senin ama henüz son formunu açmadın. Geçmiş hikâyen bölümü yakında geliyor!" },
-        "main": { "emoji": "👑", "name": "Ana Karakter", "desc": "Kamera SENİ takip ediyor. Senaryo zırhı: aktif. Girdiğin her odanın enerjisi değişiyor. Karakter gelişim arkın, film müziğin ve en az üç kişi seni destekliyor. Sadece protagonist enerjisi." },
-        "boss": { "emoji": "🔥", "name": "Son Boss", "desc": "Oyunu oynamıyorsun — oyun SENSİN. Gerçeklik kararlarının etrafında bükülüyor. Sen içeri girdiğinde ana karakterler bile NPC oluyor. Birden fazla fazın, efsane bir tema müziğin var ve herkes adını biliyor." }
+    "s5": {
+      "npc": "Mistik Kedi",
+      "line": "Miyav~ Insan, bu cavusakta bir yol sec. Sol guvenli ama sikici. Sag tehlikeli ama hazine var.",
+      "choices": {
+        "a": "Guvenli yolu secerim.",
+        "b": "Dusuneyim...",
+        "c": "Tabii ki sag! Hazineyi ver!"
+      },
+      "reactions": {
+        "a": "Guvenli secim, miyav... Ama maceracı malzemesi? Suphe, miyav.",
+        "b": "Dikkatli bir insan, miyav. Fena degil, miyav.",
+        "c": "Nyaha! Cesur biri, miyav! Bu aptal... yani, kahraman! Cok olmustu, miyav!"
+      }
     },
-    "result": {
-        "title": "Sonucun",
-        "score": "%{score} Ana Karakter Enerjisi",
-        "retake": "Tekrar Dene",
-        "npcLabel": "NPC",
-        "bossLabel": "BOSS"
+    "s6": {
+      "npc": "Antik Robot",
+      "line": "Sistem hatasi... Tesisin savunma sistemi kontrolden cikti. 30 saniye. Manuel devre disi birakma mi yoksa ana bilgisayari hacklemek mi?",
+      "choices": {
+        "a": "Makinelerden anlamam...",
+        "b": "Manuel devre disi birakmayi goster.",
+        "c": "Ana bilgisayari hackle. Kodu goster!"
+      },
+      "reactions": {
+        "a": "Onaylandi. Kullanici seviyesi: Gozlemci. Lutfen bekleyin.",
+        "b": "Manuel mod aktif. Sistematik bir problem cozucusun.",
+        "c": "Uyari: Yetkisiz erisim— ...Erisim verildi?! Etkileyici, insan."
+      }
     },
-    "share": {
-        "title": "Sonucunu Paylaş",
-        "text": "NPC Testinde \"{tier}\" ({score}%) çıktı! NPC miyim yoksa Ana Karakter mi? Öğren:",
-        "twitter": "X'te Paylaş",
-        "copyUrl": "Linki Kopyala",
-        "copied": "Kopyalandı!"
+    "s7": {
+      "npc": "Orman Perisi",
+      "line": "Cicekler soluyor ve orman oluyor... Bir dilek gerceklestirebilirim. Ne dilerdin?",
+      "choices": {
+        "a": "Emin degilim, sen karar ver.",
+        "b": "Ormani canlandirmak icin kullan.",
+        "c": "Bir dilekle uc sorunu cozmenin yolu var!"
+      },
+      "reactions": {
+        "a": "...Karar verememek en uzucu sey.",
+        "b": "Ne sicak bir kalp. Orman minnettar olacak.",
+        "c": "Hay Allah! Ne bir fikir! Sen gercekten ozelsin!"
+      }
     },
-    "nav": { "back": "DopaBrain Ana Sayfa" }
+    "s8": {
+      "npc": "Karanlik Ucak",
+      "line": "He he... Buraya kadar geldin. Etkileyici. Ama Karanlik Lord muzakere istiyor. Rahat bir hayat istemez misin? Bize katil.",
+      "choices": {
+        "a": "Rahat hayat? Kulaga fena gelmiyor...",
+        "b": "Once sartlari duyayim.",
+        "c": "Karanlik Lord'a soyle, ben geliyorum!"
+      },
+      "reactions": {
+        "a": "Guzel guzel~ Karanlik Lord itaatkar koyunlari sever. He he.",
+        "b": "Kurnaz. Ama iki tarafi da tartan herkesin dusmani olur.",
+        "c": "Ne?! Bu deli... Rapor etmeliyim. Efendim, sorunumuz var!"
+      }
+    },
+    "s9": {
+      "npc": "Efsanevi Kahraman",
+      "line": "Bir zamanlar dunyayi kurtardim. Ama artik yasliyim. Mesaleyi devretme zamani geldi. Halefim olmaya hazir misin?",
+      "choices": {
+        "a": "Buna uygun oldugumu sanmiyorum...",
+        "b": "Henuz emin degilim ama ogrenmek istiyorum.",
+        "c": "Bunu bekliyordum, Usta!"
+      },
+      "reactions": {
+        "a": "Alcikonulluluk erdemdir, ama fazlasi firsati kacirtir. Git.",
+        "b": "Guzel. Ogrenme istegi, her sey oradan baslar.",
+        "c": "Ha! O gozler... Genc halimi gormek gibi. Gectin!"
+      }
+    },
+    "s10": {
+      "npc": "Son Kapi Bekccisi",
+      "line": "Bu son kapi. Kaderin oteki tarafta bekliyor. Ama geri donus yok. Yine de acacak misin?",
+      "choices": {
+        "a": "Dusunup geleyim...",
+        "b": "Hazirim. Ac.",
+        "c": "Bir kapi beni durdurabilir mi? Cekil!"
+      },
+      "reactions": {
+        "a": "Kapi beklemez... Yolun buraya kadar.",
+        "b": "Guzel. Sakin kararlilik... Kaderinle yuzlesmeye layiksin.",
+        "c": "Hahaha! Kapidan korkmayanlar! Sen... efsanesin!"
+      }
+    }
+  },
+  "tiers": {
+    "npc": {
+      "name": "Tam NPC",
+      "tagline": "Duvarlara carpar. Ayni diyalogu tekrarlar.",
+      "desc": "Tum NPC'ler seni gormezden geldi. Hep en guvenli secenegi sectin. Varsayilan repligin '...' ve ana goreve katilmiyorsun. Ama merak etme — her dunyada NPC lazim. Sensiz koy bos olurdu!",
+      "traits": ["Guvenlik Oncelikli", "Rutin Ustasi", "Gozlemci", "Dusuk Enerji"]
+    },
+    "extra": {
+      "name": "Arka Plan Figurani",
+      "tagline": "Sahnede var ama kimse adini hatirlamiyor.",
+      "desc": "Sahnede varsin ama NPC'ler seni uzun sure hatirlamiyor. Koylü #47 — teknik olarak mevcut, teknik olarak canli... teknik olarak orada. Karakter gelisim potansiyelin var ama henuz yukleme ekranindasin.",
+      "traits": ["Pasif Katilimci", "Duyarli", "Potansiyeli Var", "Temkinli"]
+    },
+    "side": {
+      "name": "Yan Karakter",
+      "tagline": "Akilda kalan sahneleri var.",
+      "desc": "NPC'ler seni hatirladi! Bircok durumda etkileyici secimler yaptin ve gercek varlik gosterdin. Henuz ana gorev kahramani degilsin ama herkesin sevdigi yan karakter. Gecmis hikaye bolumun yakinda!",
+      "traits": ["Dengeli", "Guvenilir", "Gelisen", "Takim Oyuncusu"]
+    },
+    "main": {
+      "name": "Ana Karakter",
+      "tagline": "Kamera seni takip ediyor.",
+      "desc": "NPC'ler derinden etkilendi! Senaryo zirhı aktif — girdigin her konusma degisti. Karakter gelisim arki, film muzigi ve en az uc NPC seni destekliyor.",
+      "traits": ["Kararli", "Karizmatik", "Senaryo Zirhı", "Lider"]
+    },
+    "boss": {
+      "name": "Son Boss",
+      "tagline": "Oyunu oynamaz. Oyunun KENDISIDIR.",
+      "desc": "NPC'ler onunde titredi! Her konusmayi domine ettin ve gerceklik kararlarin etrafinda bukuldu. Birden fazla faz, oldurucu tema muzigi ve tum NPC'ler adini biliyor. Efsanevi!",
+      "traits": ["Ezici Varlik", "Korkusuz", "Oyun Degistirici", "Efsane"]
+    }
+  },
+  "result": {
+    "share": "Sonucu Paylas",
+    "retry": "Tekrar Oyna",
+    "npcLabel": "NPC",
+    "bossLabel": "BOSS"
+  },
+  "share": {
+    "title": "Sonucu Paylas",
+    "text": "NPC Testinde \"{type}\" ({score}%) aldim! RPG diyalog testini yap:",
+    "copy": "Linki Kopyala",
+    "copied": "Kopyalandi!",
+    "copyFail": "Kopyalama basarisiz"
+  }
 }

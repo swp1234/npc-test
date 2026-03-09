@@ -1,53 +1,203 @@
 {
-    "meta": {
-        "title": "Teste NPC - Você é um NPC? | DopaBrain",
-        "description": "Você é um NPC ou o Protagonista? Faça este teste para descobrir onde você está no espectro de NPC a Chefe Final!"
+  "meta": {
+    "title": "Teste NPC - Dialogo RPG | DopaBrain",
+    "description": "Voce e NPC ou Protagonista? Reaja a 10 encontros RPG e descubra seu papel: de NPC a Chefe Final!"
+  },
+  "a11y": { "skipLink": "Pular para o conteudo" },
+  "intro": {
+    "title": "Teste NPC",
+    "subtitle": "Descubra seu papel RPG atraves do dialogo",
+    "start": "Iniciar Missao",
+    "questionCount": "10 cenas / ~3 min"
+  },
+  "dialogue": {
+    "continue": "[ Clique para continuar ]"
+  },
+  "scenes": {
+    "s1": {
+      "npc": "Sabio da Vila",
+      "line": "Viajante, a escuridao caiu sobre esta vila. Apenas os corajosos podem quebrar esta maldicao. Que tipo de pessoa voce e?",
+      "choices": {
+        "a": "Estou so de passagem...",
+        "b": "Me conte mais sobre isso.",
+        "c": "Eu sou essa pessoa corajosa!"
+      },
+      "reactions": {
+        "a": "...Mais um NPC de fundo. Saia do caminho, o heroi vira.",
+        "b": "Olhar interessante. Vejo potencial.",
+        "c": "Ha! Que confianca! Com esses olhos, talvez..."
+      }
     },
-    "a11y": { "skip": "Pular para o conteúdo" },
-    "app": {
-        "title": "Teste NPC",
-        "subtitle": "Você é um NPC ou o Protagonista?",
-        "description": "Responda 12 perguntas sobre seus hábitos diários e comportamento social para descobrir se você vive no piloto automático ou escreve o próprio roteiro.",
-        "start": "Iniciar Missão"
+    "s2": {
+      "npc": "O Rei",
+      "line": "Aventureiro! O reino esta em perigo. Um dragao sequestrou a princesa. O que voce fara?",
+      "choices": {
+        "a": "Isso nao e trabalho dos cavaleiros?",
+        "b": "Qual e a recompensa?",
+        "c": "Parto agora mesmo, Majestade!"
+      },
+      "reactions": {
+        "a": "...De fato. Guarda! Traga o proximo aventureiro.",
+        "b": "Um pratico. Mil moedas de ouro e titulo de cavaleiro.",
+        "c": "Esse e o espirito! O destino do reino esta em suas maos!"
+      }
     },
-    "quiz": {
-        "progress": "{current} / {total}",
-        "question": "Pergunta"
+    "s3": {
+      "npc": "O Fantasma",
+      "line": "He he he... Voce que entrou neste castelo amaldicoado. Deve resolver minha charada para sair vivo. Pronto?",
+      "choices": {
+        "a": "Prefiro sair quieto.",
+        "b": "Adoro charadas. Manda ver.",
+        "c": "Charadas? Eu faco as perguntas. Sua vez!"
+      },
+      "reactions": {
+        "a": "Chato... A porta esta trancada. Voce nao pode sair.",
+        "b": "Bom... Nada mal. Vejo luz nos seus olhos.",
+        "c": "O que?! Ousar desafiar um fantasma?! ...Gostei de voce."
+      }
     },
-    "questions": {
-        "q1": { "text": "O que você faz quando entra num lugar cheio de desconhecidos?", "a": "Fico encostado na parede observando", "b": "Procuro alguém conhecido e grudo nele", "c": "Puxo papo com a pessoa mais próxima", "d": "Faço uma entrada que todo mundo nota" },
-        "q2": { "text": "Como você pede num restaurante?", "a": "Sempre a mesma coisa", "b": "O que recomendam", "c": "Algo diferente a cada vez", "d": "Fora do cardápio ou personalizado" },
-        "q3": { "text": "Qual é seu estilo de caminhar?", "a": "Mesmo caminho todo dia", "b": "Sigo o fluxo de pessoas", "c": "Pego atalhos e rotas alternativas", "d": "Ando como se tivesse uma trilha sonora tocando" },
-        "q4": { "text": "Como você lida com silêncios constrangedores?", "a": "Espero alguém falar", "b": "Mexo no celular", "c": "Puxo algum assunto", "d": "Falo algo aleatório e assumo" },
-        "q5": { "text": "Qual é sua rotina matinal?", "a": "Exatamente a mesma coisa todo dia", "b": "Não tenho uma de verdade", "c": "Muda conforme meu humor", "d": "Cada dia é um episódio novo" },
-        "q6": { "text": "Alguém pede sua opinião. Você diz:", "a": "Tanto faz, pode ser o que vocês quiserem", "b": "Concordo com a maioria", "c": "Falo o que realmente penso", "d": "Tenho uma palestra TED preparada" },
-        "q7": { "text": "Como você reage quando acontece algo constrangedor?", "a": "Congelo e torço pra ninguém ter visto", "b": "Finjo que não aconteceu", "c": "Rio de mim mesmo", "d": "Transformo numa história que conto pra todo mundo" },
-        "q8": { "text": "Qual é seu estilo de mensagem?", "a": "Respostas de uma palavra: 'ok', 'blz', 'kk'", "b": "Respondo horas depois com 'desculpa, acabei de ver'", "c": "Participo de conversas inteiras", "d": "Áudios, memes, textão, o pacote completo" },
-        "q9": { "text": "Como você escolhe o que assistir ou jogar?", "a": "Revejo o mesmo conteúdo conforto", "b": "O que tiver em alta", "c": "Baseado em recomendações de amigos", "d": "Eu dito as tendências" },
-        "q10": { "text": "Numa festa, onde você está?", "a": "Fazendo carinho no cachorro no canto", "b": "Perto da mesa de comida", "c": "Circulando entre os grupos, falando com todo mundo", "d": "No centro da pista contando histórias" },
-        "q11": { "text": "Como você toma decisões?", "a": "Deixo os outros decidirem por mim", "b": "Vou na onda", "c": "Peso prós e contras", "d": "Confio no meu instinto na hora" },
-        "q12": { "text": "O que as pessoas falam de você?", "a": "Pera, quem?", "b": "Que sou gente boa, acho", "c": "Que sou muito divertido/a", "d": "Todo mundo tem uma história sobre mim" }
+    "s4": {
+      "npc": "Mestre Ferreiro",
+      "line": "Esta arma levou 30 anos para ser forjada. So a entrego a alguem verdadeiramente digno. Prove seu valor.",
+      "choices": {
+        "a": "Nao acho que sou digno...",
+        "b": "Aceito qualquer prova.",
+        "c": "Acho que esta espada ja me escolheu."
+      },
+      "reactions": {
+        "a": "...Va embora. A espada aguarda seu verdadeiro mestre.",
+        "b": "Humildade e vontade. Boa combinacao.",
+        "c": "Haha! Com essa coragem, ate a espada concordaria!"
+      }
     },
-    "tiers": {
-        "npc": { "emoji": "🤖", "name": "NPC Completo", "desc": "Você bate nas paredes, repete os mesmos diálogos e segue exatamente o mesmo caminho todo dia. Sua frase icônica é '...' e sua animação parada é ficar olhando pro nada. Mas ei, todo mundo precisa de NPCs — você mantém a simulação rodando!" },
-        "extra": { "emoji": "👻", "name": "Figurante", "desc": "Você existe na cena mas ninguém lembra seu nome. Você é o Aldeão #47 — tecnicamente presente, tecnicamente vivo, tecnicamente... lá. Você tem potencial pra um arco de personagem, mas ainda tá na tela de carregamento." },
-        "side": { "emoji": "⚡", "name": "Coadjuvante", "desc": "Você tem momentos memoráveis e as pessoas sabem seu nome. É o amigo que todo mundo ama, o das frases marcantes, mas ainda não desbloqueou sua forma final. Seu episódio de backstory tá chegando!" },
-        "main": { "emoji": "👑", "name": "Protagonista", "desc": "A câmera segue VOCÊ. Armadura de trama: ativada. Cada sala que você entra, a energia muda. Você tem o arco de desenvolvimento, a trilha sonora, e pelo menos três pessoas torcendo por você. Só vibe de protagonista." },
-        "boss": { "emoji": "🔥", "name": "Chefe Final", "desc": "Você não joga o jogo — você É o jogo. A realidade se curva ao redor das suas decisões. Quando você entra, até os protagonistas viram NPCs. Você tem múltiplas fases, uma música tema épica, e todo mundo sabe seu nome." }
+    "s5": {
+      "npc": "Gato Mistico",
+      "line": "Miau~ Humano, escolha um caminho nesta bifurcacao. A esquerda e segura mas tediosa. A direita e perigosa mas tem tesouro.",
+      "choices": {
+        "a": "Vou pelo caminho seguro.",
+        "b": "Deixa eu pensar...",
+        "c": "Obvio que a direita! Me da o tesouro!"
+      },
+      "reactions": {
+        "a": "Escolha segura, miau... Mas material de aventureiro? Duvidoso, miau.",
+        "b": "Um humano cauteloso, miau. Nao e ruim, miau.",
+        "c": "Nyaha! Um corajoso, miau! Que tolo... quer dizer, heroi! Fazia tempo, miau!"
+      }
     },
-    "result": {
-        "title": "Seu Resultado",
-        "score": "{score}% Energia de Protagonista",
-        "retake": "Refazer Missão",
-        "npcLabel": "NPC",
-        "bossLabel": "CHEFE"
+    "s6": {
+      "npc": "Robo Antigo",
+      "line": "Erro de sistema... O sistema de defesa saiu de controle. Voce tem 30 segundos. Desativacao manual ou hackear o mainframe?",
+      "choices": {
+        "a": "Nao entendo muito de maquinas...",
+        "b": "Me mostre o manual de desativacao.",
+        "c": "Hackear o mainframe. Me mostre o codigo!"
+      },
+      "reactions": {
+        "a": "Confirmado. Nivel do usuario: Observador. Aguarde.",
+        "b": "Modo manual ativado. Voce e um solucionador sistematico.",
+        "c": "Aviso: Acesso nao autorizado— ...Acesso concedido?! Impressionante, humano."
+      }
     },
-    "share": {
-        "title": "Compartilhe seu Resultado",
-        "text": "Tirei \"{tier}\" ({score}%) no Teste NPC! Sou um NPC ou o Protagonista? Descubra:",
-        "twitter": "Compartilhar no X",
-        "copyUrl": "Copiar Link",
-        "copied": "Copiado!"
+    "s7": {
+      "npc": "Fada da Floresta",
+      "line": "As flores estao murchando e a floresta esta morrendo... Posso realizar um desejo. O que voce desejaria?",
+      "choices": {
+        "a": "Nao tenho certeza, voce decide.",
+        "b": "Use para reviver a floresta.",
+        "c": "Tenho como resolver tres problemas com um desejo!"
+      },
+      "reactions": {
+        "a": "...Nao conseguir decidir e a coisa mais triste.",
+        "b": "Que coracao quente. A floresta sera grata.",
+        "c": "Oh! Que ideia! Voce e realmente especial!"
+      }
     },
-    "nav": { "back": "Início DopaBrain" }
+    "s8": {
+      "npc": "Lacaio das Trevas",
+      "line": "He he... Chegou ate aqui. Impressionante. Mas o Senhor das Trevas quer negociar. Nao quer uma vida facil? Junte-se a nos.",
+      "choices": {
+        "a": "Vida facil? Nao parece ruim...",
+        "b": "Deixe-me ouvir os termos.",
+        "c": "Diga ao Senhor das Trevas que estou indo atras dele!"
+      },
+      "reactions": {
+        "a": "Bom, bom~ O Senhor das Trevas gosta de ovelhas obedientes. He he.",
+        "b": "Esperto. Mas quem pesa os dois lados acaba inimigo de todos.",
+        "c": "O que?! Esse maluco... Preciso reportar. Meu Senhor, temos um problema!"
+      }
+    },
+    "s9": {
+      "npc": "Heroi Lendario",
+      "line": "Um dia salvei o mundo. Mas estou velho. E hora de passar o bastao. Voce esta pronto para ser meu sucessor?",
+      "choices": {
+        "a": "Acho que nao estou preparado...",
+        "b": "Ainda nao sei, mas quero aprender.",
+        "c": "Esperei a vida toda por isso, Mestre!"
+      },
+      "reactions": {
+        "a": "Humildade e virtude, mas em excesso voce perde a chance. Va.",
+        "b": "Bom. A vontade de aprender, e ai que tudo comeca.",
+        "c": "Ha! Esses olhos... Como ver meu eu mais jovem. Aprovado!"
+      }
+    },
+    "s10": {
+      "npc": "Guardiao Final",
+      "line": "Este e o ultimo portao. Seu destino espera do outro lado. Mas nao ha volta. Ainda assim vai abrir?",
+      "choices": {
+        "a": "Deixa eu pensar e voltar...",
+        "b": "Estou pronto. Abra.",
+        "c": "Um portao pode me parar? Saia da frente!"
+      },
+      "reactions": {
+        "a": "O portao nao espera... Seu caminho termina aqui.",
+        "b": "Bom. Resolucao calma... Voce e digno de encarar seu destino.",
+        "c": "Hahaha! Quem nao teme portao nenhum! Voce e... a lenda!"
+      }
+    }
+  },
+  "tiers": {
+    "npc": {
+      "name": "NPC Total",
+      "tagline": "Bate nas paredes. Repete o mesmo dialogo.",
+      "desc": "Todos os NPCs te ignoraram. Voce sempre escolheu a opcao mais segura. Sua fala padrao e '...' e voce nao participa da missao principal. Mas nao se preocupe — todo mundo precisa de NPCs. Sem voce, a vila ficaria vazia!",
+      "traits": ["Seguranca Primeiro", "Mestre da Rotina", "Observador", "Baixa Energia"]
+    },
+    "extra": {
+      "name": "Figurante",
+      "tagline": "Presente na cena mas ninguem lembra o nome.",
+      "desc": "Voce existe na cena, mas os NPCs nao te lembram por muito tempo. Aldeao #47 — tecnicamente presente, tecnicamente vivo... tecnicamente la. Tem potencial de desenvolvimento, mas ainda esta na tela de carregamento.",
+      "traits": ["Participante Passivo", "Perceptivo", "Tem Potencial", "Cauteloso"]
+    },
+    "side": {
+      "name": "Personagem Secundario",
+      "tagline": "Tem cenas memoraveis.",
+      "desc": "Os NPCs lembram de voce! Fez escolhas impressionantes em varias situacoes e mostrou presenca real. Ainda nao e o protagonista, mas e o coadjuvante que todos amam. Seu episodio de origem vem em breve!",
+      "traits": ["Equilibrado", "Confiavel", "Em Crescimento", "Jogador de Equipe"]
+    },
+    "main": {
+      "name": "Protagonista",
+      "tagline": "A camera te segue.",
+      "desc": "Os NPCs ficaram impressionados! Armadura de enredo ativada: cada conversa mudou quando voce entrou. Arco de desenvolvimento, trilha sonora, e pelo menos tres NPCs torcendo por voce.",
+      "traits": ["Decidido", "Carismatico", "Armadura de Enredo", "Lider"]
+    },
+    "boss": {
+      "name": "Chefe Final",
+      "tagline": "Nao joga o jogo. E o jogo.",
+      "desc": "Os NPCs tremeram diante de voce! Dominou cada conversa e a realidade se curvou ao seu redor. Multiplas fases, tema musical epico, e todos os NPCs sabem seu nome. Lendario!",
+      "traits": ["Presenca Avassaladora", "Sem Medo", "Muda o Jogo", "Lenda"]
+    }
+  },
+  "result": {
+    "share": "Compartilhar Resultado",
+    "retry": "Jogar Novamente",
+    "npcLabel": "NPC",
+    "bossLabel": "BOSS"
+  },
+  "share": {
+    "title": "Compartilhar Resultado",
+    "text": "Tirei \"{type}\" ({score}%) no Teste NPC! Faca o teste de dialogo RPG:",
+    "copy": "Copiar Link",
+    "copied": "Copiado!",
+    "copyFail": "Erro ao copiar"
+  }
 }
