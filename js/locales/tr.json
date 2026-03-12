@@ -199,5 +199,8 @@
     "copy": "Linki Kopyala",
     "copied": "Kopyalandi!",
     "copyFail": "Kopyalama basarisiz"
+  },
+  "game": {
+    "scene": "SAHNE"
   }
 }

@@ -199,5 +199,8 @@
     "copy": "Copiar Enlace",
     "copied": "Copiado!",
     "copyFail": "Error al copiar"
+  },
+  "game": {
+    "scene": "ESCENA"
   }
 }

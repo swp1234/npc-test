@@ -173,7 +173,7 @@
     // Update progress
     var pct = (currentScene / TOTAL_SCENES) * 100;
     sceneProgressFill.style.width = pct + '%';
-    sceneLabel.textContent = 'SCENE ' + (currentScene + 1) + '/' + TOTAL_SCENES;
+    sceneLabel.textContent = (window.i18n?.t('game.scene') || 'SCENE') + ' ' + (currentScene + 1) + '/' + TOTAL_SCENES;
 
     // Set NPC portrait
     npcEmoji.textContent = NPC_EMOJIS[currentScene];
