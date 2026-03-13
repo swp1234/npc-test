@@ -191,7 +191,15 @@
     "share": "Bagikan Hasil",
     "retry": "Main Lagi",
     "npcLabel": "NPC",
-    "bossLabel": "BOSS"
+    "bossLabel": "BOSS",
+    "moreTests": "Coba Tes Lainnya",
+    "percentileStat": "Hanya <strong>{percent}%</strong> pemain yang mendapat peran RPG yang sama"
+  },
+  "related": {
+    "brainrotScore": "Brainrot Score",
+    "rizzScore": "Rizz Score",
+    "deluluScore": "Delulu Score",
+    "villainType": "Tipe Villain"
   },
   "share": {
     "title": "Bagikan Hasil",

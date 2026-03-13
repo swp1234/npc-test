@@ -191,7 +191,15 @@
     "share": "Compartilhar Resultado",
     "retry": "Jogar Novamente",
     "npcLabel": "NPC",
-    "bossLabel": "BOSS"
+    "bossLabel": "BOSS",
+    "moreTests": "Explore Mais Testes",
+    "percentileStat": "Apenas <strong>{percent}%</strong> dos jogadores obtiveram o mesmo papel RPG"
+  },
+  "related": {
+    "brainrotScore": "Brainrot Score",
+    "rizzScore": "Rizz Score",
+    "deluluScore": "Delulu Score",
+    "villainType": "Tipo de Vilao"
   },
   "share": {
     "title": "Compartilhar Resultado",

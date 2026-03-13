@@ -191,7 +191,15 @@
     "share": "결과 공유하기",
     "retry": "다시 플레이",
     "npcLabel": "NPC",
-    "bossLabel": "BOSS"
+    "bossLabel": "BOSS",
+    "moreTests": "다른 테스트도 해보세요",
+    "percentileStat": "참가자 중 <strong>{percent}%</strong>만 같은 RPG 역할을 받았어요"
+  },
+  "related": {
+    "brainrotScore": "브레인롯 점수",
+    "rizzScore": "리즈 점수",
+    "deluluScore": "델루루 점수",
+    "villainType": "빌런 유형"
   },
   "share": {
     "title": "결과 공유하기",

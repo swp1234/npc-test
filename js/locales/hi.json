@@ -191,7 +191,15 @@
     "share": "रिज़ल्ट शेयर करो",
     "retry": "फिर से खेलो",
     "npcLabel": "NPC",
-    "bossLabel": "BOSS"
+    "bossLabel": "BOSS",
+    "moreTests": "और टेस्ट करो",
+    "percentileStat": "सिर्फ <strong>{percent}%</strong> खिलाड़ियों को यही RPG रोल मिला"
+  },
+  "related": {
+    "brainrotScore": "ब्रेनरॉट स्कोर",
+    "rizzScore": "रिज़ स्कोर",
+    "deluluScore": "डेलुलु स्कोर",
+    "villainType": "विलन टाइप"
   },
   "share": {
     "title": "रिज़ल्ट शेयर करो",

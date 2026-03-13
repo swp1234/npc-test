@@ -191,7 +191,15 @@
     "share": "分享结果",
     "retry": "再玩一次",
     "npcLabel": "NPC",
-    "bossLabel": "BOSS"
+    "bossLabel": "BOSS",
+    "moreTests": "探索更多测试",
+    "percentileStat": "只有 <strong>{percent}%</strong> 的玩家获得了相同的RPG角色"
+  },
+  "related": {
+    "brainrotScore": "脑腐指数",
+    "rizzScore": "魅力指数",
+    "deluluScore": "妄想指数",
+    "villainType": "反派类型"
   },
   "share": {
     "title": "分享结果",

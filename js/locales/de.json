@@ -191,7 +191,15 @@
     "share": "Ergebnis teilen",
     "retry": "Nochmal spielen",
     "npcLabel": "NPC",
-    "bossLabel": "BOSS"
+    "bossLabel": "BOSS",
+    "moreTests": "Mehr Tests entdecken",
+    "percentileStat": "Nur <strong>{percent}%</strong> der Spieler erhielten dieselbe RPG-Rolle"
+  },
+  "related": {
+    "brainrotScore": "Brainrot Score",
+    "rizzScore": "Rizz Score",
+    "deluluScore": "Delulu Score",
+    "villainType": "Bosewicht-Typ"
   },
   "share": {
     "title": "Ergebnis teilen",

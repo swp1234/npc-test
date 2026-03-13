@@ -191,7 +191,15 @@
     "share": "Partager le Resultat",
     "retry": "Rejouer",
     "npcLabel": "PNJ",
-    "bossLabel": "BOSS"
+    "bossLabel": "BOSS",
+    "moreTests": "Decouvrir plus de tests",
+    "percentileStat": "Seulement <strong>{percent}%</strong> des joueurs ont obtenu le meme role RPG"
+  },
+  "related": {
+    "brainrotScore": "Brainrot Score",
+    "rizzScore": "Rizz Score",
+    "deluluScore": "Delulu Score",
+    "villainType": "Type de Mechant"
   },
   "share": {
     "title": "Partager le Resultat",

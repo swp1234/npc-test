@@ -191,7 +191,15 @@
     "share": "Sonucu Paylas",
     "retry": "Tekrar Oyna",
     "npcLabel": "NPC",
-    "bossLabel": "BOSS"
+    "bossLabel": "BOSS",
+    "moreTests": "Daha Fazla Test",
+    "percentileStat": "Oyuncularin sadece <strong>{percent}%</strong>'i ayni RPG rolunu aldi"
+  },
+  "related": {
+    "brainrotScore": "Brainrot Skoru",
+    "rizzScore": "Rizz Skoru",
+    "deluluScore": "Delulu Skoru",
+    "villainType": "Kotu Adam Tipi"
   },
   "share": {
     "title": "Sonucu Paylas",

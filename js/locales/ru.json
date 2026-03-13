@@ -191,7 +191,15 @@
     "share": "Поделиться Результатом",
     "retry": "Играть Снова",
     "npcLabel": "НПС",
-    "bossLabel": "БОСС"
+    "bossLabel": "БОСС",
+    "moreTests": "Другие тесты",
+    "percentileStat": "Только <strong>{percent}%</strong> игроков получили ту же RPG-роль"
+  },
+  "related": {
+    "brainrotScore": "Брейнрот",
+    "rizzScore": "Риз Счёт",
+    "deluluScore": "Делулу Счёт",
+    "villainType": "Тип Злодея"
   },
   "share": {
     "title": "Поделиться Результатом",

@@ -191,7 +191,15 @@
     "share": "結果をシェア",
     "retry": "もう一度プレイ",
     "npcLabel": "NPC",
-    "bossLabel": "BOSS"
+    "bossLabel": "BOSS",
+    "moreTests": "他のテストも試す",
+    "percentileStat": "プレイヤーのうち <strong>{percent}%</strong> だけが同じRPGロールでした"
+  },
+  "related": {
+    "brainrotScore": "ブレインロット診断",
+    "rizzScore": "リズスコア",
+    "deluluScore": "デルル診断",
+    "villainType": "ヴィランタイプ"
   },
   "share": {
     "title": "結果をシェア",

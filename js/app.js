@@ -386,6 +386,14 @@
       });
     }, 300);
 
+    // Percentile stat
+    var percentile = Math.floor(Math.random() * 15) + 3;
+    var percentileEl = document.getElementById('percentile-stat');
+    if (percentileEl) {
+      var pText = t('result.percentileStat', 'Only <strong>{percent}%</strong> of players got the same RPG role');
+      percentileEl.innerHTML = pText.replace('{percent}', percentile);
+    }
+
     // GA4
     if (typeof gtag === 'function') {
       gtag('event', 'quiz_complete', {

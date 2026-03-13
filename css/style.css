@@ -743,6 +743,80 @@ body::before {
   border-top: 2px solid var(--rpg-border);
 }
 
+/* ===== Percentile Stat ===== */
+.percentile-stat {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 20px;
+  padding: 10px 16px;
+  background: rgba(0, 201, 167, 0.08);
+  border: 1px solid rgba(0, 201, 167, 0.15);
+}
+
+/* ===== Related Tests ===== */
+.related-tests {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 2px solid var(--rpg-border);
+  width: 100%;
+}
+
+.related-tests h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.related-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  background: var(--rpg-bg-inner);
+  border: 2px solid var(--rpg-border);
+  text-decoration: none;
+  color: var(--text);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.related-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--card-color, var(--primary));
+}
+
+.related-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--card-color, var(--primary));
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+.related-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.related-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 /* ===== Share Modal ===== */
 .share-modal {
   display: none;
@@ -832,6 +906,10 @@ body::before {
 
   .intro-card h1 {
     font-size: 1.8rem;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .dialogue-text {
