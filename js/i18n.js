@@ -11,6 +11,37 @@
       this.loaded = false;
     }
 
+    I18n.prototype.getSeoHref = function(lang) {
+      var links = document.querySelectorAll('link[rel="alternate"][hreflang]');
+      var hrefMap = {};
+      for (var i = 0; i < links.length; i++) {
+        var hreflang = links[i].getAttribute('hreflang');
+        if (hreflang) hrefMap[hreflang] = links[i].href;
+      }
+      return hrefMap[lang] || hrefMap['x-default'] || ((document.querySelector('link[rel="canonical"]') || {}).href) || window.location.href;
+    };
+
+    I18n.prototype.syncSeoState = function(lang, updateHistory) {
+      var currentUrl = new URL(window.location.href);
+      var currentHasLangParam = currentUrl.searchParams.has('lang');
+      var targetHref = this.getSeoHref(updateHistory || currentHasLangParam ? lang : 'x-default');
+      if (targetHref) {
+        var canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.href = targetHref;
+        var ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.content = targetHref;
+        var twitterUrl = document.querySelector('meta[name="twitter:url"]');
+        if (twitterUrl) twitterUrl.content = targetHref;
+      }
+      if (updateHistory && targetHref) {
+        var nextUrl = new URL(targetHref);
+        nextUrl.hash = currentUrl.hash;
+        if (currentUrl.pathname !== nextUrl.pathname || currentUrl.search !== nextUrl.search || currentUrl.hash !== nextUrl.hash) {
+          window.history.replaceState({}, '', nextUrl.pathname + nextUrl.search + nextUrl.hash);
+        }
+      }
+    };
+
     I18n.prototype.detectLanguage = function() {
       // URL param first
       var params = new URLSearchParams(window.location.search);
@@ -28,7 +59,7 @@
       return DEFAULT_LANG;
     };
 
-    I18n.prototype.load = function(lang) {
+    I18n.prototype.load = function(lang, updateHistory) {
       var self = this;
       this.lang = lang;
       localStorage.setItem('npc-test-lang', lang);
@@ -40,6 +71,7 @@
           self.translations = data;
           self.loaded = true;
           self.applyAll();
+          self.syncSeoState(self.lang, !!updateHistory);
           return data;
         })
         .catch(function(err) {
@@ -96,6 +128,7 @@
       // Title
       var title = this.t('meta.title');
       if (title && title !== 'meta.title') document.title = title;
+      this.syncSeoState(this.lang, false);
     };
 
     I18n.prototype.init = function() {
@@ -107,7 +140,7 @@
       if (langSelect) {
         langSelect.value = lang;
         langSelect.addEventListener('change', function() {
-          self.load(this.value);
+          self.load(this.value, true);
           // Dispatch event for app to react
           window.dispatchEvent(new CustomEvent('langchange', { detail: { lang: this.value } }));
         });
