@@ -64,6 +64,8 @@
   var meterScore = document.getElementById('meterScore');
   var resultDescription = document.getElementById('resultDescription');
   var resultTraits = document.getElementById('resultTraits');
+  var rolePreviewItems = document.querySelectorAll('[data-preview-tier]');
+  var relatedGrid = document.getElementById('related-grid');
 
   // Share elements
   var shareBtn = document.getElementById('shareBtn');
@@ -74,6 +76,13 @@
   var shareFacebook = document.getElementById('shareFacebook');
   var shareCopy = document.getElementById('shareCopy');
   var themeToggle = document.getElementById('themeToggle');
+  var recommendationMap = {
+    npc: ['brainrot-score', 'delulu-score', 'rizz-score', 'villain-type'],
+    extra: ['delulu-score', 'brainrot-score', 'rizz-score', 'villain-type'],
+    side: ['rizz-score', 'delulu-score', 'brainrot-score', 'villain-type'],
+    main: ['rizz-score', 'villain-type', 'delulu-score', 'brainrot-score'],
+    boss: ['villain-type', 'rizz-score', 'delulu-score', 'brainrot-score']
+  };
 
   // i18n helper
   function t(key, fallback) {
@@ -85,6 +94,49 @@
       // silent
     }
     return fallback || key;
+  }
+
+  function trackEvent(name, params) {
+    if (typeof gtag === 'function') {
+      gtag('event', name, params || {});
+    }
+  }
+
+  function updateRolePreview() {
+    if (!rolePreviewItems.length) return;
+    for (var i = 0; i < rolePreviewItems.length; i++) {
+      var item = rolePreviewItems[i];
+      var tierKey = item.getAttribute('data-preview-tier');
+      var tierMeta = TIERS.find(function(tier) { return tier.key === tierKey; });
+      if (!tierMeta) continue;
+      item.textContent = tierMeta.emoji + ' ' + t('tiers.' + tierKey + '.name', tierKey);
+    }
+  }
+
+  function prioritizeRelatedCards(tierKey) {
+    if (!relatedGrid) return;
+
+    var cards = Array.prototype.slice.call(relatedGrid.querySelectorAll('.related-card'));
+    var order = recommendationMap[tierKey] || recommendationMap.side;
+    var rankMap = {};
+
+    order.forEach(function(key, index) {
+      rankMap[key] = index;
+    });
+
+    cards.sort(function(a, b) {
+      var aKey = a.getAttribute('data-related-key') || '';
+      var bKey = b.getAttribute('data-related-key') || '';
+      var aRank = Object.prototype.hasOwnProperty.call(rankMap, aKey) ? rankMap[aKey] : 999;
+      var bRank = Object.prototype.hasOwnProperty.call(rankMap, bKey) ? rankMap[bKey] : 999;
+      return aRank - bRank;
+    });
+
+    cards.forEach(function(card, index) {
+      card.classList.toggle('is-featured', index < 2);
+      card.setAttribute('data-rank', String(index + 1));
+      relatedGrid.appendChild(card);
+    });
   }
 
   // Theme
@@ -158,12 +210,10 @@
   startBtn.addEventListener('click', function() {
     currentScene = 0;
     totalRawScore = 0;
+    resultTier = null;
     showScreen(dialogueScreen);
     renderScene();
-
-    if (typeof gtag === 'function') {
-      gtag('event', 'quiz_start', { event_category: 'npc_test' });
-    }
+    trackEvent('quiz_start', { event_category: 'npc_test' });
   });
 
   // Render a scene
@@ -264,6 +314,13 @@
     }
 
     totalRawScore += points;
+    trackEvent('npc_choice_select', {
+      event_category: 'npc_test',
+      scene_number: currentScene + 1,
+      scene_key: sceneKey,
+      choice_key: choiceKey,
+      choice_points: points
+    });
 
     // Show NPC reaction
     var reactionText = t(sceneKey + '.reactions.' + choiceKey, '');
@@ -299,6 +356,10 @@
 
     continuePrompt.onclick = function() {
       continuePrompt.classList.remove('visible');
+      trackEvent('npc_continue_click', {
+        event_category: 'npc_test',
+        scene_number: currentScene + 1
+      });
       advanceScene();
     };
   }
@@ -338,6 +399,7 @@
 
     resultTier = getTier(finalPercent);
     var tierKey = 'tiers.' + resultTier.key;
+    prioritizeRelatedCards(resultTier.key);
 
     // Progress full
     sceneProgressFill.style.width = '100%';
@@ -395,13 +457,16 @@
     }
 
     // GA4
-    if (typeof gtag === 'function') {
-      gtag('event', 'quiz_complete', {
-        event_category: 'npc_test',
-        event_label: resultTier.key,
-        value: finalPercent
-      });
-    }
+    trackEvent('result_view', {
+      event_category: 'npc_test',
+      event_label: resultTier.key,
+      value: finalPercent
+    });
+    trackEvent('quiz_complete', {
+      event_category: 'npc_test',
+      event_label: resultTier.key,
+      value: finalPercent
+    });
   }
 
   // Retry
@@ -413,11 +478,18 @@
     meterFill.style.width = '0%';
     meterScore.textContent = '0%';
     showScreen(introScreen);
+    trackEvent('npc_retry_click', {
+      event_category: 'npc_test'
+    });
   });
 
   // Share modal
   shareBtn.addEventListener('click', function() {
     shareModal.classList.add('active');
+    trackEvent('npc_share_open', {
+      event_category: 'npc_test',
+      event_label: resultTier ? resultTier.key : ''
+    });
   });
 
   shareClose.addEventListener('click', function() {
@@ -438,24 +510,32 @@
   }
 
   function getShareUrl() {
-    return 'https://dopabrain.com/npc-test/';
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical && canonical.href) return canonical.href;
+    return window.location.origin + window.location.pathname + window.location.search;
   }
 
   shareTwitter.addEventListener('click', function() {
     var text = encodeURIComponent(getShareText());
     var url = encodeURIComponent(getShareUrl());
     window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + url, '_blank', 'noopener');
-    if (typeof gtag === 'function') {
-      gtag('event', 'share', { method: 'twitter', content_type: 'quiz_result' });
-    }
+    trackEvent('share', { method: 'twitter', content_type: 'quiz_result' });
+    trackEvent('npc_share_click', {
+      event_category: 'npc_test',
+      method: 'twitter',
+      event_label: resultTier ? resultTier.key : ''
+    });
   });
 
   shareFacebook.addEventListener('click', function() {
     var url = encodeURIComponent(getShareUrl());
     window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank', 'noopener');
-    if (typeof gtag === 'function') {
-      gtag('event', 'share', { method: 'facebook', content_type: 'quiz_result' });
-    }
+    trackEvent('share', { method: 'facebook', content_type: 'quiz_result' });
+    trackEvent('npc_share_click', {
+      event_category: 'npc_test',
+      method: 'facebook',
+      event_label: resultTier ? resultTier.key : ''
+    });
   });
 
   shareCopy.addEventListener('click', function() {
@@ -469,9 +549,12 @@
     } else {
       fallbackCopy(text);
     }
-    if (typeof gtag === 'function') {
-      gtag('event', 'share', { method: 'copy', content_type: 'quiz_result' });
-    }
+    trackEvent('share', { method: 'copy', content_type: 'quiz_result' });
+    trackEvent('npc_share_click', {
+      event_category: 'npc_test',
+      method: 'copy',
+      event_label: resultTier ? resultTier.key : ''
+    });
   });
 
   function fallbackCopy(text) {
@@ -512,6 +595,7 @@
 
   // Language change handler
   window.addEventListener('langchange', function() {
+    updateRolePreview();
     if (resultScreen.classList.contains('active') && resultTier) {
       setTimeout(function() {
         var tierKey = 'tiers.' + resultTier.key;
@@ -534,13 +618,29 @@
         } catch (e) {
           // silent
         }
+        prioritizeRelatedCards(resultTier.key);
       }, 200);
     } else if (dialogueScreen.classList.contains('active')) {
       renderScene();
     }
   });
 
+  if (relatedGrid) {
+    relatedGrid.addEventListener('click', function(event) {
+      var card = event.target.closest('.related-card');
+      if (!card) return;
+      trackEvent('npc_related_click', {
+        event_category: 'npc_test',
+        event_label: card.getAttribute('data-related-key') || card.getAttribute('href'),
+        result_tier: resultTier ? resultTier.key : 'unknown',
+        related_rank: card.getAttribute('data-rank') || ''
+      });
+    });
+  }
+
   // Init
   initTheme();
+  updateRolePreview();
+  window.setTimeout(updateRolePreview, 300);
 
 })();

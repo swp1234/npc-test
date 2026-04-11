@@ -226,6 +226,12 @@ gtag('js',new Date());gtag('config','G-J8GSWM40TV');
         </div>
         <h1 data-i18n="intro.title">NPC 테스트</h1>
         <p class="subtitle" data-i18n="intro.subtitle">RPG 대화 트리로 알아보는 나의 역할</p>
+        <div class="role-preview" id="rolePreview" aria-label="Possible RPG roles">
+          <span class="role-preview-item" data-preview-tier="npc">🤖 Full NPC</span>
+          <span class="role-preview-item" data-preview-tier="side">⚡ Side Character</span>
+          <span class="role-preview-item" data-preview-tier="main">👑 Main Character</span>
+          <span class="role-preview-item" data-preview-tier="boss">🔥 Final Boss</span>
+        </div>
         <button id="startBtn" class="btn-primary" data-i18n="intro.start">퀘스트 시작</button>
         <p class="question-count" data-i18n="intro.questionCount">10개 장면 / 약 3분</p>
       </div>
@@ -288,20 +294,20 @@ gtag('js',new Date());gtag('config','G-J8GSWM40TV');
         </div>
         <div class="related-tests">
           <h3 data-i18n="result.moreTests">More Tests</h3>
-          <div class="related-grid">
-            <a href="/brainrot-score/" class="related-card" style="--card-color: #e74c3c">
+          <div class="related-grid" id="related-grid">
+            <a href="/brainrot-score/" class="related-card" data-related-key="brainrot-score" style="--card-color: #e74c3c">
               <span class="related-emoji">&#x1F9E0;&#x1F480;</span>
               <span class="related-name" data-i18n="related.brainrotScore">Brainrot Score</span>
             </a>
-            <a href="/rizz-score/" class="related-card" style="--card-color: #f39c12">
+            <a href="/rizz-score/" class="related-card" data-related-key="rizz-score" style="--card-color: #f39c12">
               <span class="related-emoji">&#x1F60E;</span>
               <span class="related-name" data-i18n="related.rizzScore">Rizz Score</span>
             </a>
-            <a href="/delulu-score/" class="related-card" style="--card-color: #9b59b6">
+            <a href="/delulu-score/" class="related-card" data-related-key="delulu-score" style="--card-color: #9b59b6">
               <span class="related-emoji">&#x1F4AD;</span>
               <span class="related-name" data-i18n="related.deluluScore">Delulu Score</span>
             </a>
-            <a href="/villain-type/" class="related-card" style="--card-color: #2c3e50">
+            <a href="/villain-type/" class="related-card" data-related-key="villain-type" style="--card-color: #2c3e50">
               <span class="related-emoji">&#x1F9B9;</span>
               <span class="related-name" data-i18n="related.villainType">Villain Type</span>
             </a>

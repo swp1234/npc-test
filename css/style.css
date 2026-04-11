@@ -278,6 +278,27 @@ body::before {
   font-size: 0.9rem;
 }
 
+.role-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.role-preview-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 201, 167, 0.25);
+  background: rgba(0, 201, 167, 0.08);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .question-count {
   color: var(--text-muted);
   font-size: 0.8rem;
@@ -790,6 +811,11 @@ body::before {
   overflow: hidden;
 }
 
+.related-card.is-featured {
+  border-color: var(--card-color, var(--primary));
+  box-shadow: 0 0 18px rgba(0, 201, 167, 0.12);
+}
+
 .related-card::before {
   content: '';
   position: absolute;
@@ -798,6 +824,21 @@ body::before {
   width: 100%;
   height: 3px;
   background: var(--card-color, var(--primary));
+}
+
+.related-card.is-featured::after {
+  content: '#' attr(data-rank);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  min-width: 24px;
+  padding: 3px 6px;
+  border-radius: 999px;
+  background: var(--card-color, var(--primary));
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .related-card:hover {
@@ -908,6 +949,10 @@ body::before {
     font-size: 1.8rem;
   }
 
+  .role-preview {
+    gap: 10px;
+  }
+
   .related-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -959,6 +1004,11 @@ body::before {
   .lang-selector select {
     padding: 8px 8px;
     font-size: 12px;
+  }
+
+  .role-preview-item {
+    font-size: 0.72rem;
+    padding: 7px 10px;
   }
 }
 
