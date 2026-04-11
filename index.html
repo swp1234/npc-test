@@ -36,6 +36,20 @@
 <link rel="alternate" hreflang="hi" href="https://dopabrain.com/npc-test/?lang=hi">
 <link rel="alternate" hreflang="ru" href="https://dopabrain.com/npc-test/?lang=ru">
 <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/npc-test/">
+<script>
+(function () {
+  var lang = new URLSearchParams(window.location.search).get('lang');
+  if (!lang) return;
+  var target = document.querySelector('link[rel="alternate"][hreflang="' + lang + '"]');
+  if (!target) return;
+  var targetHref = target.href;
+  var canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = targetHref;
+  var ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.content = targetHref;
+  document.documentElement.lang = lang;
+})();
+</script>
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
