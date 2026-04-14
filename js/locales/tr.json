@@ -3,7 +3,9 @@
     "title": "NPC Testi - RPG Diyalog | DopaBrain",
     "description": "NPC misin yoksa Ana Karakter mi? 10 RPG karsilasmaya tepki ver ve rolunu kesfet — NPC'den Son Boss'a!"
   },
-  "a11y": { "skipLink": "Icerigi atla" },
+  "a11y": {
+    "skipLink": "Icerigi atla"
+  },
   "intro": {
     "title": "NPC Testi",
     "subtitle": "Diyalog ile RPG Rolunu Kesfet",
@@ -160,31 +162,56 @@
       "name": "Tam NPC",
       "tagline": "Duvarlara carpar. Ayni diyalogu tekrarlar.",
       "desc": "Tum NPC'ler seni gormezden geldi. Hep en guvenli secenegi sectin. Varsayilan repligin '...' ve ana goreve katilmiyorsun. Ama merak etme — her dunyada NPC lazim. Sensiz koy bos olurdu!",
-      "traits": ["Guvenlik Oncelikli", "Rutin Ustasi", "Gozlemci", "Dusuk Enerji"]
+      "traits": [
+        "Guvenlik Oncelikli",
+        "Rutin Ustasi",
+        "Gozlemci",
+        "Dusuk Enerji"
+      ]
     },
     "extra": {
       "name": "Arka Plan Figurani",
       "tagline": "Sahnede var ama kimse adini hatirlamiyor.",
       "desc": "Sahnede varsin ama NPC'ler seni uzun sure hatirlamiyor. Koylü #47 — teknik olarak mevcut, teknik olarak canli... teknik olarak orada. Karakter gelisim potansiyelin var ama henuz yukleme ekranindasin.",
-      "traits": ["Pasif Katilimci", "Duyarli", "Potansiyeli Var", "Temkinli"]
+      "traits": [
+        "Pasif Katilimci",
+        "Duyarli",
+        "Potansiyeli Var",
+        "Temkinli"
+      ]
     },
     "side": {
       "name": "Yan Karakter",
       "tagline": "Akilda kalan sahneleri var.",
       "desc": "NPC'ler seni hatirladi! Bircok durumda etkileyici secimler yaptin ve gercek varlik gosterdin. Henuz ana gorev kahramani degilsin ama herkesin sevdigi yan karakter. Gecmis hikaye bolumun yakinda!",
-      "traits": ["Dengeli", "Guvenilir", "Gelisen", "Takim Oyuncusu"]
+      "traits": [
+        "Dengeli",
+        "Guvenilir",
+        "Gelisen",
+        "Takim Oyuncusu"
+      ]
     },
     "main": {
       "name": "Ana Karakter",
       "tagline": "Kamera seni takip ediyor.",
       "desc": "NPC'ler derinden etkilendi! Senaryo zirhı aktif — girdigin her konusma degisti. Karakter gelisim arki, film muzigi ve en az uc NPC seni destekliyor.",
-      "traits": ["Kararli", "Karizmatik", "Senaryo Zirhı", "Lider"]
+      "traits": [
+        "Kararli",
+        "Karizmatik",
+        "Senaryo Zirhı",
+        "Lider"
+      ]
     },
     "boss": {
       "name": "Son Boss",
       "tagline": "Oyunu oynamaz. Oyunun KENDISIDIR.",
       "desc": "NPC'ler onunde titredi! Her konusmayi domine ettin ve gerceklik kararlarin etrafinda bukuldu. Birden fazla faz, oldurucu tema muzigi ve tum NPC'ler adini biliyor. Efsanevi!",
-      "traits": ["Ezici Varlik", "Korkusuz", "Oyun Degistirici", "Efsane"]
+      "traits": [
+        "Ezici Varlik",
+        "Korkusuz",
+        "Oyun Degistirici",
+        "Efsane"
+      ]
     }
   },
   "result": {
@@ -193,13 +220,19 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "Daha Fazla Test",
-    "percentileStat": "Oyuncularin sadece <strong>{percent}%</strong>'i ayni RPG rolunu aldi"
+    "percentileStat": "Oyuncularin sadece <strong>{percent}%</strong>'i ayni RPG rolunu aldi",
+    "nextStepLabel": "En ?yi Sonraki Test",
+    "nextStepDesc": "Sonucunuz en g??l? sonraki rotay? a?t?. G?rev ilerlemeden ?nce yap?n.",
+    "nextStepCta": "En ?yi E?le?meyi A?",
+    "jumpToMore": "T?m Takip Edilenleri G?r"
   },
   "related": {
     "brainrotScore": "Brainrot Skoru",
     "rizzScore": "Rizz Skoru",
     "deluluScore": "Delulu Skoru",
-    "villainType": "Kotu Adam Tipi"
+    "villainType": "Kotu Adam Tipi",
+    "eqTest": "EQ Testi",
+    "attachmentStyle": "Ba?lanma Stili"
   },
   "share": {
     "title": "Sonucu Paylas",

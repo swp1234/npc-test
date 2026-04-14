@@ -764,6 +764,86 @@ body::before {
   border-top: 2px solid var(--rpg-border);
 }
 
+.quick-actions-card {
+  --cta-color: var(--primary);
+  margin: 0 0 20px;
+  padding: 18px;
+  border: 2px solid rgba(0, 201, 167, 0.25);
+  background: linear-gradient(180deg, rgba(0, 201, 167, 0.12), rgba(255, 255, 255, 0.02));
+  text-align: left;
+}
+
+.quick-actions-summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.quick-actions-icon {
+  width: 52px;
+  height: 52px;
+  border: 2px solid var(--rpg-border-light);
+  background: var(--rpg-bg-inner);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.quick-actions-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.quick-actions-label {
+  margin: 0 0 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.quick-actions-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--cta-color);
+  line-height: 1.2;
+}
+
+.quick-actions-desc {
+  margin: 8px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.quick-actions-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.quick-actions-buttons .btn-primary,
+.quick-actions-buttons .btn-secondary {
+  width: 100%;
+}
+
+#primary-related-cta {
+  background: rgba(0, 0, 0, 0.15);
+  border-color: var(--cta-color);
+  color: #fff;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.18);
+}
+
+.result-ad-slot {
+  margin: 18px auto 0;
+  padding: 12px;
+  border: 2px solid rgba(0, 201, 167, 0.18);
+  background: rgba(255, 255, 255, 0.03);
+}
+
 /* ===== Percentile Stat ===== */
 .percentile-stat {
   color: var(--text-secondary);
@@ -955,6 +1035,10 @@ body::before {
 
   .related-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .quick-actions-buttons {
+    grid-template-columns: 1fr 1fr;
   }
 
   .dialogue-text {
