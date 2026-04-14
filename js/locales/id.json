@@ -3,7 +3,9 @@
     "title": "Tes NPC - Dialog RPG | DopaBrain",
     "description": "Kamu NPC atau Karakter Utama? Reaksi terhadap 10 pertemuan RPG dan temukan peranmu — dari NPC sampai Boss Akhir!"
   },
-  "a11y": { "skipLink": "Langsung ke konten" },
+  "a11y": {
+    "skipLink": "Langsung ke konten"
+  },
   "intro": {
     "title": "Tes NPC",
     "subtitle": "Temukan Peran RPG-mu Lewat Dialog",
@@ -160,31 +162,56 @@
       "name": "NPC Total",
       "tagline": "Nabrak tembok. Mengulang dialog yang sama.",
       "desc": "Semua NPC mengabaikanmu. Kamu selalu memilih opsi paling aman. Dialog defaultmu adalah '...' dan kamu tidak ikut quest utama. Tapi jangan khawatir — setiap dunia butuh NPC. Tanpamu, desa akan kosong!",
-      "traits": ["Keamanan Utama", "Master Rutinitas", "Pengamat", "Energi Rendah"]
+      "traits": [
+        "Keamanan Utama",
+        "Master Rutinitas",
+        "Pengamat",
+        "Energi Rendah"
+      ]
     },
     "extra": {
       "name": "Figuran Latar",
       "tagline": "Ada di adegan tapi tak ada yang ingat namanya.",
       "desc": "Kamu ada di adegan, tapi NPC tidak mengingatmu lama. Penduduk desa #47 — secara teknis ada, secara teknis hidup... secara teknis di sana. Punya potensi pengembangan karakter, tapi masih di layar loading.",
-      "traits": ["Peserta Pasif", "Peka Situasi", "Punya Potensi", "Hati-hati"]
+      "traits": [
+        "Peserta Pasif",
+        "Peka Situasi",
+        "Punya Potensi",
+        "Hati-hati"
+      ]
     },
     "side": {
       "name": "Karakter Pendukung",
       "tagline": "Punya adegan yang berkesan.",
       "desc": "NPC mengingatmu! Kamu membuat pilihan mengesankan di beberapa situasi dan menunjukkan kehadiran nyata. Belum protagonis quest utama, tapi karakter pendukung yang semua orang suka. Episode latar belakangmu segera hadir!",
-      "traits": ["Seimbang", "Bisa Diandalkan", "Berkembang", "Pemain Tim"]
+      "traits": [
+        "Seimbang",
+        "Bisa Diandalkan",
+        "Berkembang",
+        "Pemain Tim"
+      ]
     },
     "main": {
       "name": "Karakter Utama",
       "tagline": "Kamera mengikutimu.",
       "desc": "NPC sangat terkesan! Plot armor aktif — setiap percakapan berubah saat kamu masuk. Arc pengembangan karakter, OST, dan setidaknya tiga NPC mendukungmu.",
-      "traits": ["Tegas", "Karismatik", "Plot Armor", "Pemimpin"]
+      "traits": [
+        "Tegas",
+        "Karismatik",
+        "Plot Armor",
+        "Pemimpin"
+      ]
     },
     "boss": {
       "name": "Boss Akhir",
       "tagline": "Tidak memainkan game. ADALAH game-nya.",
       "desc": "NPC gemetar di hadapanmu! Kamu mendominasi setiap percakapan, dan realitas membengkok di sekitar keputusanmu. Beberapa fase, lagu tema pembunuh, dan semua NPC tahu namamu. Legendaris!",
-      "traits": ["Kehadiran Luar Biasa", "Tanpa Rasa Takut", "Pengubah Permainan", "Legenda"]
+      "traits": [
+        "Kehadiran Luar Biasa",
+        "Tanpa Rasa Takut",
+        "Pengubah Permainan",
+        "Legenda"
+      ]
     }
   },
   "result": {
@@ -193,13 +220,19 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "Coba Tes Lainnya",
-    "percentileStat": "Hanya <strong>{percent}%</strong> pemain yang mendapat peran RPG yang sama"
+    "percentileStat": "Hanya <strong>{percent}%</strong> pemain yang mendapat peran RPG yang sama",
+    "nextStepLabel": "Tes Selanjutnya Terbaik",
+    "nextStepDesc": "Hasilmu membuka rute selanjutnya yang terkuat. Ikuti sebelum misi berlanjut.",
+    "nextStepCta": "Buka Kecocokan Terbaik",
+    "jumpToMore": "Lihat Semua Tindak Lanjut"
   },
   "related": {
     "brainrotScore": "Brainrot Score",
     "rizzScore": "Rizz Score",
     "deluluScore": "Delulu Score",
-    "villainType": "Tipe Villain"
+    "villainType": "Tipe Villain",
+    "eqTest": "Tes EQ",
+    "attachmentStyle": "Gaya Kelekatan"
   },
   "share": {
     "title": "Bagikan Hasil",

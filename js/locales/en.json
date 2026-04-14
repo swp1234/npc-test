@@ -193,9 +193,15 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "Explore More Tests",
+    "nextStepLabel": "Best Next Test",
+    "nextStepDesc": "Your result unlocked the strongest next route. Take it before the quest moves on.",
+    "nextStepCta": "Open Best Match",
+    "jumpToMore": "See All Follow-ups",
     "percentileStat": "Only <strong>{percent}%</strong> of players got the same RPG role"
   },
   "related": {
+    "eqTest": "EQ Test",
+    "attachmentStyle": "Attachment Style",
     "brainrotScore": "Brainrot Score",
     "rizzScore": "Rizz Score",
     "deluluScore": "Delulu Score",

@@ -35,8 +35,10 @@
   var totalRawScore = 0;
   var finalPercent = 0;
   var resultTier = null;
+  var currentPercentile = null;
   var isTyping = false;
   var typingTimeout = null;
+  var resultInlineAdLoaded = false;
 
   // DOM elements
   var introScreen = document.getElementById('intro');
@@ -66,6 +68,13 @@
   var resultTraits = document.getElementById('resultTraits');
   var rolePreviewItems = document.querySelectorAll('[data-preview-tier]');
   var relatedGrid = document.getElementById('related-grid');
+  var primaryRelatedEmoji = document.getElementById('primary-related-emoji');
+  var primaryRelatedTitle = document.getElementById('primary-related-title');
+  var primaryRelatedDesc = document.getElementById('primary-related-desc');
+  var primaryRelatedCta = document.getElementById('primary-related-cta');
+  var primaryRelatedCtaText = document.getElementById('primary-related-cta-text');
+  var relatedJumpBtn = document.getElementById('related-jump-btn');
+  var resultInlineAd = document.getElementById('result-inline-ad');
 
   // Share elements
   var shareBtn = document.getElementById('shareBtn');
@@ -77,11 +86,11 @@
   var shareCopy = document.getElementById('shareCopy');
   var themeToggle = document.getElementById('themeToggle');
   var recommendationMap = {
-    npc: ['brainrot-score', 'delulu-score', 'rizz-score', 'villain-type'],
-    extra: ['delulu-score', 'brainrot-score', 'rizz-score', 'villain-type'],
-    side: ['rizz-score', 'delulu-score', 'brainrot-score', 'villain-type'],
-    main: ['rizz-score', 'villain-type', 'delulu-score', 'brainrot-score'],
-    boss: ['villain-type', 'rizz-score', 'delulu-score', 'brainrot-score']
+    npc: ['attachment-style', 'eq-test', 'rizz-score', 'villain-type'],
+    extra: ['eq-test', 'attachment-style', 'rizz-score', 'villain-type'],
+    side: ['rizz-score', 'eq-test', 'attachment-style', 'villain-type'],
+    main: ['eq-test', 'rizz-score', 'villain-type', 'attachment-style'],
+    boss: ['villain-type', 'eq-test', 'rizz-score', 'attachment-style']
   };
 
   // i18n helper
@@ -100,6 +109,13 @@
     if (typeof gtag === 'function') {
       gtag('event', name, params || {});
     }
+  }
+
+  function getCurrentLang() {
+    if (window.i18n && window.i18n.lang) {
+      return window.i18n.lang;
+    }
+    return document.documentElement.lang || 'ko';
   }
 
   function updateRolePreview() {
@@ -137,6 +153,49 @@
       card.setAttribute('data-rank', String(index + 1));
       relatedGrid.appendChild(card);
     });
+  }
+
+  function updatePrimaryRecommendation() {
+    if (!relatedGrid || !primaryRelatedTitle || !primaryRelatedDesc || !primaryRelatedCta || !primaryRelatedCtaText || !primaryRelatedEmoji) {
+      return;
+    }
+
+    var firstCard = relatedGrid.querySelector('.related-card');
+    if (!firstCard) return;
+
+    var titleEl = firstCard.querySelector('.related-name');
+    var emojiEl = firstCard.querySelector('.related-emoji');
+    var cardTitle = titleEl ? titleEl.textContent.trim() : 'Recommended Test';
+    var cardColor = firstCard.style.getPropertyValue('--card-color') || '';
+    var nextStepCard = document.getElementById('next-step-card');
+
+    primaryRelatedTitle.textContent = cardTitle;
+    primaryRelatedDesc.textContent = t('result.nextStepDesc', 'Your result unlocked the strongest next route. Take it before the quest moves on.');
+    primaryRelatedCtaText.textContent = t('result.nextStepCta', 'Open Best Match');
+    primaryRelatedEmoji.textContent = emojiEl ? emojiEl.textContent.trim() : '->';
+    primaryRelatedCta.setAttribute('href', firstCard.getAttribute('href') || '#');
+    primaryRelatedCta.setAttribute('data-related-key', firstCard.getAttribute('data-related-key') || '');
+    primaryRelatedCta.setAttribute('data-related-rank', firstCard.getAttribute('data-rank') || '1');
+
+    if (cardColor) {
+      if (nextStepCard) {
+        nextStepCard.style.setProperty('--cta-color', cardColor);
+      }
+      primaryRelatedCta.style.setProperty('--cta-color', cardColor);
+    }
+  }
+
+  function ensureResultAdLoaded() {
+    if (resultInlineAdLoaded || !resultInlineAd) return;
+    var adNode = resultInlineAd.querySelector('.adsbygoogle');
+    if (!adNode) return;
+
+    try {
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      resultInlineAdLoaded = true;
+    } catch (error) {
+      // Ad blockers or delayed AdSense init are non-fatal.
+    }
   }
 
   // Theme
@@ -211,9 +270,14 @@
     currentScene = 0;
     totalRawScore = 0;
     resultTier = null;
+    currentPercentile = null;
     showScreen(dialogueScreen);
     renderScene();
-    trackEvent('quiz_start', { event_category: 'npc_test' });
+    trackEvent('quiz_start', {
+      event_category: 'npc_test',
+      event_label: getCurrentLang(),
+      value: TOTAL_SCENES
+    });
   });
 
   // Render a scene
@@ -399,7 +463,9 @@
 
     resultTier = getTier(finalPercent);
     var tierKey = 'tiers.' + resultTier.key;
+    currentPercentile = currentPercentile || (Math.floor(Math.random() * 15) + 3);
     prioritizeRelatedCards(resultTier.key);
+    updatePrimaryRecommendation();
 
     // Progress full
     sceneProgressFill.style.width = '100%';
@@ -449,11 +515,10 @@
     }, 300);
 
     // Percentile stat
-    var percentile = Math.floor(Math.random() * 15) + 3;
     var percentileEl = document.getElementById('percentile-stat');
     if (percentileEl) {
       var pText = t('result.percentileStat', 'Only <strong>{percent}%</strong> of players got the same RPG role');
-      percentileEl.innerHTML = pText.replace('{percent}', percentile);
+      percentileEl.innerHTML = pText.replace('{percent}', currentPercentile);
     }
 
     // GA4
@@ -467,20 +532,24 @@
       event_label: resultTier.key,
       value: finalPercent
     });
+    ensureResultAdLoaded();
   }
 
   // Retry
   retryBtn.addEventListener('click', function() {
+    trackEvent('npc_retry_click', {
+      event_category: 'npc_test',
+      event_label: resultTier ? resultTier.key : 'unknown',
+      value: finalPercent
+    });
     currentScene = 0;
     totalRawScore = 0;
     finalPercent = 0;
     resultTier = null;
+    currentPercentile = null;
     meterFill.style.width = '0%';
     meterScore.textContent = '0%';
     showScreen(introScreen);
-    trackEvent('npc_retry_click', {
-      event_category: 'npc_test'
-    });
   });
 
   // Share modal
@@ -510,9 +579,9 @@
   }
 
   function getShareUrl() {
-    var canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical && canonical.href) return canonical.href;
-    return window.location.origin + window.location.pathname + window.location.search;
+    var url = new URL(window.location.origin + window.location.pathname);
+    url.searchParams.set('lang', getCurrentLang());
+    return url.toString();
   }
 
   shareTwitter.addEventListener('click', function() {
@@ -556,6 +625,30 @@
       event_label: resultTier ? resultTier.key : ''
     });
   });
+
+  if (primaryRelatedCta) {
+    primaryRelatedCta.addEventListener('click', function() {
+      trackEvent('npc_primary_cta_click', {
+        event_category: 'npc_test',
+        event_label: this.getAttribute('data-related-key') || this.getAttribute('href'),
+        result_tier: resultTier ? resultTier.key : 'unknown',
+        related_rank: this.getAttribute('data-related-rank') || '1'
+      });
+    });
+  }
+
+  if (relatedJumpBtn) {
+    relatedJumpBtn.addEventListener('click', function() {
+      var relatedSection = document.querySelector('.related-tests');
+      if (relatedSection) {
+        relatedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      trackEvent('npc_related_jump_click', {
+        event_category: 'npc_test',
+        event_label: resultTier ? resultTier.key : 'unknown'
+      });
+    });
+  }
 
   function fallbackCopy(text) {
     var ta = document.createElement('textarea');
@@ -618,7 +711,13 @@
         } catch (e) {
           // silent
         }
+        var percentileEl = document.getElementById('percentile-stat');
+        if (percentileEl && currentPercentile) {
+          var pText = t('result.percentileStat', 'Only <strong>{percent}%</strong> of players got the same RPG role');
+          percentileEl.innerHTML = pText.replace('{percent}', currentPercentile);
+        }
         prioritizeRelatedCards(resultTier.key);
+        updatePrimaryRecommendation();
       }, 200);
     } else if (dialogueScreen.classList.contains('active')) {
       renderScene();

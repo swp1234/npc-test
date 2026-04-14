@@ -3,7 +3,9 @@
     "title": "NPC测试 - RPG对话树 | DopaBrain",
     "description": "通过RPG对话树来测试你是NPC还是主角！回应10个NPC场景，发现你的RPG角色！"
   },
-  "a11y": { "skipLink": "跳至正文" },
+  "a11y": {
+    "skipLink": "跳至正文"
+  },
   "intro": {
     "title": "NPC测试",
     "subtitle": "通过RPG对话发现你的角色",
@@ -160,31 +162,56 @@
       "name": "完全NPC",
       "tagline": "撞墙、重复同样的台词",
       "desc": "所有NPC都无视了你。你总是选择最安全的选项。默认台词是「...」，不参与主线任务。但别担心——每个世界都需要NPC。没有你，村庄就空了！",
-      "traits": ["安全第一", "日常大师", "观察者", "低能量"]
+      "traits": [
+        "安全第一",
+        "日常大师",
+        "观察者",
+        "低能量"
+      ]
     },
     "extra": {
       "name": "背景群演",
       "tagline": "存在于场景中但没人记得名字",
       "desc": "你存在于场景中，但NPC不会长久记住你。村民47号——技术上存在，技术上活着...技术上在那里。有角色成长潜力，但还在加载画面。",
-      "traits": ["被动参与", "察言观色", "有潜力", "谨慎派"]
+      "traits": [
+        "被动参与",
+        "察言观色",
+        "有潜力",
+        "谨慎派"
+      ]
     },
     "side": {
       "name": "配角",
       "tagline": "有令人难忘的场景",
       "desc": "NPC记住你了！你在几个场面做出了令人印象深刻的选择，展示了存在感。还不是主线主角，但是大家最喜欢的配角。你的回忆篇章即将到来！",
-      "traits": ["均衡", "可靠", "成长中", "团队合作者"]
+      "traits": [
+        "均衡",
+        "可靠",
+        "成长中",
+        "团队合作者"
+      ]
     },
     "main": {
       "name": "主角",
       "tagline": "镜头跟着你走",
       "desc": "NPC对你印象深刻！主角光环启动——你进入的每一段对话氛围都变了。角色成长弧线、OST，至少三个NPC在为你加油。",
-      "traits": ["果断", "有魅力", "主角光环", "领导者"]
+      "traits": [
+        "果断",
+        "有魅力",
+        "主角光环",
+        "领导者"
+      ]
     },
     "boss": {
       "name": "最终BOSS",
       "tagline": "不是在玩游戏，就是游戏本身",
       "desc": "NPC在你面前发抖！你主宰了每一段对话，现实围绕你的决定而弯曲。多阶段形态、杀手主题曲，所有NPC都知道你的名字。传说！",
-      "traits": ["压倒性存在感", "无所畏惧", "改变游戏规则", "传说"]
+      "traits": [
+        "压倒性存在感",
+        "无所畏惧",
+        "改变游戏规则",
+        "传说"
+      ]
     }
   },
   "result": {
@@ -193,13 +220,19 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "探索更多测试",
-    "percentileStat": "只有 <strong>{percent}%</strong> 的玩家获得了相同的RPG角色"
+    "percentileStat": "只有 <strong>{percent}%</strong> 的玩家获得了相同的RPG角色",
+    "nextStepLabel": "??????",
+    "nextStepDesc": "??????????????????????????",
+    "nextStepCta": "??????",
+    "jumpToMore": "??????"
   },
   "related": {
     "brainrotScore": "脑腐指数",
     "rizzScore": "魅力指数",
     "deluluScore": "妄想指数",
-    "villainType": "反派类型"
+    "villainType": "反派类型",
+    "eqTest": "????",
+    "attachmentStyle": "????"
   },
   "share": {
     "title": "分享结果",

@@ -3,7 +3,9 @@
     "title": "Teste NPC - Dialogo RPG | DopaBrain",
     "description": "Voce e NPC ou Protagonista? Reaja a 10 encontros RPG e descubra seu papel: de NPC a Chefe Final!"
   },
-  "a11y": { "skipLink": "Pular para o conteudo" },
+  "a11y": {
+    "skipLink": "Pular para o conteudo"
+  },
   "intro": {
     "title": "Teste NPC",
     "subtitle": "Descubra seu papel RPG atraves do dialogo",
@@ -160,31 +162,56 @@
       "name": "NPC Total",
       "tagline": "Bate nas paredes. Repete o mesmo dialogo.",
       "desc": "Todos os NPCs te ignoraram. Voce sempre escolheu a opcao mais segura. Sua fala padrao e '...' e voce nao participa da missao principal. Mas nao se preocupe — todo mundo precisa de NPCs. Sem voce, a vila ficaria vazia!",
-      "traits": ["Seguranca Primeiro", "Mestre da Rotina", "Observador", "Baixa Energia"]
+      "traits": [
+        "Seguranca Primeiro",
+        "Mestre da Rotina",
+        "Observador",
+        "Baixa Energia"
+      ]
     },
     "extra": {
       "name": "Figurante",
       "tagline": "Presente na cena mas ninguem lembra o nome.",
       "desc": "Voce existe na cena, mas os NPCs nao te lembram por muito tempo. Aldeao #47 — tecnicamente presente, tecnicamente vivo... tecnicamente la. Tem potencial de desenvolvimento, mas ainda esta na tela de carregamento.",
-      "traits": ["Participante Passivo", "Perceptivo", "Tem Potencial", "Cauteloso"]
+      "traits": [
+        "Participante Passivo",
+        "Perceptivo",
+        "Tem Potencial",
+        "Cauteloso"
+      ]
     },
     "side": {
       "name": "Personagem Secundario",
       "tagline": "Tem cenas memoraveis.",
       "desc": "Os NPCs lembram de voce! Fez escolhas impressionantes em varias situacoes e mostrou presenca real. Ainda nao e o protagonista, mas e o coadjuvante que todos amam. Seu episodio de origem vem em breve!",
-      "traits": ["Equilibrado", "Confiavel", "Em Crescimento", "Jogador de Equipe"]
+      "traits": [
+        "Equilibrado",
+        "Confiavel",
+        "Em Crescimento",
+        "Jogador de Equipe"
+      ]
     },
     "main": {
       "name": "Protagonista",
       "tagline": "A camera te segue.",
       "desc": "Os NPCs ficaram impressionados! Armadura de enredo ativada: cada conversa mudou quando voce entrou. Arco de desenvolvimento, trilha sonora, e pelo menos tres NPCs torcendo por voce.",
-      "traits": ["Decidido", "Carismatico", "Armadura de Enredo", "Lider"]
+      "traits": [
+        "Decidido",
+        "Carismatico",
+        "Armadura de Enredo",
+        "Lider"
+      ]
     },
     "boss": {
       "name": "Chefe Final",
       "tagline": "Nao joga o jogo. E o jogo.",
       "desc": "Os NPCs tremeram diante de voce! Dominou cada conversa e a realidade se curvou ao seu redor. Multiplas fases, tema musical epico, e todos os NPCs sabem seu nome. Lendario!",
-      "traits": ["Presenca Avassaladora", "Sem Medo", "Muda o Jogo", "Lenda"]
+      "traits": [
+        "Presenca Avassaladora",
+        "Sem Medo",
+        "Muda o Jogo",
+        "Lenda"
+      ]
     }
   },
   "result": {
@@ -193,13 +220,19 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "Explore Mais Testes",
-    "percentileStat": "Apenas <strong>{percent}%</strong> dos jogadores obtiveram o mesmo papel RPG"
+    "percentileStat": "Apenas <strong>{percent}%</strong> dos jogadores obtiveram o mesmo papel RPG",
+    "nextStepLabel": "Pr?ximo Teste Sugerido",
+    "nextStepDesc": "Seu resultado desbloqueou a rota mais forte a seguir. Fa?a-o antes que a miss?o avance.",
+    "nextStepCta": "Abrir Melhor Correspond?ncia",
+    "jumpToMore": "Ver Todos os Acompanhamentos"
   },
   "related": {
     "brainrotScore": "Brainrot Score",
     "rizzScore": "Rizz Score",
     "deluluScore": "Delulu Score",
-    "villainType": "Tipo de Vilao"
+    "villainType": "Tipo de Vilao",
+    "eqTest": "Teste de QE",
+    "attachmentStyle": "Estilo de Apego"
   },
   "share": {
     "title": "Compartilhar Resultado",

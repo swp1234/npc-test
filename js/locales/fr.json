@@ -3,7 +3,9 @@
     "title": "Test PNJ - Arbre de Dialogue RPG | DopaBrain",
     "description": "Es-tu un PNJ ou le Personnage Principal ? Reagis a 10 rencontres RPG et decouvre ton role : de PNJ a Boss Final !"
   },
-  "a11y": { "skipLink": "Aller au contenu" },
+  "a11y": {
+    "skipLink": "Aller au contenu"
+  },
   "intro": {
     "title": "Test PNJ",
     "subtitle": "Decouvre ton role RPG a travers le dialogue",
@@ -160,31 +162,56 @@
       "name": "PNJ Total",
       "tagline": "Se cogne aux murs. Repete le meme dialogue.",
       "desc": "Tous les PNJ t'ont ignore. Tu as toujours choisi l'option la plus sure. Ta phrase par defaut est '...' et tu ne participes pas a la quete principale. Mais ne t'inquiete pas — chaque monde a besoin de PNJ. Sans toi, le village serait vide !",
-      "traits": ["Securite d'Abord", "Maitre de Routine", "Observateur", "Faible Energie"]
+      "traits": [
+        "Securite d'Abord",
+        "Maitre de Routine",
+        "Observateur",
+        "Faible Energie"
+      ]
     },
     "extra": {
       "name": "Figurant",
       "tagline": "Present dans la scene mais personne ne se souvient du nom.",
       "desc": "Tu existes dans la scene mais les PNJ ne se souviennent pas longtemps de toi. Villageois #47 — techniquement present, techniquement vivant... techniquement la. Tu as du potentiel mais tu es encore sur l'ecran de chargement.",
-      "traits": ["Participant Passif", "Perceptif", "A du Potentiel", "Prudent"]
+      "traits": [
+        "Participant Passif",
+        "Perceptif",
+        "A du Potentiel",
+        "Prudent"
+      ]
     },
     "side": {
       "name": "Personnage Secondaire",
       "tagline": "A des scenes memorables.",
       "desc": "Les PNJ se souviennent de toi ! Tu as fait des choix impressionnants dans plusieurs situations et montre une vraie presence. Pas encore le protagoniste mais le secondaire que tout le monde adore. Ton episode d'origine arrive bientot !",
-      "traits": ["Equilibre", "Fiable", "En Croissance", "Joueur d'Equipe"]
+      "traits": [
+        "Equilibre",
+        "Fiable",
+        "En Croissance",
+        "Joueur d'Equipe"
+      ]
     },
     "main": {
       "name": "Personnage Principal",
       "tagline": "La camera te suit.",
       "desc": "Les PNJ ont ete profondement impressionnes ! Armure de scenario activee — chaque conversation a change quand tu es entre. Arc de developpement, bande-son, et au moins trois PNJ qui te soutiennent.",
-      "traits": ["Determine", "Charismatique", "Armure de Scenario", "Leader"]
+      "traits": [
+        "Determine",
+        "Charismatique",
+        "Armure de Scenario",
+        "Leader"
+      ]
     },
     "boss": {
       "name": "Boss Final",
       "tagline": "Ne joue pas au jeu. EST le jeu.",
       "desc": "Les PNJ ont tremble devant toi ! Tu as domine chaque conversation et la realite s'est pliee autour de tes decisions. Phases multiples, theme musical epique, et tous les PNJ connaissent ton nom. Legendaire !",
-      "traits": ["Presence Ecrasante", "Sans Peur", "Change la Donne", "Legende"]
+      "traits": [
+        "Presence Ecrasante",
+        "Sans Peur",
+        "Change la Donne",
+        "Legende"
+      ]
     }
   },
   "result": {
@@ -193,13 +220,19 @@
     "npcLabel": "PNJ",
     "bossLabel": "BOSS",
     "moreTests": "Decouvrir plus de tests",
-    "percentileStat": "Seulement <strong>{percent}%</strong> des joueurs ont obtenu le meme role RPG"
+    "percentileStat": "Seulement <strong>{percent}%</strong> des joueurs ont obtenu le meme role RPG",
+    "nextStepLabel": "Meilleur Prochain Test",
+    "nextStepDesc": "Votre r?sultat a d?bloqu? le chemin le plus puissant. Prenez-le avant que la qu?te ne progresse.",
+    "nextStepCta": "Ouvrir la Meilleure Correspondance",
+    "jumpToMore": "Voir Tous les Suivis"
   },
   "related": {
     "brainrotScore": "Brainrot Score",
     "rizzScore": "Rizz Score",
     "deluluScore": "Delulu Score",
-    "villainType": "Type de Mechant"
+    "villainType": "Type de Mechant",
+    "eqTest": "Test d'IE",
+    "attachmentStyle": "Style d'Attachement"
   },
   "share": {
     "title": "Partager le Resultat",
