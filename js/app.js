@@ -206,6 +206,11 @@
     }
   }
 
+  function hideAppLoader() {
+    const appLoader = document.getElementById('app-loader');
+    if (appLoader) appLoader.classList.add('hidden');
+  }
+
   themeToggle.addEventListener('click', function() {
     var current = document.documentElement.getAttribute('data-theme');
     var next = current === 'light' ? 'dark' : 'light';
@@ -740,6 +745,7 @@
   // Init
   initTheme();
   updateRolePreview();
+  hideAppLoader();
   window.setTimeout(updateRolePreview, 300);
 
 })();
