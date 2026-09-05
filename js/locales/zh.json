@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "NPC测试 - RPG对话树 | DopaBrain",
-    "description": "通过RPG对话树来测试你是NPC还是主角！回应10个NPC场景，发现你的RPG角色！"
+    "description": "完成10个快速RPG选择，根据本次回答获得从NPC到最终Boss的娱乐角色。"
   },
   "a11y": {
     "skipLink": "跳至正文"
@@ -10,10 +10,9 @@
     "title": "NPC测试",
     "subtitle": "通过RPG对话发现你的角色",
     "start": "开始任务",
-    "questionCount": "10个场景 / 约3分钟"
-  },
-  "dialogue": {
-    "continue": "[ 点击继续 ]"
+    "questionCount": "10个选择 / 约1分钟",
+    "method": "分数为10个公开选项分值（每项0–3分）之和，并按满分30分换算为百分比。",
+    "boundary": "这是作者创作的娱乐内容，并非经过验证的人格测评。"
   },
   "scenes": {
     "s1": {
@@ -220,11 +219,11 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "探索更多测试",
-    "percentileStat": "只有 <strong>{percent}%</strong> 的玩家获得了相同的RPG角色",
-    "nextStepLabel": "??????",
-    "nextStepDesc": "??????????????????????????",
-    "nextStepCta": "??????",
-    "jumpToMore": "??????"
+    "nextStepLabel": "最适合的下一项测试",
+    "nextStepDesc": "继续体验与本次结果最接近的测试。",
+    "nextStepCta": "打开推荐测试",
+    "jumpToMore": "查看所有后续测试",
+    "calculation": "分数仅使用本次回答，不与其他参与者比较。"
   },
   "related": {
     "brainrotScore": "脑腐指数",

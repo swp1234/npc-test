@@ -586,26 +586,6 @@ body::before {
   opacity: 1;
 }
 
-/* Continue prompt */
-.continue-prompt {
-  text-align: center;
-  padding: 12px;
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  animation: promptPulse 1.5s ease-in-out infinite;
-  cursor: pointer;
-  display: none;
-}
-
-.continue-prompt.visible {
-  display: block;
-}
-
-@keyframes promptPulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-
 /* ===== Result Screen ===== */
 .result-card {
   text-align: center;
@@ -837,17 +817,10 @@ body::before {
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.18);
 }
 
-.result-ad-slot {
-  margin: 18px auto 0;
-  padding: 12px;
-  border: 2px solid rgba(0, 201, 167, 0.18);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-/* ===== Percentile Stat ===== */
-.percentile-stat {
+.trust-note {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
   margin: 0 0 20px;
   padding: 10px 16px;
   background: rgba(0, 201, 167, 0.08);

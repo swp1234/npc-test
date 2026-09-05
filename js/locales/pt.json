@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Teste NPC - Dialogo RPG | DopaBrain",
-    "description": "Voce e NPC ou Protagonista? Reaja a 10 encontros RPG e descubra seu papel: de NPC a Chefe Final!"
+    "description": "Faça 10 escolhas rápidas de RPG e receba um papel de entretenimento, de NPC a Chefe Final, com base nas respostas."
   },
   "a11y": {
     "skipLink": "Pular para o conteudo"
@@ -10,10 +10,9 @@
     "title": "Teste NPC",
     "subtitle": "Descubra seu papel RPG atraves do dialogo",
     "start": "Iniciar Missao",
-    "questionCount": "10 cenas / ~3 min"
-  },
-  "dialogue": {
-    "continue": "[ Clique para continuar ]"
+    "questionCount": "10 escolhas / cerca de 1 min",
+    "method": "A pontuação soma os valores publicados de 10 escolhas (0–3 cada) e mostra a porcentagem de 30.",
+    "boundary": "Esta atividade criada pelo autor é entretenimento, não uma avaliação de personalidade validada."
   },
   "scenes": {
     "s1": {
@@ -220,11 +219,11 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "Explore Mais Testes",
-    "percentileStat": "Apenas <strong>{percent}%</strong> dos jogadores obtiveram o mesmo papel RPG",
-    "nextStepLabel": "Pr?ximo Teste Sugerido",
-    "nextStepDesc": "Seu resultado desbloqueou a rota mais forte a seguir. Fa?a-o antes que a miss?o avance.",
-    "nextStepCta": "Abrir Melhor Correspond?ncia",
-    "jumpToMore": "Ver Todos os Acompanhamentos"
+    "nextStepLabel": "Melhor próximo teste",
+    "nextStepDesc": "Continue com o teste mais próximo deste resultado.",
+    "nextStepCta": "Abrir melhor opção",
+    "jumpToMore": "Ver todos os próximos testes",
+    "calculation": "A pontuação usa apenas estas respostas e não é comparada com outros participantes."
   },
   "related": {
     "brainrotScore": "Brainrot Score",

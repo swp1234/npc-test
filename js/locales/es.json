@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Test NPC - Dialogo RPG | DopaBrain",
-    "description": "Eres NPC o protagonista? Reacciona a 10 encuentros RPG y descubre tu rol: desde NPC hasta Jefe Final!"
+    "description": "Haz 10 elecciones RPG rápidas y obtén un rol de entretenimiento, de NPC a Jefe Final, según tus respuestas."
   },
   "a11y": {
     "skipLink": "Saltar al contenido"
@@ -10,10 +10,9 @@
     "title": "Test NPC",
     "subtitle": "Descubre tu rol RPG a traves del dialogo",
     "start": "Iniciar Mision",
-    "questionCount": "10 escenas / ~3 min"
-  },
-  "dialogue": {
-    "continue": "[ Clic para continuar ]"
+    "questionCount": "10 elecciones / cerca de 1 min",
+    "method": "La puntuación suma los valores publicados de 10 elecciones (0–3 cada una) y los muestra como porcentaje de 30.",
+    "boundary": "Esta actividad creada por el autor es entretenimiento, no una evaluación de personalidad validada."
   },
   "scenes": {
     "s1": {
@@ -220,11 +219,11 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "Explora Mas Tests",
-    "percentileStat": "Solo el <strong>{percent}%</strong> de los jugadores obtuvo el mismo rol RPG",
-    "nextStepLabel": "Mejor Pr?xima Prueba",
-    "nextStepDesc": "Tu resultado ha desbloqueado la ruta m?s fuerte a seguir. T?mala antes de que la misi?n avance.",
+    "nextStepLabel": "Mejor prueba siguiente",
+    "nextStepDesc": "Continúa con la prueba más cercana a este resultado.",
     "nextStepCta": "Abrir Mejor Coincidencia",
-    "jumpToMore": "Ver Todos los Seguimientos"
+    "jumpToMore": "Ver todos los seguimientos",
+    "calculation": "La puntuación usa solo estas respuestas y no se compara con otros participantes."
   },
   "related": {
     "brainrotScore": "Brainrot Score",

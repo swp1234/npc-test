@@ -1,17 +1,16 @@
 {
   "meta": {
     "title": "NPC Test - RPG Dialogue Tree | DopaBrain",
-    "description": "Are you an NPC or the Main Character? React to 10 RPG encounters and discover your role — from NPC to Final Boss!"
+    "description": "Make 10 quick RPG dialogue choices and get an entertainment-only NPC-to-Boss role based on your answers."
   },
   "a11y": { "skipLink": "Skip to content" },
   "intro": {
     "title": "NPC Test",
     "subtitle": "Discover Your RPG Role Through Dialogue",
     "start": "Start Quest",
-    "questionCount": "10 scenes / ~3 min"
-  },
-  "dialogue": {
-    "continue": "[ Click to continue ]"
+    "questionCount": "10 choices / about 1 min",
+    "method": "Score = the sum of 10 published choice values (0–3 each), shown as a percentage of 30.",
+    "boundary": "This author-created activity is entertainment, not a validated personality assessment."
   },
   "scenes": {
     "s1": {
@@ -197,7 +196,7 @@
     "nextStepDesc": "Your result unlocked the strongest next route. Take it before the quest moves on.",
     "nextStepCta": "Open Best Match",
     "jumpToMore": "See All Follow-ups",
-    "percentileStat": "Only <strong>{percent}%</strong> of players got the same RPG role"
+    "calculation": "Your score uses only these answers and is not compared with other participants."
   },
   "related": {
     "eqTest": "EQ Test",

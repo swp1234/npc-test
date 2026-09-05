@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Tes NPC - Dialog RPG | DopaBrain",
-    "description": "Kamu NPC atau Karakter Utama? Reaksi terhadap 10 pertemuan RPG dan temukan peranmu — dari NPC sampai Boss Akhir!"
+    "description": "Buat 10 pilihan RPG singkat dan dapatkan peran hiburan dari NPC hingga Boss Akhir berdasarkan jawabanmu."
   },
   "a11y": {
     "skipLink": "Langsung ke konten"
@@ -10,10 +10,9 @@
     "title": "Tes NPC",
     "subtitle": "Temukan Peran RPG-mu Lewat Dialog",
     "start": "Mulai Quest",
-    "questionCount": "10 adegan / ~3 menit"
-  },
-  "dialogue": {
-    "continue": "[ Klik untuk lanjut ]"
+    "questionCount": "10 pilihan / sekitar 1 menit",
+    "method": "Skor menjumlahkan nilai 10 pilihan yang dipublikasikan (masing-masing 0–3), lalu menampilkannya sebagai persentase dari 30.",
+    "boundary": "Aktivitas buatan penulis ini hanya hiburan, bukan asesmen kepribadian tervalidasi."
   },
   "scenes": {
     "s1": {
@@ -220,11 +219,11 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "Coba Tes Lainnya",
-    "percentileStat": "Hanya <strong>{percent}%</strong> pemain yang mendapat peran RPG yang sama",
     "nextStepLabel": "Tes Selanjutnya Terbaik",
     "nextStepDesc": "Hasilmu membuka rute selanjutnya yang terkuat. Ikuti sebelum misi berlanjut.",
     "nextStepCta": "Buka Kecocokan Terbaik",
-    "jumpToMore": "Lihat Semua Tindak Lanjut"
+    "jumpToMore": "Lihat Semua Tindak Lanjut",
+    "calculation": "Skor hanya memakai jawaban ini dan tidak dibandingkan dengan peserta lain."
   },
   "related": {
     "brainrotScore": "Brainrot Score",
