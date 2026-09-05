@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Test PNJ - Arbre de Dialogue RPG | DopaBrain",
-    "description": "Es-tu un PNJ ou le Personnage Principal ? Reagis a 10 rencontres RPG et decouvre ton role : de PNJ a Boss Final !"
+    "description": "Fais 10 choix RPG rapides et obtiens, selon tes réponses, un rôle ludique allant de PNJ à Boss final."
   },
   "a11y": {
     "skipLink": "Aller au contenu"
@@ -10,10 +10,9 @@
     "title": "Test PNJ",
     "subtitle": "Decouvre ton role RPG a travers le dialogue",
     "start": "Lancer la Quete",
-    "questionCount": "10 scenes / ~3 min"
-  },
-  "dialogue": {
-    "continue": "[ Cliquez pour continuer ]"
+    "questionCount": "10 choix / environ 1 min",
+    "method": "Le score additionne les valeurs publiées de 10 choix (0–3 chacun), puis affiche le pourcentage sur 30.",
+    "boundary": "Cette activité créée par l’auteur est un divertissement, pas une évaluation de personnalité validée."
   },
   "scenes": {
     "s1": {
@@ -220,11 +219,11 @@
     "npcLabel": "PNJ",
     "bossLabel": "BOSS",
     "moreTests": "Decouvrir plus de tests",
-    "percentileStat": "Seulement <strong>{percent}%</strong> des joueurs ont obtenu le meme role RPG",
     "nextStepLabel": "Meilleur Prochain Test",
-    "nextStepDesc": "Votre r?sultat a d?bloqu? le chemin le plus puissant. Prenez-le avant que la qu?te ne progresse.",
+    "nextStepDesc": "Continue avec le test le plus proche de ce résultat.",
     "nextStepCta": "Ouvrir la Meilleure Correspondance",
-    "jumpToMore": "Voir Tous les Suivis"
+    "jumpToMore": "Voir tous les tests suivants",
+    "calculation": "Le score utilise uniquement ces réponses et n’est pas comparé aux autres participants."
   },
   "related": {
     "brainrotScore": "Brainrot Score",

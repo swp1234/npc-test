@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "NPC Testi - RPG Diyalog | DopaBrain",
-    "description": "NPC misin yoksa Ana Karakter mi? 10 RPG karsilasmaya tepki ver ve rolunu kesfet — NPC'den Son Boss'a!"
+    "description": "10 hızlı RPG seçimi yap ve yanıtlarına göre NPC'den Son Boss'a uzanan eğlencelik rolünü gör."
   },
   "a11y": {
     "skipLink": "Icerigi atla"
@@ -10,10 +10,9 @@
     "title": "NPC Testi",
     "subtitle": "Diyalog ile RPG Rolunu Kesfet",
     "start": "Goreve Basla",
-    "questionCount": "10 sahne / ~3 dk"
-  },
-  "dialogue": {
-    "continue": "[ Devam etmek icin tikla ]"
+    "questionCount": "10 seçim / yaklaşık 1 dk",
+    "method": "Puan, 10 seçimin yayımlanmış değerlerini (her biri 0–3) toplar ve 30 üzerinden yüzde olarak gösterir.",
+    "boundary": "Yazarın hazırladığı bu etkinlik eğlence amaçlıdır; doğrulanmış bir kişilik değerlendirmesi değildir."
   },
   "scenes": {
     "s1": {
@@ -220,11 +219,11 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "Daha Fazla Test",
-    "percentileStat": "Oyuncularin sadece <strong>{percent}%</strong>'i ayni RPG rolunu aldi",
-    "nextStepLabel": "En ?yi Sonraki Test",
-    "nextStepDesc": "Sonucunuz en g??l? sonraki rotay? a?t?. G?rev ilerlemeden ?nce yap?n.",
-    "nextStepCta": "En ?yi E?le?meyi A?",
-    "jumpToMore": "T?m Takip Edilenleri G?r"
+    "nextStepLabel": "En iyi sonraki test",
+    "nextStepDesc": "Bu sonuca en yakın testle devam et.",
+    "nextStepCta": "Önerilen testi aç",
+    "jumpToMore": "Tüm devam testlerini gör",
+    "calculation": "Puan yalnızca bu yanıtları kullanır ve diğer katılımcılarla karşılaştırılmaz."
   },
   "related": {
     "brainrotScore": "Brainrot Skoru",

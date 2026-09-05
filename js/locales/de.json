@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "NPC-Test - RPG-Dialogbaum | DopaBrain",
-    "description": "Bist du ein NPC oder der Hauptcharakter? Reagiere auf 10 RPG-Begegnungen und entdecke deine Rolle: von NPC bis Endboss!"
+    "description": "Triff 10 schnelle RPG-Entscheidungen und erhalte anhand deiner Antworten eine Unterhaltungsrolle von NPC bis Endboss."
   },
   "a11y": {
     "skipLink": "Zum Inhalt springen"
@@ -10,10 +10,9 @@
     "title": "NPC-Test",
     "subtitle": "Entdecke deine RPG-Rolle durch Dialog",
     "start": "Quest starten",
-    "questionCount": "10 Szenen / ~3 Min"
-  },
-  "dialogue": {
-    "continue": "[ Klicken zum Fortfahren ]"
+    "questionCount": "10 Entscheidungen / etwa 1 Min",
+    "method": "Der Wert addiert die veröffentlichten Punkte aus 10 Entscheidungen (je 0–3) und zeigt den Anteil von 30.",
+    "boundary": "Diese vom Autor erstellte Aktivität dient der Unterhaltung und ist kein validierter Persönlichkeitstest."
   },
   "scenes": {
     "s1": {
@@ -220,11 +219,11 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "Mehr Tests entdecken",
-    "percentileStat": "Nur <strong>{percent}%</strong> der Spieler erhielten dieselbe RPG-Rolle",
-    "nextStepLabel": "Bester N?chster Test",
-    "nextStepDesc": "Ihr Ergebnis hat den st?rksten n?chsten Weg freigeschaltet. Nehmen Sie ihn, bevor die Quest weitergeht.",
-    "nextStepCta": "Beste ?bereinstimmung ?ffnen",
-    "jumpToMore": "Alle Follow-ups anzeigen"
+    "nextStepLabel": "Bester nächster Test",
+    "nextStepDesc": "Mach mit dem Test weiter, der diesem Ergebnis am nächsten kommt.",
+    "nextStepCta": "Empfehlung öffnen",
+    "jumpToMore": "Alle Folgetests anzeigen",
+    "calculation": "Der Wert nutzt nur diese Antworten und wird nicht mit anderen Teilnehmenden verglichen."
   },
   "related": {
     "brainrotScore": "Brainrot Score",

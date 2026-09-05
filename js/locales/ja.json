@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "NPCテスト - RPG対話ツリー | DopaBrain",
-    "description": "RPG対話ツリーで分かるNPCテスト！10の場面でNPCに反応して、あなたのRPGでの役割を発見しよう！"
+    "description": "10個の短いRPG選択から、回答に基づくNPC〜ラスボスの娯楽用ロールを表示します。"
   },
   "a11y": {
     "skipLink": "本文へスキップ"
@@ -10,10 +10,9 @@
     "title": "NPCテスト",
     "subtitle": "RPG対話で分かるあなたの役割",
     "start": "クエスト開始",
-    "questionCount": "10シーン / 約3分"
-  },
-  "dialogue": {
-    "continue": "[ クリックして続ける ]"
+    "questionCount": "10問 / 約1分",
+    "method": "10個の選択肢の公開点（各0〜3点）の合計を30点満点の割合で表示します。",
+    "boundary": "作者制作の娯楽コンテンツであり、検証済みの性格診断ではありません。"
   },
   "scenes": {
     "s1": {
@@ -220,11 +219,11 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "他のテストも試す",
-    "percentileStat": "プレイヤーのうち <strong>{percent}%</strong> だけが同じRPGロールでした",
-    "nextStepLabel": "?????????",
-    "nextStepDesc": "????????????????????????????????????????????",
-    "nextStepCta": "?????????",
-    "jumpToMore": "??????????????"
+    "nextStepLabel": "おすすめの次のテスト",
+    "nextStepDesc": "今回の結果に近い次のテストへ進みましょう。",
+    "nextStepCta": "おすすめを開く",
+    "jumpToMore": "候補をすべて見る",
+    "calculation": "スコアは今回の回答だけを使用し、他の参加者とは比較しません。"
   },
   "related": {
     "brainrotScore": "ブレインロット診断",

@@ -35,10 +35,8 @@
   var totalRawScore = 0;
   var finalPercent = 0;
   var resultTier = null;
-  var currentPercentile = null;
-  var isTyping = false;
-  var typingTimeout = null;
-  var resultInlineAdLoaded = false;
+  var advanceTimer = null;
+  var trackedStages = new Set();
 
   // DOM elements
   var introScreen = document.getElementById('intro');
@@ -56,7 +54,6 @@
   var npcReactionText = document.getElementById('npcReactionText');
   var choicesArea = document.getElementById('choicesArea');
   var choicesContainer = document.getElementById('choicesContainer');
-  var continuePrompt = document.getElementById('continuePrompt');
 
   // Result elements
   var resultPortrait = document.getElementById('resultPortrait');
@@ -74,7 +71,6 @@
   var primaryRelatedCta = document.getElementById('primary-related-cta');
   var primaryRelatedCtaText = document.getElementById('primary-related-cta-text');
   var relatedJumpBtn = document.getElementById('related-jump-btn');
-  var resultInlineAd = document.getElementById('result-inline-ad');
 
   // Share elements
   var shareBtn = document.getElementById('shareBtn');
@@ -185,17 +181,10 @@
     }
   }
 
-  function ensureResultAdLoaded() {
-    if (resultInlineAdLoaded || !resultInlineAd) return;
-    var adNode = resultInlineAd.querySelector('.adsbygoogle');
-    if (!adNode) return;
-
-    try {
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      resultInlineAdLoaded = true;
-    } catch (error) {
-      // Ad blockers or delayed AdSense init are non-fatal.
-    }
+  function trackStage(name) {
+    if (trackedStages.has(name)) return;
+    trackedStages.add(name);
+    trackEvent(name, { event_category: 'npc_test' });
   }
 
   // Theme
@@ -222,41 +211,6 @@
     window.scrollTo(0, 0);
   }
 
-  // Typing effect
-  function typeText(element, text, speed, callback) {
-    isTyping = true;
-    element.innerHTML = '';
-    var i = 0;
-    var cursor = document.createElement('span');
-    cursor.className = 'typing-cursor';
-
-    function typeChar() {
-      if (i < text.length) {
-        // Remove cursor before adding char
-        if (cursor.parentNode) cursor.parentNode.removeChild(cursor);
-        element.textContent = text.substring(0, i + 1);
-        element.appendChild(cursor);
-        i++;
-        typingTimeout = setTimeout(typeChar, speed);
-      } else {
-        // Done typing - remove cursor
-        if (cursor.parentNode) cursor.parentNode.removeChild(cursor);
-        isTyping = false;
-        if (callback) callback();
-      }
-    }
-
-    typeChar();
-  }
-
-  // Skip typing and show full text immediately
-  function skipTyping(element, text, callback) {
-    if (typingTimeout) clearTimeout(typingTimeout);
-    isTyping = false;
-    element.textContent = text;
-    if (callback) callback();
-  }
-
   // Get tier from percentage
   function getTier(percent) {
     for (var i = TIERS.length - 1; i >= 0; i--) {
@@ -270,14 +224,10 @@
     currentScene = 0;
     totalRawScore = 0;
     resultTier = null;
-    currentPercentile = null;
+    trackedStages = new Set();
     showScreen(dialogueScreen);
     renderScene();
-    trackEvent('quiz_start', {
-      event_category: 'npc_test',
-      event_label: getCurrentLang(),
-      value: TOTAL_SCENES
-    });
+    trackStage('npc_test_start');
   });
 
   // Render a scene
@@ -295,7 +245,10 @@
 
     // Hide reaction and continue prompt
     npcReaction.classList.remove('visible');
-    continuePrompt.classList.remove('visible');
+    if (advanceTimer) {
+      clearTimeout(advanceTimer);
+      advanceTimer = null;
+    }
 
     // Show choices area
     choicesArea.style.display = 'block';
@@ -304,29 +257,8 @@
     var npcLine = t(sceneKey + '.line', 'The NPC speaks...');
 
     // Type the dialogue text, then show choices
-    var choicesShown = false;
-    typeText(dialogueText, npcLine, 30, function() {
-      if (!choicesShown) {
-        choicesShown = true;
-        showChoices(sceneKey);
-      }
-    });
-
-    // Allow clicking to skip typing
-    var skipHandler = function() {
-      if (isTyping) {
-        choicesShown = true;
-        skipTyping(dialogueText, npcLine, function() {
-          showChoices(sceneKey);
-        });
-      }
-    };
-
-    // Remove old handler and add new
-    dialogueText.onclick = skipHandler;
-
-    // Clear choices while typing
-    choicesContainer.innerHTML = '';
+    dialogueText.textContent = npcLine;
+    showChoices(sceneKey);
   }
 
   // Show choices for current scene
@@ -380,11 +312,9 @@
     totalRawScore += points;
     trackEvent('npc_choice_select', {
       event_category: 'npc_test',
-      scene_number: currentScene + 1,
-      scene_key: sceneKey,
-      choice_key: choiceKey,
-      choice_points: points
+      scene_number: currentScene + 1
     });
+    if (currentScene === 4) trackStage('npc_test_halfway');
 
     // Show NPC reaction
     var reactionText = t(sceneKey + '.reactions.' + choiceKey, '');
@@ -394,38 +324,19 @@
       // Hide choices area to make room
       choicesArea.style.display = 'none';
 
-      typeText(npcReactionText, reactionText, 25, function() {
-        showContinuePrompt();
-      });
-
-      // Allow skip on reaction too
-      npcReactionText.onclick = function() {
-        if (isTyping) {
-          skipTyping(npcReactionText, reactionText, function() {
-            showContinuePrompt();
-          });
-        }
-      };
+      npcReactionText.textContent = reactionText;
+      scheduleAdvance(1200);
     } else {
-      // No reaction, just proceed
-      setTimeout(function() {
-        advanceScene();
-      }, 500);
+      scheduleAdvance(350);
     }
   }
 
-  // Show continue prompt
-  function showContinuePrompt() {
-    continuePrompt.classList.add('visible');
-
-    continuePrompt.onclick = function() {
-      continuePrompt.classList.remove('visible');
-      trackEvent('npc_continue_click', {
-        event_category: 'npc_test',
-        scene_number: currentScene + 1
-      });
+  function scheduleAdvance(delay) {
+    if (advanceTimer) clearTimeout(advanceTimer);
+    advanceTimer = setTimeout(function() {
+      advanceTimer = null;
       advanceScene();
-    };
+    }, delay);
   }
 
   // Advance to next scene or result
@@ -463,7 +374,6 @@
 
     resultTier = getTier(finalPercent);
     var tierKey = 'tiers.' + resultTier.key;
-    currentPercentile = currentPercentile || (Math.floor(Math.random() * 15) + 3);
     prioritizeRelatedCards(resultTier.key);
     updatePrimaryRecommendation();
 
@@ -514,39 +424,18 @@
       });
     }, 300);
 
-    // Percentile stat
-    var percentileEl = document.getElementById('percentile-stat');
-    if (percentileEl) {
-      var pText = t('result.percentileStat', 'Only <strong>{percent}%</strong> of players got the same RPG role');
-      percentileEl.innerHTML = pText.replace('{percent}', currentPercentile);
-    }
-
-    // GA4
-    trackEvent('result_view', {
-      event_category: 'npc_test',
-      event_label: resultTier.key,
-      value: finalPercent
-    });
-    trackEvent('quiz_complete', {
-      event_category: 'npc_test',
-      event_label: resultTier.key,
-      value: finalPercent
-    });
-    ensureResultAdLoaded();
+    trackStage('npc_test_complete');
   }
 
   // Retry
   retryBtn.addEventListener('click', function() {
     trackEvent('npc_retry_click', {
-      event_category: 'npc_test',
-      event_label: resultTier ? resultTier.key : 'unknown',
-      value: finalPercent
+      event_category: 'npc_test'
     });
     currentScene = 0;
     totalRawScore = 0;
     finalPercent = 0;
     resultTier = null;
-    currentPercentile = null;
     meterFill.style.width = '0%';
     meterScore.textContent = '0%';
     showScreen(introScreen);
@@ -556,8 +445,7 @@
   shareBtn.addEventListener('click', function() {
     shareModal.classList.add('active');
     trackEvent('npc_share_open', {
-      event_category: 'npc_test',
-      event_label: resultTier ? resultTier.key : ''
+      event_category: 'npc_test'
     });
   });
 
@@ -591,8 +479,7 @@
     trackEvent('share', { method: 'twitter', content_type: 'quiz_result' });
     trackEvent('npc_share_click', {
       event_category: 'npc_test',
-      method: 'twitter',
-      event_label: resultTier ? resultTier.key : ''
+      method: 'twitter'
     });
   });
 
@@ -602,8 +489,7 @@
     trackEvent('share', { method: 'facebook', content_type: 'quiz_result' });
     trackEvent('npc_share_click', {
       event_category: 'npc_test',
-      method: 'facebook',
-      event_label: resultTier ? resultTier.key : ''
+      method: 'facebook'
     });
   });
 
@@ -621,8 +507,7 @@
     trackEvent('share', { method: 'copy', content_type: 'quiz_result' });
     trackEvent('npc_share_click', {
       event_category: 'npc_test',
-      method: 'copy',
-      event_label: resultTier ? resultTier.key : ''
+      method: 'copy'
     });
   });
 
@@ -631,7 +516,6 @@
       trackEvent('npc_primary_cta_click', {
         event_category: 'npc_test',
         event_label: this.getAttribute('data-related-key') || this.getAttribute('href'),
-        result_tier: resultTier ? resultTier.key : 'unknown',
         related_rank: this.getAttribute('data-related-rank') || '1'
       });
     });
@@ -644,8 +528,7 @@
         relatedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
       trackEvent('npc_related_jump_click', {
-        event_category: 'npc_test',
-        event_label: resultTier ? resultTier.key : 'unknown'
+        event_category: 'npc_test'
       });
     });
   }
@@ -711,11 +594,6 @@
         } catch (e) {
           // silent
         }
-        var percentileEl = document.getElementById('percentile-stat');
-        if (percentileEl && currentPercentile) {
-          var pText = t('result.percentileStat', 'Only <strong>{percent}%</strong> of players got the same RPG role');
-          percentileEl.innerHTML = pText.replace('{percent}', currentPercentile);
-        }
         prioritizeRelatedCards(resultTier.key);
         updatePrimaryRecommendation();
       }, 200);
@@ -731,7 +609,6 @@
       trackEvent('npc_related_click', {
         event_category: 'npc_test',
         event_label: card.getAttribute('data-related-key') || card.getAttribute('href'),
-        result_tier: resultTier ? resultTier.key : 'unknown',
         related_rank: card.getAttribute('data-rank') || ''
       });
     });

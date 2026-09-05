@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "NPC 테스트 - RPG 대화 트리 | DopaBrain",
-    "description": "RPG 대화 트리로 알아보는 NPC 테스트! NPC가 던지는 10가지 상황에 반응하고, 당신의 RPG 역할을 발견하세요."
+    "description": "10개의 빠른 RPG 선택으로 답변에 기반한 NPC부터 최종 보스까지의 오락용 역할을 확인하세요."
   },
   "a11y": {
     "skipLink": "본문으로 건너뛰기"
@@ -10,10 +10,9 @@
     "title": "NPC 테스트",
     "subtitle": "RPG 대화 트리로 알아보는 나의 역할",
     "start": "퀘스트 시작",
-    "questionCount": "10개 장면 / 약 3분"
-  },
-  "dialogue": {
-    "continue": "[ 계속하려면 클릭 ]"
+    "questionCount": "10개 선택 / 약 1분",
+    "method": "점수는 10개 선택지의 공개 점수 합계(각 0~3점)를 30점 만점의 백분율로 계산합니다.",
+    "boundary": "오락용 창작 활동이며 검증된 성격 검사가 아닙니다."
   },
   "scenes": {
     "s1": {
@@ -220,11 +219,11 @@
     "npcLabel": "NPC",
     "bossLabel": "BOSS",
     "moreTests": "다른 테스트도 해보세요",
-    "percentileStat": "참가자 중 <strong>{percent}%</strong>만 같은 RPG 역할을 받았어요",
-    "nextStepLabel": "??? ?? ???",
-    "nextStepDesc": "??? ??? ?? ??? ?? ??? ?????. ???? ???? ?? ?????.",
-    "nextStepCta": "??? ?? ??",
-    "jumpToMore": "?? ?? ?? ??"
+    "nextStepLabel": "가장 잘 맞는 다음 테스트",
+    "nextStepDesc": "이번 결과와 가장 가까운 다음 테스트를 바로 이어서 해보세요.",
+    "nextStepCta": "추천 테스트 열기",
+    "jumpToMore": "후속 테스트 모두 보기",
+    "calculation": "표시된 점수는 이번 답변에만 기반하며 다른 참가자와 비교하지 않습니다."
   },
   "related": {
     "brainrotScore": "브레인롯 점수",
