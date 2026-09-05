@@ -82,11 +82,11 @@
   var shareCopy = document.getElementById('shareCopy');
   var themeToggle = document.getElementById('themeToggle');
   var recommendationMap = {
-    npc: ['attachment-style', 'eq-test', 'rizz-score', 'villain-type'],
-    extra: ['eq-test', 'attachment-style', 'rizz-score', 'villain-type'],
-    side: ['rizz-score', 'eq-test', 'attachment-style', 'villain-type'],
-    main: ['eq-test', 'rizz-score', 'villain-type', 'attachment-style'],
-    boss: ['villain-type', 'eq-test', 'rizz-score', 'attachment-style']
+    npc: ['attachment-style', 'eq-test', 'ick-factor', 'villain-type'],
+    extra: ['eq-test', 'attachment-style', 'ick-factor', 'villain-type'],
+    side: ['ick-factor', 'eq-test', 'attachment-style', 'villain-type'],
+    main: ['eq-test', 'ick-factor', 'villain-type', 'attachment-style'],
+    boss: ['villain-type', 'eq-test', 'ick-factor', 'attachment-style']
   };
 
   // i18n helper
