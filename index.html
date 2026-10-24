@@ -46,8 +46,6 @@
   var target = document.querySelector('link[rel="alternate"][hreflang="' + lang + '"]');
   if (!target) return;
   var targetHref = target.href;
-  var canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical) canonical.href = targetHref;
   var ogUrl = document.querySelector('meta[property="og:url"]');
   if (ogUrl) ogUrl.content = targetHref;
   document.documentElement.lang = lang;
